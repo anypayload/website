@@ -3,8 +3,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Container, Row, Col, Card, CardBody, CardTitle, Button, CardText, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap"
-import Particles from 'react-particles-js'
-import map from '../components/world-map/map.svg'
+//import map from '../components/world-map/map.svg'
 
 const StepCard = ({title, content}) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -38,133 +37,26 @@ const StepCard = ({title, content}) => {
   )
 }
 
-const particles = {
-  "particles": {
-      "number": {
-          "value": 227,
-          "density": {
-              "enable": true,
-              "value_area": 1025.908125981517
-          }
-      },
-      "color": {
-          "value": "#e91c63"
-      },
-      "shape": {
-          "type": "circle",
-          "stroke": {
-              "width": 0,
-              "color": "#000000"
-          },
-          "polygon": {
-              "nb_sides": 5
-          },
-      },
-      "opacity": {
-          "value": 0.2,
-          "random": false,
-          "anim": {
-              "enable": false,
-              "speed": 1,
-              "opacity_min": 0.1,
-              "sync": false
-          }
-      },
-      "size": {
-          "value": 3,
-          "random": true,
-          "anim": {
-              "enable": false,
-              "speed": 40,
-              "size_min": 0.1,
-              "sync": false
-          }
-      },
-      "line_linked": {
-          "enable": true,
-          "distance": 150,
-          "color": "#e91c63",
-          "opacity": 0.2,
-          "width": 1
-      },
-      "move": {
-          "enable": true,
-          "speed": 6,
-          "direction": "none",
-          "random": false,
-          "straight": false,
-          "out_mode": "out",
-          "bounce": false,
-          "attract": {
-              "enable": false,
-              "rotateX": 600,
-              "rotateY": 1200
-          }
-      }
-  },
-  "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-          "onhover": {
-              "enable": false,
-              "mode": "repulse"
-          },
-          "onclick": {
-              "enable": true,
-              "mode": "push"
-          },
-          "resize": true
-      },
-      "modes": {
-          "grab": {
-              "distance": 400,
-              "line_linked": {
-                  "opacity": 1
-              }
-          },
-          "bubble": {
-              "distance": 400,
-              "size": 40,
-              "duration": 2,
-              "opacity": 8,
-              "speed": 3
-          },
-          "repulse": {
-              "distance": 200,
-              "duration": 0.4
-          },
-          "push": {
-              "particles_nb": 4
-          },
-          "remove": {
-              "particles_nb": 2
-          }
-      }
-  },
-  "retina_detect": true
-};
-
-
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <section class="pb-5 mb-5 position-relative h-100 w-100">
-      <Particles 
-        params={particles}
-        className="position-absolute d-inline h-100 w-100"
-      />
+    <SEO 
+      title="Production ready and tested IoT payloads"
+    />
 
+    <section class="bg-primary text-white bg circuit">
       <Container>
-        <Row className="my-5 py-5">
+        <Row>
           <Col md="7">
-            <h1 class="h2 mt-5 pt-5">Production-ready sensor payloads for your IoT platform.</h1>
-            <Button color="primary" size="lg" className="mt-3" outline>Get started</Button>
+            <div class="py-5 my-5">
+              <h1>Production-ready sensor payloads for your IoT platform.</h1>
+              <Button to={`/about`} tag={Link} color="secondary" size="lg" className="mt-4">Get started</Button>
+            </div>
           </Col>
         </Row>
       </Container>
     </section>
 
-    <section className="py-5 bg-light">
+    {/*<section className="py-5 bg-light">
       <Container>
         <Row>
           <Col md="7" className="mx-auto text-center">
@@ -216,7 +108,7 @@ const IndexPage = () => (
           </Col>
         </Row>
       </Container>
-    </div>
+</div>*/}
 
   </Layout>
 )

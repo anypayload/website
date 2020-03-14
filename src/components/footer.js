@@ -19,7 +19,7 @@ const Footer = () =>
                 <NavLink tag={Link} to="/articles/topics">Recent</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} to="/articles/submit">Trending</NavLink>
+                <NavLink tag={Link} to="/articles/submit">Changelog</NavLink>
               </NavItem>
             </Nav>
           </Col>

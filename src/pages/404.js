@@ -2,12 +2,24 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Container, Row, Col } from "reactstrap"
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <SEO 
+      title="The page you are looking for cannot be found" 
+    />
+
+    <section className="bg-primary text-light">
+    <Container>
+      <Row>
+        <Col className="justify-content-center align-items-center text-center py-5 my-md-5">
+          <h1>Sorry.</h1>
+          <p className="h5">The page you are looking for cannot be found.</p>
+        </Col>
+      </Row>
+    </Container>
+    </section>
   </Layout>
 )
 

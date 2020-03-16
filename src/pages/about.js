@@ -3,6 +3,7 @@ import { Container, Row, Col, Card, CardTitle, CardBody } from 'reactstrap'
 import WorldMap from '../components/world-map'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Callto from '../components/callto'
 
 const AboutPage = () => (
   <Layout>
@@ -48,6 +49,8 @@ const AboutPage = () => (
         </Row>
       </Container>
     </section>
+    
+    <Callto />
   </Layout>
 )
 

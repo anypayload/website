@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Container, Row, Col, Card, CardBody, CardTitle, Button, CardText, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap"
+import Callto from "../components/callto"
 //import map from '../components/world-map/map.svg'
 
 const StepCard = ({title, content}) => {
@@ -55,6 +56,8 @@ const IndexPage = () => (
         </Row>
       </Container>
     </section>
+
+    <Callto />
 
     {/*<section className="py-5 bg-light">
       <Container>

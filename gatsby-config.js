@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `anypayload`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Production-ready sensor payloads for your IoT platform.`,
     author: `@anypayload`,
+    siteUrl: `https://www.anypayload.com`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -12,6 +13,16 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `payloads`,
+        path: `${__dirname}/src/content/payloads`
+      }
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

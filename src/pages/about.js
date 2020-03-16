@@ -12,12 +12,12 @@ const AboutPage = () => (
       We are a small team located in Austria engaging in software consulting in IoT and related areas."
     />
 
-    <section className="border-bottom">
-      <WorldMap className="py-5">
+    <section>
+      <WorldMap className="py-md-5">
         <Container>
           <Row className="text-center align-items-center justify-content-center">
             <Col lg="7" className="my-5 py-md-5">
-              <blockquote className="blockquote mt-5">
+              <blockquote className="blockquote mt-5 font-weight-bold">
                 <p>
                   We seek to simplify the use of IoT sensors and devices in production by eliminating repetitive tasks.
                   We are a small team located in Austria engaging in software consulting in IoT and related areas.
@@ -31,7 +31,7 @@ const AboutPage = () => (
         </Container>
       </WorldMap>
 
-      <Container className="mb-5 mt-n5">
+      <Container className="mb-5 mt-md-n5">
         <Row className="row-cols-md-2">
           <InfoCard title="About Us">
             <p>We are a small team that …</p>

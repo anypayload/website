@@ -40,7 +40,7 @@ const StepCard = ({title, content}) => {
 const IndexPage = () => (
   <Layout>
     <SEO 
-      title="Production ready and tested IoT payloads"
+      title="Production-ready and tested sensor IoT payloads"
     />
 
     <section class="bg-primary text-white bg circuit">

@@ -27,13 +27,13 @@ const Footer = () =>
         <Col xs="6" md="3">
           <Nav vertical>
             <NavItem>
-              <NavLink to="/events" tag={Link} className="text-uppercase text-muted">Tools</NavLink>
+              <NavLink to="/products" tag={Link} className="text-uppercase text-muted">Products</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://www.meetup.com/de-DE/blockchainers-vienna/">Payload Decoder</NavLink>
+              <NavLink to="/products/uplink-decoder" tag={Link} activeClassName="active">Uplink Decoder</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/code-of-conduct" tag={Link} activeClassName="active">Payload Builder</NavLink>
+              <NavLink to="/products/downlink-encoder" tag={Link} activeClassName="active">Downlink Encoder</NavLink>
             </NavItem>
           </Nav>
         </Col>
@@ -54,7 +54,7 @@ const Footer = () =>
 
         <Col xs="12" md="3" className="text-center text-md-right">
           <img src={LogoBlack} className="img-fluid mx-n2 w-50" alt="blockninjas" />
-          <small className="mono d-block">Production-ready sensor payloads for your IoT platform.</small>
+          <small className="mono d-block">Production-ready sensor payloads for your IoT solutions.</small>
         </Col>
       </Row>
     </Container>

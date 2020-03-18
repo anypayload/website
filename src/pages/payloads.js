@@ -1,6 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Container, Row, Col, Card, CardBody, CardTitle, Button, CardText, ListGroup, ListGroupItem, Form, FormGroup, Label, Input } from "reactstrap"
@@ -18,9 +17,29 @@ const StepCard = ({title, content}) => (
   </Card>
 )
 
-const PayloadsPage = () => (
+export default ({ data }) => (
   <Layout>
     <SEO title="Payloads" />
+
+    <section>
+      <Container>
+        <Row>
+          <Col>
+            <table className="table">
+              <tbody>
+                {data.allMarkdownRemark.edges.map((edge, idx) => 
+                <tr>
+                  <td>{edge.node.frontmatter.manufacturer}</td>
+                  <td>{edge.node.frontmatter.payload}</td>
+                  <td><Link to={edge.node.fields.slug}>Show</Link></td>
+                </tr>
+                )}
+              </tbody>
+            </table>
+          </Col>
+        </Row>
+      </Container>
+    </section>
 
     <section className="py-5 bg-light">
       <Container>
@@ -70,4 +89,22 @@ const PayloadsPage = () => (
   </Layout>
 )
 
-export default PayloadsPage
+export const query = graphql`
+  query {
+    allMarkdownRemark(sort: { fields: [frontmatter___payload], order: ASC }) {
+      totalCount
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            manufacturer
+            payload
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`

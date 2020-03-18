@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col, Card, CardTitle, CardBody } from 'reactstrap'
+import { Container, Row, Col, Card, CardTitle, CardBody, CardText } from 'reactstrap'
 import WorldMap from '../components/world-map'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -34,6 +34,7 @@ const AboutPage = () => (
 
       <Container className="mb-5 mt-md-n5">
         <Row className="row-cols-md-2">
+          <Col md="6" className="mb-4">
           <InfoCard title="About Us">
             <p>We are a small team that …</p>
             <ul>
@@ -42,10 +43,13 @@ const AboutPage = () => (
               <li>prefers economically feasible effectiveness and automation.</li>
             </ul>
           </InfoCard>
+          </Col>
 
+          <Col md="6" className="mb-4">
           <InfoCard title="Our Mission">
             <p>Make adoption of IoT technology simple.</p>
           </InfoCard>
+          </Col>
         </Row>
       </Container>
     </section>
@@ -54,17 +58,17 @@ const AboutPage = () => (
   </Layout>
 )
 
-const InfoCard = ({title, children}) => {
-  return (
-    <Col md="6" className="mb-4">
-      <Card className="shadow-lg border-0 h-100">
-        <CardBody>
-          <CardTitle className="h4 mb-4">{title}</CardTitle>
-          {children}
-        </CardBody>
-      </Card>
-    </Col>
-  );
-}
+const InfoCard = ({ title, icon, children }) => (
+  <Card className="border-0 shadow-lg h-100 px-md-3">
+    <CardBody>
+      <CardTitle className="my-4">
+        <h5 className="font-weight-bold text-primary text-uppercase">{title}</h5>
+      </CardTitle>
+      <CardText>
+        {children}
+      </CardText>
+    </CardBody>
+  </Card>
+)
 
 export default AboutPage

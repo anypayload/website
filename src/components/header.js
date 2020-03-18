@@ -26,10 +26,10 @@ const Header = (props) => {
         <Collapse isOpen={!collapsed} navbar>
           <Nav className="ml-auto text-uppercase" navbar>
             <NavItem>
-              <NavLink tag={Link} activeClassName="active" to="/consulting">Consulting</NavLink>
+              <NavLink tag={Link} activeClassName="active" to="/industries">Industries</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={Link} activeClassName="active" to="/payloads">Payloads</NavLink>
+              <NavLink tag={Link} activeClassName="active" to="/products">Products</NavLink>
             </NavItem>
             <NavItem>
               <NavLink tag={Link} activeClassName="active" to="/about">About</NavLink>

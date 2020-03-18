@@ -76,7 +76,7 @@ const IndexPage = () => (
 
     <section className="py-5">
       <Container className="py-5">
-        <Row className="pb-5">
+        <Row className="pb-5 align-items-center">
           <Col md="6">
             <h2 className="text-primary font-weight-bold">Industries</h2>
             <p className="lead my-4">

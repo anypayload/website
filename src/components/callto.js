@@ -6,8 +6,8 @@ const Callto = ({ top, bottom, btn }) => (
     <Container>
       <Row className="align-items-center justify-content-md-center" noGutters>
         <Col md="6">
-          <h2 className="text-primary">{top || "Are you interested in our services?"}</h2>
-          <h2 className="text-secondarys">{bottom || "Get in touch now."}</h2>
+          <h2 className="text-primary font-weight-normal">{top || "Are you interested in our services?"}</h2>
+          <h2>{bottom || "Get in touch now."}</h2>
         </Col>
         <Col md="2">
           <Button color="primary" size="lg">{btn || "Contact us"}</Button>

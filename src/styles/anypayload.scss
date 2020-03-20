@@ -12,6 +12,8 @@ $border-color: $gray-200;
 $navbar-light-hover-color: $primary;
 $navbar-light-active-color: $primary;
 
+$headings-font-weight: 700 !default;
+
 //$navbar-padding-y: 1rem;
 $card-columns-count:                2 !default;
 @import 'node_modules/bootstrap/scss/bootstrap.scss';

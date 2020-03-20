@@ -6,55 +6,9 @@ import { faCloud, faBuilding, faMicrochip } from "@fortawesome/free-solid-svg-ic
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Callto from "../components/callto"
+import CardTargetGroup from "../components/card"
 import illustrationProf from "../images/undraw_professor_8lrt.svg"
-//import map from '../components/world-map/map.svg'
 import anypayload from "../images/anypayload-icon.png"
-
-const StepCard = ({title, content}) => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-
-  const toggle = () => setDropdownOpen(prevState => !prevState);
-
-  return (
-  <Card className="shadow-sm border-0" body>
-    <CardTitle className="font-weight-bold h4 mt-n5">
-      <span className="badge badge-pill bg-white border border-primary text-primary badge-primary" style={{padding: "0.75rem"}}>
-      {title}
-      </span>
-    </CardTitle>
-    <CardText>
-      {content}
-
-      {/*<Dropdown isOpen={dropdownOpen} toggle={toggle}>
-        <DropdownToggle caret>
-          Dropdown
-          </DropdownToggle>
-        <DropdownMenu>
-          <DropdownItem header>Header</DropdownItem>
-          <DropdownItem>Elsys</DropdownItem>
-          <DropdownItem>Senseo</DropdownItem>
-          <DropdownItem>Bar Action</DropdownItem>
-          <DropdownItem>Quo Action</DropdownItem>
-        </DropdownMenu>
-  </Dropdown>*/}
-    </CardText>
-  </Card>
-  )
-}
-
-const CardTargetGroup = ({ title, icon, children }) => (
-  <Card className="border-0 h-100">
-    <CardBody className="px-0">
-      <FontAwesomeIcon icon={icon} size="2x" className="text-primary" />
-      <CardTitle className="my-4">
-        <h5 className="font-weight-bold text-primary text-uppercase">{title}</h5>
-      </CardTitle>
-      <CardText>
-        {children}
-      </CardText>
-    </CardBody>
-  </Card>
-)
 
 const IndexPage = () => (
   <Layout>
@@ -67,7 +21,7 @@ const IndexPage = () => (
         <Row>
           <Col md="7">
             <div class="py-5 my-5">
-              <h1 className="font-weight-bold">Production-ready sensor payloads for your IoT application.</h1>
+              <h1>Production-ready sensor payloads for your IoT application.</h1>
               <Button to={`/about`} tag={Link} color="secondary" size="lg" className="mt-4">Get started</Button>
             </div>
           </Col>
@@ -79,7 +33,7 @@ const IndexPage = () => (
       <Container className="py-5">
         <Row className="align-items-center">
           <Col xl="6">
-            <h2 className="text-primary font-weight-bold">Sensor payloads for humans</h2>
+            <h2 className="text-primary">Sensor payloads for humans</h2>
             <p className="lead my-4">
               Your input is any IoT sensor payload. 
               Your output is the interpreted data in human readable format. 
@@ -89,7 +43,7 @@ const IndexPage = () => (
           <Col>
             <Row className="justify-content-center align-items-center">
               <Col xs="4" className="text-right">
-                <h5 className="text-primary font-weight-bold mt-3">Input</h5>
+                <h5 className="text-primary mt-3">Input</h5>
                 <pre>
                   <code>0x0100e20229</code>
                   <small className="text-muted d-block">– Elsys Payload Sample</small>
@@ -99,7 +53,7 @@ const IndexPage = () => (
                 <img src={anypayload} alt="anypayload technology" className="img-fluid rounded shadow" />
               </Col>
               <Col xs={{size: 4, offset: 1}}>
-                <h5 className="text-primary font-weight-bold mt-3">Output</h5>
+                <h5 className="text-primary mt-3">Output</h5>
                 <pre>
                   <code>
                   "temperature": 22.6<br />

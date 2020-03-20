@@ -1,9 +1,10 @@
 import React from 'react'
-import { Container, Row, Col, Card, CardTitle, CardBody, CardText } from 'reactstrap'
+import { Container, Row, Col } from 'reactstrap'
 import WorldMap from '../components/world-map'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Callto from '../components/callto'
+import CardInfo from '../components/card'
 
 const AboutPage = () => (
   <Layout>
@@ -18,7 +19,7 @@ const AboutPage = () => (
         <Container>
           <Row className="text-center align-items-center justify-content-center">
             <Col lg="7" className="my-5 py-md-5">
-              <blockquote className="blockquote mt-5 font-weight-bold">
+              <blockquote className="blockquote mt-5">
                 <p>
                   We seek to simplify the use of IoT sensors and devices in production by eliminating repetitive tasks.
                   We are a small team located in Austria engaging in software consulting in IoT and related areas.
@@ -35,20 +36,20 @@ const AboutPage = () => (
       <Container className="mb-5 mt-md-n5">
         <Row className="row-cols-md-2">
           <Col md="6" className="mb-4">
-          <InfoCard title="About Us">
-            <p>We are a small team that …</p>
-            <ul>
-              <li>embraces IoT technologies,</li>
-              <li>appreciate high-quality software,</li>
-              <li>prefers economically feasible effectiveness and automation.</li>
-            </ul>
-          </InfoCard>
+            <CardInfo title="About Us" className="mt-n4">
+              <p>We are a small team that …</p>
+              <ul>
+                <li>embraces IoT technologies,</li>
+                <li>appreciate high-quality software,</li>
+                <li>prefers economically feasible effectiveness and automation.</li>
+              </ul>
+            </CardInfo>
           </Col>
 
           <Col md="6" className="mb-4">
-          <InfoCard title="Our Mission">
-            <p>Make adoption of IoT technology simple.</p>
-          </InfoCard>
+            <CardInfo title="Our Mission" className="mt-n4">
+              <p>Make adoption of IoT technology simple.</p>
+            </CardInfo>
           </Col>
         </Row>
       </Container>
@@ -56,19 +57,6 @@ const AboutPage = () => (
     
     <Callto />
   </Layout>
-)
-
-const InfoCard = ({ title, icon, children }) => (
-  <Card className="border-0 shadow-lg h-100 px-md-3">
-    <CardBody>
-      <CardTitle className="my-4">
-        <h5 className="font-weight-bold text-primary text-uppercase">{title}</h5>
-      </CardTitle>
-      <CardText>
-        {children}
-      </CardText>
-    </CardBody>
-  </Card>
 )
 
 export default AboutPage

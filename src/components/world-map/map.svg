@@ -9,7 +9,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <style type="text/css">
 		<![CDATA[
        circle {
-         fill: rgba(28, 178, 169, 0.3);
+         fill: rgba(28, 178, 169, 0.25);
        }
     ]]>
 		</style>

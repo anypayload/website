@@ -12,7 +12,7 @@ import anypayload from "../images/anypayload-icon.png"
 
 const IndexPage = () => (
   <Layout>
-    <SEO 
+    <SEO
       title="Production-ready and tested sensor IoT application"
     />
 
@@ -35,9 +35,9 @@ const IndexPage = () => (
           <Col xl="6">
             <h2 className="text-primary">Sensor payloads for humans</h2>
             <p className="lead my-4">
-              Your input is any IoT sensor payload. 
-              Your output is the interpreted data in human readable format. 
-              Integrates seamlessly in any software or platform. 
+              Your input is any IoT sensor payload.
+              Your output is the interpreted data in human-readable format.
+              Integrates seamlessly into any software or platform.
             </p>
           </Col>
           <Col>
@@ -49,15 +49,15 @@ const IndexPage = () => (
                   <small className="text-muted d-block">– Elsys Payload Sample</small>
                 </pre>
               </Col>
-              <Col xs={{size: 2, offset: 1}}>
+              <Col xs={{ size: 2, offset: 1 }}>
                 <img src={anypayload} alt="anypayload technology" className="img-fluid rounded shadow" />
               </Col>
-              <Col xs={{size: 4, offset: 1}}>
+              <Col xs={{ size: 4, offset: 1 }}>
                 <h5 className="text-primary mt-3">Output</h5>
                 <pre>
                   <code>
-                  "temperature": 22.6<br />
-                  "humidity": 41<br />
+                    "temperature": 22.6<br />
+                    "humidity": 41<br />
                   </code>
                 </pre>
               </Col>
@@ -67,7 +67,7 @@ const IndexPage = () => (
       </Container>
     </section>
 
-    <Callto 
+    <Callto
       top="Interested in a specific payload?"
       bottom="Get a quote now."
       btn="Request quote"
@@ -79,7 +79,7 @@ const IndexPage = () => (
           <Col md="6">
             <h2 className="text-primary font-weight-bold">Industries</h2>
             <p className="lead my-4">
-              We help businesses accelerate their speed on building innovative IoT solutions.
+              We help businesses accelerate building innovative IoT solutions.
             </p>
           </Col>
           <Col md={{ size: 4, offset: 1 }} className="d-none d-md-flex">
@@ -88,27 +88,27 @@ const IndexPage = () => (
         </Row>
         <Row>
           <Col md="4" className="mt-5">
-            <CardTargetGroup icon={faBuilding} title="Corporates">
-              Building IoT solutions is challenging, especially if you want to iterate fast. 
-              Our technology can help you to focus on your core product while we provide
-              more value to your customers.
+            <CardTargetGroup icon={faBuilding} title="Organizations adopting IoT">
+              Building IoT solutions is challenging, especially if you want to execute in a faster
+              than ever changing environment. Our technology helps you to focus on your core product, 
+              while we boost your productivity by unburdening you from recurring and work-intensive tasks.
             </CardTargetGroup>
           </Col>
           <Col md="4" className="mt-5">
             <CardTargetGroup icon={faCloud} title="IoT platform providers">
-              When building a successful IoT platform, many integrations have to 
-              be implemented. We got the technology that helps you to iterate fast 
+              When building a successful IoT platform, many integrations have to
+              be implemented. We have the technology that helps you to iterate fast
               in any programming language.
             </CardTargetGroup>
           </Col>
           <Col md="4" className="mt-5">
             <CardTargetGroup icon={faMicrochip} title="Sensor Manufacturers">
-              You are great in manufactoring hardware but struggle to provide and implement 
-              high-quality and developer friendly software which is crucial for a broad adoption 
-              of your hardware.
+              You are great in manufacturing hardware, but struggle to provide and implement
+              high quality and developer friendly software in multiple languages, 
+              which is crucial for broad adoption of your hardware? 
             </CardTargetGroup>
           </Col>
-          
+
           {/*<Col>
           Extra Seite:
           Our solutions

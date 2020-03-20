@@ -1,16 +1,16 @@
 import React from 'react'
 import { Container, Row, Col, Button } from 'reactstrap'
 
-const Callto = () => (
+const Callto = ({ top, bottom, btn }) => (
   <div className="bg-light py-5">
     <Container>
       <Row className="align-items-center justify-content-md-center" noGutters>
         <Col md="6">
-          <h2 className="text-primary">Are you interested in our services?</h2>
-          <h2 className="text-secondarys">Get in touch now.</h2>
+          <h2 className="text-primary">{top || "Are you interested in our services?"}</h2>
+          <h2 className="text-secondarys">{bottom || "Get in touch now."}</h2>
         </Col>
         <Col md="2">
-          <Button color="primary" size="lg">Contact us</Button>
+          <Button color="primary" size="lg">{btn || "Contact us"}</Button>
         </Col>
       </Row>
     </Container>

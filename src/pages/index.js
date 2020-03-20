@@ -8,6 +8,7 @@ import SEO from "../components/seo"
 import Callto from "../components/callto"
 import illustrationProf from "../images/undraw_professor_8lrt.svg"
 //import map from '../components/world-map/map.svg'
+import anypayload from "../images/anypayload-icon.png"
 
 const StepCard = ({title, content}) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -66,13 +67,57 @@ const IndexPage = () => (
         <Row>
           <Col md="7">
             <div class="py-5 my-5">
-              <h1>Production-ready sensor payloads for your IoT application.</h1>
+              <h1 className="font-weight-bold">Production-ready sensor payloads for your IoT application.</h1>
               <Button to={`/about`} tag={Link} color="secondary" size="lg" className="mt-4">Get started</Button>
             </div>
           </Col>
         </Row>
       </Container>
     </section>
+
+    <section className="py-5">
+      <Container className="py-5">
+        <Row className="align-items-center">
+          <Col xl="6">
+            <h2 className="text-primary font-weight-bold">Sensor payloads for humans</h2>
+            <p className="lead my-4">
+              Your input is any IoT sensor payload. 
+              Your output is the interpreted data in human readable format. 
+              Integrates seamlessly in any software or platform. 
+            </p>
+          </Col>
+          <Col>
+            <Row className="justify-content-center align-items-center">
+              <Col xs="4" className="text-right">
+                <h5 className="text-primary font-weight-bold mt-3">Input</h5>
+                <pre>
+                  <code>0x0100e20229</code>
+                  <small className="text-muted d-block">– Elsys Payload Sample</small>
+                </pre>
+              </Col>
+              <Col xs={{size: 2, offset: 1}}>
+                <img src={anypayload} alt="anypayload technology" className="img-fluid rounded shadow" />
+              </Col>
+              <Col xs={{size: 4, offset: 1}}>
+                <h5 className="text-primary font-weight-bold mt-3">Output</h5>
+                <pre>
+                  <code>
+                  "temperature": 22.6<br />
+                  "humidity": 41<br />
+                  </code>
+                </pre>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Container>
+    </section>
+
+    <Callto 
+      top="Interested in a specific payload?"
+      bottom="Get a quote now."
+      btn="Request quote"
+    />
 
     <section className="py-5">
       <Container className="py-5">

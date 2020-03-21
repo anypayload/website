@@ -30,10 +30,10 @@ const Footer = () =>
               <NavLink to="/products" tag={Link} className="text-uppercase text-muted">Products</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/products/uplink-decoder" tag={Link} activeClassName="active">Uplink Decoder</NavLink>
+              <NavLink to="/products/payload-parser" tag={Link} activeClassName="active">Payload Parser</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/products/downlink-encoder" tag={Link} activeClassName="active">Downlink Encoder</NavLink>
+              <NavLink to="/products/downlink-generator" tag={Link} activeClassName="active">Downlink Generator</NavLink>
             </NavItem>
           </Nav>
         </Col>

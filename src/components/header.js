@@ -32,10 +32,10 @@ const Header = (props) => {
               <NavLink tag={Link} activeClassName="active" to="/products">Products</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={Link} activeClassName="active" to="/about">About</NavLink>
+              <NavLink tag={Link} activeClassName="active" to="/pricing">Pricing</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={Link} activeClassName="active" to="/contact">Contact</NavLink>
+              <NavLink tag={Link} activeClassName="active" to="/about">About</NavLink>
             </NavItem>
           </Nav>
         </Collapse>

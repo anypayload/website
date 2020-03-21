@@ -1,8 +1,7 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link } from "gatsby"
-import { Container, Row, Col, Card, CardBody, CardTitle, Button, CardText, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, CardHeader, CardFooter } from "reactstrap"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCloud, faBuilding, faMicrochip } from "@fortawesome/free-solid-svg-icons"
+import { Container, Row, Col, Button } from "reactstrap"
+import { faCloud, faMicrochip } from "@fortawesome/free-solid-svg-icons"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Callto from "../components/callto"
@@ -13,7 +12,7 @@ import anypayload from "../images/anypayload-icon.png"
 const IndexPage = () => (
   <Layout>
     <SEO
-      title="Production-ready and tested sensor IoT application"
+      title="Production-ready and payload parser and downlink generator for your IoT application"
     />
 
     <section className="bg-primary text-white bg circuit">
@@ -87,25 +86,32 @@ const IndexPage = () => (
           </Col>
         </Row>
         <Row>
-          <Col md="4" className="mt-5">
-            <CardTargetGroup icon={faBuilding} title="Organizations adopting IoT">
-              Building IoT solutions is challenging, especially if you want to execute in a faster
-              than ever changing environment. Our technology helps you to focus on your core product, 
-              while we boost your productivity by unburdening you from recurring and work-intensive tasks.
+          <Col md="6" className="mt-5">
+            <CardTargetGroup icon={faCloud} title="For Organizations adopting IoT">
+              <p>
+                Building IoT solutions is challenging, especially if you want to execute in a faster
+                than ever changing environment. Our technology helps you to focus on your core product, 
+                while we boost your productivity by unburdening you from recurring and work-intensive tasks.
+              </p>
+              <Button tag={Link} to="/industries/organizations" color="primary" outline className="stretched-link" size="sm">Learn more</Button>
             </CardTargetGroup>
           </Col>
-          <Col md="4" className="mt-5">
+          {/*<Col md="4" className="mt-5">
             <CardTargetGroup icon={faCloud} title="IoT platform providers">
               When building a successful IoT platform, many integrations have to
               be implemented. We have the technology that helps you to iterate fast
               in any programming language.
             </CardTargetGroup>
-          </Col>
-          <Col md="4" className="mt-5">
-            <CardTargetGroup icon={faMicrochip} title="Sensor Manufacturers">
-              You are great in manufacturing hardware, but struggle to provide and implement
-              high quality and developer friendly software in multiple languages, 
-              which is crucial for broad adoption of your hardware? 
+          </Col>*/}
+          <Col md="6" className="mt-5">
+            <CardTargetGroup icon={faMicrochip} title="For Hardware Producers">
+              <p>
+                You are great in manufacturing hardware, but struggle to provide and implement
+                high quality and developer friendly software in multiple languages, 
+                which is crucial for broad adoption of your hardware?<br />
+                We are happy to support you.
+              </p>
+              <Button tag={Link} to="/industries/hardware-producers" color="primary" outline className="stretched-link" size="sm">Learn more</Button>
             </CardTargetGroup>
           </Col>
 

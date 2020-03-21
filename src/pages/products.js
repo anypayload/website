@@ -30,7 +30,7 @@ const ProductsPage = () => (
         <Row>
           <Col md="6" className="py-5 border-right">
             <Row>
-              <Col>
+              <Col className="text-md-right">
                 <CardTargetGroup icon={faChevronCircleDown} title="Downlink Generator">
                   Easily configure your sensors of choice by using our downlink generator. Use our intuitive UI or configure your 
                   sensors with our API.
@@ -38,7 +38,7 @@ const ProductsPage = () => (
               </Col>
             </Row>
 
-            <Row className="justify-content-center align-items-center">
+            <Row className="justify-content-center align-items-center border-top pt-5">
               <Col xs="4" className="text-right">
                 <h5 className="text-primary mt-3">Input</h5>
                 <pre>
@@ -70,7 +70,7 @@ const ProductsPage = () => (
               </Col>
             </Row>
             
-            <Row className="justify-content-center align-items-center">
+            <Row className="justify-content-center align-items-center border-top pt-5">
               <Col xs="4" className="text-right">
                 <h5 className="text-primary mt-3">Input</h5>
                 <pre>

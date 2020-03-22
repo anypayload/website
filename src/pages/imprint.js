@@ -24,12 +24,12 @@ const ImprintPage = () => (
 
     <section className="bg-white py-5">
       <Container>
-        <Row className="align-items-center pt-5 pt-lg-7">
+        <Row className="align-items-center">
           <Col>
             <h2>Datenschutz</h2>
           </Col>
         </Row>
-        <Row className="py-5 pt-lg-7 pb-lg-5">
+        <Row className="py-5 pb-lg-5">
           <Col md="4">
             <h5>Anbieter und Verantwortlicher</h5>
             <address>

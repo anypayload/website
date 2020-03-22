@@ -52,12 +52,6 @@ $spacers: (
   width: 75% !important; 
 }
 
-
-/* CUSTOM STYLING */
-.mono {
-  font-family: $font-family-monospace;
-}
-
 nav {
   .navbar-brand { 
     color: $primary !important; 
@@ -67,10 +61,12 @@ nav {
 footer {
   color: $text-muted;
 
-  a {
+  a.nav-link {
     color: $dark;
-    font-family: $font-family-monospace;
     font-size: .9rem;
+    &.active {
+      color: $primary;
+    }
   }
 }
 

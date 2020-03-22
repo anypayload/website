@@ -7,10 +7,10 @@ import faMeetup from '@fortawesome/fontawesome-free-brands/faMeetup'
 import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'*/
 
 const Footer = () => 
-  <footer className="py-5 py-lg-7">
+  <footer className="pb-5">
     <Container>
       <Row className="pb-5 align-items-centers">
-        <Col xs="6" md="3">
+        <Col xs="6" md="3" className="pt-5">
           <Nav vertical>
             <NavItem>
               <NavLink tag={Link} to="/payloads/" className="text-uppercase text-muted">Payloads</NavLink>
@@ -24,7 +24,7 @@ const Footer = () =>
           </Nav>
         </Col>
 
-        <Col xs="6" md="3">
+        <Col xs="6" md="3" className="pt-5">
           <Nav vertical>
             <NavItem>
               <NavLink to="/products/" tag={Link} className="text-uppercase text-muted">Products</NavLink>
@@ -38,7 +38,7 @@ const Footer = () =>
           </Nav>
         </Col>
 
-        <Col xs="6" md="3">
+        <Col xs="6" md="3" className="pt-5">
           <Nav vertical>
             <NavItem>
               <NavLink to="/contact/" tag={Link} className="text-uppercase text-muted">Contact</NavLink>
@@ -52,9 +52,9 @@ const Footer = () =>
           </Nav>
         </Col>
 
-        <Col xs="12" md="3" className="text-center text-md-right">
-          <img src={LogoBlack} className="img-fluid mx-n2 w-50" alt="blockninjas" />
-          <small className="mono d-block">Production-ready sensor payloads for your IoT solutions.</small>
+        <Col xs="12" md="3" className="text-center text-md-right pt-5">
+          <img src={LogoBlack} className="img-fluid mx-md-n1 w-50 mt-5 mt-md-0" alt="blockninjas" />
+          <small className="mt-md-3 d-block">Production-ready sensor payloads for your IoT solutions.</small>
         </Col>
       </Row>
     </Container>

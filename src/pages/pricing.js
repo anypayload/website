@@ -31,7 +31,7 @@ const PricingPage = () => (
         <Row className="row-cols-2 row-cols-xl-4">
           <Col className="mt-5">
             <PricingCard 
-              plan="Solo" 
+              plan="Starter" 
               className="border-0"
               description="Use for your personal projects"
               costs="Free"

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 /* BOOTSTRAP */
 $font-family-sans-serif: 'Roboto', sans-serif;
@@ -17,6 +17,19 @@ $headings-font-weight: 700 !default;
 
 //$navbar-padding-y: 1rem;
 $card-columns-count:                2 !default;
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 6,
+  7: $spacer * 12
+) !default;
+
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
 
 /**

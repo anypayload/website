@@ -9,6 +9,12 @@ import CardTargetGroup from "../components/card"
 import anypayload from "../images/anypayload-icon.png"
 import workInProgress from "../images/undraw_work_in_progress_uhmv.svg"
 import blobShape from "../images/blob-shape.svg"
+import logoPython from "../images/languages/Python.svg"
+import logoJavaScript from "../images/languages/JavaScript.svg"
+import logoTypeScript from "../images/languages/TypeScript.svg"
+import logoElixir from "../images/languages/Elixir.png"
+import logoJava from "../images/languages/Java.svg"
+import logoRust from "../images/languages/Rust.svg"
 
 const ProductsPage = () => (
   <Layout className="bg-light">
@@ -98,11 +104,31 @@ const ProductsPage = () => (
         <Row className="justify-content-center text-md-center">
           <Col md="8">
             <p className="lead">
-              Our battle-tested payload parser libraries are available in multiple programming languages such as Python, JavaScript, TypeScript, Elixir, Java and Rust.
+              Our battle-tested payload parser libraries are available in multiple programming languages such as Python, JavaScript, TypeScript, Java, Rust and Elixir.
             </p>
             <p>
               Feel free to contact us if you are interested in any of them.
             </p>
+          </Col>
+        </Row>
+        <Row className="justify-content-center align-items-center">
+          <Col xs="4" md="2">
+            <img src={logoPython} alt="Python" className="img-fluid" />
+          </Col>
+          <Col xs="4" md="2">
+            <img src={logoJavaScript} alt="JavaScript" className="img-fluid p-3 p-lg-5" />
+          </Col>
+          <Col xs="4" md="2">
+            <img src={logoTypeScript} alt="TypeScript" className="img-fluid p-3 p-lg-5" />
+          </Col>
+          <Col xs="4" md="2">
+            <img src={logoJava} alt="Java" className="img-fluid p-3 p-lg-5" />
+          </Col>
+          <Col xs="4" md="2">
+            <img src={logoRust} alt="Rust" className="img-fluid p-2 p-lg-4" />
+          </Col>
+          <Col xs="4" md="2">
+            <img src={logoElixir} alt="Elixir" className="img-fluid p-2 p-lg-4" />
           </Col>
         </Row>
       </Container>

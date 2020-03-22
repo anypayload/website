@@ -1,23 +1,7 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Container, Row, Col, Card, CardBody, CardTitle, Button, CardText, ListGroup, ListGroupItem, Form, FormGroup, Label, Input, CardHeader, InputGroupAddon, InputGroup, CardFooter } from "reactstrap"
-import PayloadIntegration from "../components/payload-integration"
-
-const StepCard = ({title, content}) => (
-  <Card className="shadow-sm border-0" body>
-    <CardTitle className="font-weight-bold h4 mt-n5">
-      <span className="badge badge-pill badge-primary" style={{padding: "0.75rem"}}>
-      {title}
-      </span>
-    </CardTitle>
-    <CardText>
-      {content}
-    </CardText>
-  </Card>
-)
+import { Container, Row, Col, Card, CardBody, Button, Form, FormGroup, Label, Input, CardHeader, InputGroupAddon, InputGroup, CardFooter } from "reactstrap"
 
 const ElsysPage = () => {
   const [payload, setPayload] = useState("test0100e202290400270506060308070d62");
@@ -74,7 +58,7 @@ const ElsysPage = () => {
               <Card className="mt-4">
                 <CardHeader>How to use it</CardHeader>
                 <CardBody>
-                  <PayloadIntegration payload={payload} />
+                  
                 </CardBody>
               </Card>
             </Col>

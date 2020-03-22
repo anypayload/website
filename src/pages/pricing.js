@@ -1,13 +1,10 @@
 import React from "react"
+import { Link } from "gatsby"
 import { Container, Row, Col, Card, CardBody, CardTitle, CardSubtitle, CardHeader, CardFooter, Button } from "reactstrap"
-import { faChevronCircleDown, faChevronCircleUp, faCheck } from "@fortawesome/free-solid-svg-icons"
+import { faCheck } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Callto from "../components/callto"
-import CardTargetGroup from "../components/card"
-import anypayload from "../images/anypayload-icon.png"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Link } from "gatsby"
 
 const PricingPage = () => (
   <Layout className="bg-light">
@@ -29,11 +26,13 @@ const PricingPage = () => (
     </header>
 
     <section className="mb-5">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="position-absolute"><path fill="#fff" fill-opacity="1" d="M0,256L120,224C240,192,480,128,720,106.7C960,85,1200,107,1320,117.3L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
       <Container fluid className="w-xl-75">
         <Row className="row-cols-2 row-cols-xl-4">
           <Col className="mt-5">
             <PricingCard 
               plan="Solo" 
+              className="border-0"
               description="Use for your personal projects"
               costs="Free"
               buttonText="Get started"
@@ -48,8 +47,10 @@ const PricingPage = () => (
           <Col className="mt-5">
             <PricingCard 
               plan="Basic" 
+              className="border-0"
               description="Adopt our IoT payloads quickly"
-              costs="€ 249 / payload"
+              costs="€ 249"
+              costsPer="/ Payload"
               buttonText="Get started"
             >
               <ul className="list-unstyled">
@@ -62,8 +63,10 @@ const PricingPage = () => (
           <Col className="mt-5">
             <PricingCard 
               plan="Pro" 
+              className="shadow-lg border-primary"
               description="Simplify managing your sensors"
-              costs="€ 599 / year"
+              costs="€ 599"
+              costsPer="/ Year"
               buttonText="Get started"
             >
               <ul className="list-unstyled">
@@ -76,6 +79,7 @@ const PricingPage = () => (
           <Col className="mt-5">
             <PricingCard 
               plan="Enterprise" 
+              className="border-0"
               description="Boost productivity and iterate fast"
               costs="Contact us"
               buttonText="Contact us"
@@ -94,22 +98,25 @@ const PricingPage = () => (
   </Layout>
 )
 
-const PricingCard = ({ plan, description, costs, children, buttonText }) => (
-  <Card className="border-0 shadow-sm h-100">
-    <CardHeader className="bg-white border-0">
+const PricingCard = ({ className, plan, description, costs, costsPer, children, buttonText }) => (
+  <Card className={`${className} shadow-sm h-100`}>
+    <CardHeader className="bg-transparent border-0">
       <CardTitle className="text-center mt-2">
         <h4 className="font-weight-light">{plan}</h4>
         <h6 className="font-weight-normal text-muted mt-3 mb-4">{description}</h6>
       </CardTitle>
       <CardSubtitle className="border-top border-bottom lead text-center py-4 my-0">
-        <h4>{costs}</h4>
+        <h4>
+          {costs}
+          {costsPer && <small className="text-muted ml-2">{costsPer}</small>}
+        </h4>
       </CardSubtitle>
     </CardHeader>
     <CardBody className="py-5">
       {children}
     </CardBody>
-    <CardFooter className="bg-white border-0 mt-0 pt-0">
-      <Button color={buttonText == 'Contact us' ? "dark" : "primary"} tag={Link} to="/start" block className="font-weight-bold">
+    <CardFooter className="bg-transparent border-0 mt-0 pt-0">
+      <Button color={buttonText === 'Contact us' ? "dark" : "primary"} tag={Link} to="/start" block className="font-weight-bold">
         {buttonText}
       </Button>
     </CardFooter>

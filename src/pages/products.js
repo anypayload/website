@@ -1,31 +1,144 @@
 import React from "react"
-import { Container, Row, Col } from "reactstrap"
-import { faChevronCircleDown, faChevronCircleUp } from "@fortawesome/free-solid-svg-icons"
+import { Container, Row, Col, Form, FormGroup, Label, Input, Button, Card, CardBody, ListGroup, ListGroupItem } from "reactstrap"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faChevronCircleDown, faChevronCircleUp, faPlay } from "@fortawesome/free-solid-svg-icons"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Callto from "../components/callto"
 import CardTargetGroup from "../components/card"
 import anypayload from "../images/anypayload-icon.png"
+import workInProgress from "../images/undraw_work_in_progress_uhmv.svg"
+import blobShape from "../images/blob-shape.svg"
 
 const ProductsPage = () => (
-  <Layout>
+  <Layout className="bg-light">
     <SEO 
-      title="Easily configure your IoT sensor. Parse any IoT payload."
+      title="Easily configure your IoT sensors. Parse any IoT payload."
     />
 
-    <section className="bg-primary text-white bg circuit">
+    <header className="py-5">
+      <Container>
+        <Row className="justify-content-center">
+          <Col md="6" className="text-center">
+            <h1>Products</h1>
+            <h2 className="text-muted lead mt-4">
+              Easily configure your IoT sensors. Parse any IoT payload.
+            </h2>
+          </Col>
+        </Row>
+      </Container>
+    </header>
+
+    <section className="py-5">
+      <Container>
+        <Row>
+          <Col md="5">
+            <h6 className="text-uppercase text-muted">Work in Progress</h6>
+            <h2 className="pb-4">Payload Parser</h2>
+            <p className="lead mb-5">
+              Decode uplink payloads of your IoT platform in a human-readable and machine-interpretable format.
+            </p>
+          </Col>
+          <Col>
+            <img 
+              alt="Background Illustration"
+              src={blobShape} 
+              className="position-absolute" 
+              style={{top: -100, right: -150, opacity: 0.1}} 
+            />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Card className="shadow border-0">
+              <CardBody>
+                <Row>
+                  <Col>
+                    <Form>
+                      <FormGroup>
+                        <Label size="lg">Select a sensor to decode:</Label>
+                        <Input type="select" className="custom-select custom-select-lg" bsSize="lg">
+                          <option>Elsys</option>
+                          <option>Sensoneo</option>
+                        </Input>
+                      </FormGroup>
+                      <FormGroup>
+                        <Label size="lg">Insert your sensor payload:</Label>
+                        <Input type="text" placeholder="0x0100e20229040027"  bsSize="lg" />
+                      </FormGroup>
+                      <div className="text-right">
+                        <Button color="primary" size="lg" className="font-weight-bold">
+                          <FontAwesomeIcon icon={faPlay} className="mr-3" /> Decode
+                        </Button>
+                      </div>
+                    </Form>
+                  </Col>
+
+                  <Col>
+                    <ListGroup>
+                      <ListGroupItem className="d-flex justify-content-between align-items-center">
+                        Temperature: <span className="badge badge-primary">22.6°C</span>
+                      </ListGroupItem>
+                      <ListGroupItem className="d-flex justify-content-between align-items-center">
+                        Humidity: <span className="badge badge-primary">41</span>
+                      </ListGroupItem>
+                      <ListGroupItem className="d-flex justify-content-between align-items-center">
+                        Light: <span className="badge badge-primary">39</span>
+                      </ListGroupItem>
+                    </ListGroup>
+                  </Col>
+                </Row>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    </section>
+
+    <section className="py-6 bg-white">
+      <Container>
+        <Row>
+          <Col md="5">
+            <h6 className="text-uppercase text-muted">Work in Progress</h6>
+            <h2 className="pb-4">Downlink Generator</h2>
+            <p className="lead">
+              Easily configure your sensors of choice by using our downlink generator. 
+              Use either our intuitive UI or our API to configure your sensors.
+            </p>
+            <p>
+              If you are interested on this, feel free to contact us.<br />
+              We are happy to give you early access.
+            </p>
+          </Col>
+          <Col>
+            <img 
+              alt="Work in progress"
+              src={workInProgress} 
+              className="img-fluid" 
+            />
+          </Col>
+        </Row>
+      </Container>
+    </section>
+
+    <section className="text-white d-none">
       <Container>
         <Row>
           <Col md="6">
-            <div class="py-5 my-5">
+            <div class="py-5 my-5 rounded px-5 ml-n5 bg-primary bg circuit">
               <h1>Easily configure your sensor. Parse any payload.</h1>
+            </div>
+          </Col>
+          <Col md="6">
+            <div class="py-5 my-5 rounded px-5 mr-n5 bg-light text-dark">
+              <h1>Get. Started. Now.</h1>
             </div>
           </Col>
         </Row>
       </Container>
     </section>
 
-    <section>
+    <section className="d-none">
       <Container>
         <Row>
           <Col md="6" className="py-5 border-right">

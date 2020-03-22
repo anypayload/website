@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Link from 'gatsby-link'
+import { Link } from "gatsby"
 import {
   Container,
   Collapse,
@@ -26,16 +26,16 @@ const Header = (props) => {
         <Collapse isOpen={!collapsed} navbar>
           <Nav className="ml-auto text-uppercase" navbar>
             <NavItem>
-              <NavLink tag={Link} activeClassName="active" to="/industries">Industries</NavLink>
+              <NavLink tag={Link} activeClassName="active" to="/industries/">Industries</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={Link} activeClassName="active" to="/products">Products</NavLink>
+              <NavLink tag={Link} activeClassName="active" to="/products/">Products</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={Link} activeClassName="active" to="/pricing">Pricing</NavLink>
+              <NavLink tag={Link} activeClassName="active" to="/pricing/">Pricing</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={Link} activeClassName="active" to="/about">About</NavLink>
+              <NavLink tag={Link} activeClassName="active" to="/about/">About</NavLink>
             </NavItem>
           </Nav>
         </Collapse>

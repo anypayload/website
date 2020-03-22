@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from "gatsby"
 import { Container, Row, Col, Nav, NavItem, NavLink } from 'reactstrap'
 import LogoBlack from '../images/anypayload-black.png'
 /*import FontAwesomeIcon from '@fortawesome/react-fontawesome'
@@ -13,7 +13,7 @@ const Footer = () =>
         <Col xs="6" md="3">
           <Nav vertical>
             <NavItem>
-              <NavLink tag={Link} to="/payloads" className="text-uppercase text-muted">Payloads</NavLink>
+              <NavLink tag={Link} to="/payloads/" className="text-uppercase text-muted">Payloads</NavLink>
             </NavItem>
             <NavItem>
               <NavLink tag={Link} to="/articles/topics">Recent</NavLink>
@@ -27,13 +27,13 @@ const Footer = () =>
         <Col xs="6" md="3">
           <Nav vertical>
             <NavItem>
-              <NavLink to="/products" tag={Link} className="text-uppercase text-muted">Products</NavLink>
+              <NavLink to="/products/" tag={Link} className="text-uppercase text-muted">Products</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/products/payload-parser" tag={Link} activeClassName="active">Payload Parser</NavLink>
+              <NavLink to="/products/payload-parser/" tag={Link} activeClassName="active">Payload Parser</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/products/downlink-generator" tag={Link} activeClassName="active">Downlink Generator</NavLink>
+              <NavLink to="/products/downlink-generator/" tag={Link} activeClassName="active">Downlink Generator</NavLink>
             </NavItem>
           </Nav>
         </Col>
@@ -41,13 +41,13 @@ const Footer = () =>
         <Col xs="6" md="3">
           <Nav vertical>
             <NavItem>
-              <NavLink to="/contact" tag={Link} className="text-uppercase text-muted">Contact</NavLink>
+              <NavLink to="/contact/" tag={Link} className="text-uppercase text-muted">Contact</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/privacy" tag={Link} activeClassName="active">Privacy Policy</NavLink>
+              <NavLink to="/privacy/" tag={Link} activeClassName="active">Privacy Policy</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/imprint" tag={Link} activeClassName="active">Imprint</NavLink>
+              <NavLink to="/imprint/" tag={Link} activeClassName="active">Imprint</NavLink>
             </NavItem>
           </Nav>
         </Col>

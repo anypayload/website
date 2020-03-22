@@ -17,9 +17,10 @@ const AboutPage = () => (
     <section>
       <WorldMap className="py-md-5">
         <Container>
-          <Row className="text-center align-items-center justify-content-center">
-            <Col lg="7" className="my-5 py-md-5">
-              <blockquote className="blockquote mt-5">
+          <Row className="justify-content-center">
+            <Col md="6" className="text-center">
+              <h1>About</h1>
+              <blockquote className="blockquote mt-4">
                 <p>
                   We seek to simplify the use of IoT sensors and devices in production by eliminating repetitive tasks.
                   We are a small team located in Austria engaging in software consulting in IoT and related areas.
@@ -33,7 +34,7 @@ const AboutPage = () => (
         </Container>
       </WorldMap>
 
-      <Container className="mb-5 mt-md-n5">
+      <Container className="mb-5">
         <Row className="row-cols-md-2">
           <Col md="6" className="mb-4">
             <CardInfo title="About Us" className="mt-n4">

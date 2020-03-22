@@ -14,6 +14,7 @@ const ProductsPage = () => (
   <Layout className="bg-light">
     <SEO 
       title="Easily configure your IoT sensors. Parse any IoT payload."
+      description="We offer a comprehensive collection of IoT payload parser libraries in Python, JavaScript, TypeScript, Elixir and Rust."
     />
 
     <header className="py-5">
@@ -35,9 +36,10 @@ const ProductsPage = () => (
           <Col md="5">
             <h6 className="text-uppercase text-muted">Work in Progress</h6>
             <h2 className="pb-4">Payload Parser</h2>
-            <p className="lead mb-5">
+            <p className="lead">
               Decode uplink payloads of your IoT platform in a human-readable and machine-interpretable format.
             </p>
+            <p>Try it out for free.</p>
           </Col>
           <Col>
             <img 
@@ -50,7 +52,7 @@ const ProductsPage = () => (
         </Row>
         <Row>
           <Col>
-            <Card className="shadow border-0">
+            <Card className="shadow border-0 my-5">
               <CardBody>
                 <Row>
                   <Col>
@@ -58,7 +60,8 @@ const ProductsPage = () => (
                       <FormGroup>
                         <Label size="lg">Select a sensor to decode:</Label>
                         <Input type="select" className="custom-select custom-select-lg" bsSize="lg">
-                          <option>Elsys</option>
+                          <option>Adeunius</option>
+                          <option selected>Elsys</option>
                           <option>Sensoneo</option>
                         </Input>
                       </FormGroup>
@@ -90,6 +93,16 @@ const ProductsPage = () => (
                 </Row>
               </CardBody>
             </Card>
+          </Col>
+        </Row>
+        <Row className="justify-content-center text-md-center">
+          <Col md="8">
+            <p className="lead">
+              Our battle-tested payload parser libraries are available in multiple programming languages such as Python, JavaScript, TypeScript, Elixir, Java and Rust.
+            </p>
+            <p>
+              Feel free to contact us if you are interested in any of them.
+            </p>
           </Col>
         </Row>
       </Container>

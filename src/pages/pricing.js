@@ -26,9 +26,8 @@ const PricingPage = () => (
     </header>
 
     <section className="mb-5">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="position-absolute"><path fill="#fff" fill-opacity="1" d="M0,256L120,224C240,192,480,128,720,106.7C960,85,1200,107,1320,117.3L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
       <Container fluid className="w-xl-75">
-        <Row className="row-cols-2 row-cols-xl-4">
+        <Row className="row-cols-1 row-cols-sm-2 row-cols-xl-4">
           <Col className="mt-5">
             <PricingCard 
               plan="Starter" 

@@ -8,15 +8,15 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink } from 'reactstrap'
+  NavLink
+} from 'reactstrap'
 import Logo from '../images/anypayload.png'
 
-const Header = (props) => {
+export default (props) => {
   const [collapsed, setCollapsed] = useState(true);
   const toggleNavbar = () => setCollapsed(!collapsed);
 
   return (
-  <header>
     <Navbar color="transparent" light expand="lg" sticky>
       <Container>
         <NavbarBrand tag={Link} to="/">
@@ -41,9 +41,6 @@ const Header = (props) => {
         </Collapse>
       </Container>
     </Navbar>
-  </header>
   )
 }
-  
-export default Header
   

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-/* BOOTSTRAP */
+/* BOOTSTRAP CUSTOMIZATION */
 $font-family-sans-serif: 'Roboto', sans-serif;
 $font-family-monospace: 'Roboto Mono', monospace;
 
@@ -14,9 +14,7 @@ $navbar-light-hover-color: $primary;
 $navbar-light-active-color: $primary;
 
 $headings-font-weight: 700 !default;
-
-//$navbar-padding-y: 1rem;
-$card-columns-count:                2 !default;
+$card-columns-count: 2 !default;
 
 $spacer: 1rem !default;
 $spacers: (
@@ -66,10 +64,6 @@ nav {
   }
 }
 
-header .navbar-nav {
-  font-size: .9rem;
-}
-
 footer {
   color: $text-muted;
 
@@ -78,11 +72,6 @@ footer {
     font-family: $font-family-monospace;
     font-size: .9rem;
   }
-}
-
-h5.card-title {
-  text-transform: uppercase;
-  font-family: $font-family-monospace;
 }
 
 .bg-primary-light {

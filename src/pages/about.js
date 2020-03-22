@@ -4,7 +4,6 @@ import WorldMap from '../components/world-map'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Callto from '../components/callto'
-import CardInfo from '../components/card'
 
 const AboutPage = () => (
   <Layout>
@@ -31,29 +30,20 @@ const AboutPage = () => (
               </blockquote>
             </Col>
           </Row>
+
+          <Row className="mt-md-5 justify-content-center">
+            <Col md="5" className="mt-4">
+              <h6 className="text-uppercase text-primary">Our Mission</h6>
+              <h3 className="pb-4">Make adoption of IoT technology simple.</h3>
+            </Col>
+
+            <Col md={{size: 5, offset: 1}} className="mt-4">
+              <h6 className="text-uppercase text-primary">About Us</h6>
+              <h3 className="pb-4">We are a small team of software engineers and product managers, embracing IoT technologies.</h3>
+            </Col>
+          </Row>
         </Container>
       </WorldMap>
-
-      <Container className="mb-5">
-        <Row className="row-cols-md-2">
-          <Col md="6" className="mb-4">
-            <CardInfo title="About Us" className="mt-n4">
-              <p>We are a small team that …</p>
-              <ul>
-                <li>embraces IoT technologies,</li>
-                <li>appreciate high-quality software,</li>
-                <li>prefers economically feasible effectiveness and automation.</li>
-              </ul>
-            </CardInfo>
-          </Col>
-
-          <Col md="6" className="mb-4">
-            <CardInfo title="Our Mission" className="mt-n4">
-              <p>Make adoption of IoT technology simple.</p>
-            </CardInfo>
-          </Col>
-        </Row>
-      </Container>
     </section>
     
     <Callto />

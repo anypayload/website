@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Container, Row, Col, Button } from "reactstrap"
-import { faCloud, faMicrochip } from "@fortawesome/free-solid-svg-icons"
+import { FaCloud, FaMicrochip } from "react-icons/fa"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Callto from "../components/callto"
@@ -15,17 +15,20 @@ const IndexPage = () => (
       title="Production-ready and payload parser and downlink generator for your IoT application"
     />
 
-    <section className="bg-primary text-white bg circuit">
-      <Container>
-        <Row>
-          <Col md="7">
-            <div class="py-5 my-5">
-              <h1>Production-ready sensor payloads for your IoT application.</h1>
-              <Button to={`/about`} tag={Link} color="secondary" size="lg" className="mt-4">Get started</Button>
-            </div>
-          </Col>
-        </Row>
-      </Container>
+    <section className="text-white">
+      <div className="bg-primary">
+        <Container>
+          <Row>
+            <Col md="7">
+              <div class="py-5 my-5 bg circuit">
+                <h1>Production-ready sensor payloads for your IoT application.</h1>
+                <Button to={`/about`} tag={Link} color="secondary" size="lg" className="mt-4">Get started</Button>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      {/*<svg className="mt-n7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1cb2a9" fill-opacity="1" d="M0,288L60,266.7C120,245,240,203,360,197.3C480,192,600,224,720,240C840,256,960,256,1080,240C1200,224,1320,192,1380,176L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>*/}
     </section>
 
     <section className="py-5">
@@ -49,7 +52,7 @@ const IndexPage = () => (
                 </pre>
               </Col>
               <Col xs={{ size: 2, offset: 1 }}>
-                <img src={anypayload} alt="anypayload technology" className="img-fluid rounded shadow" />
+                <img src={anypayload} alt="anypayload technology" className="img-fluid rounded-circle p-1 shadow" />
               </Col>
               <Col xs={{ size: 4, offset: 1 }}>
                 <h5 className="text-primary mt-3">Output</h5>
@@ -87,7 +90,7 @@ const IndexPage = () => (
         </Row>
         <Row>
           <Col md="6" className="mt-5">
-            <CardTargetGroup icon={faCloud} title="For Organizations adopting IoT">
+            <CardTargetGroup icon={FaCloud} title="For Organizations adopting IoT">
               <p>
                 Building IoT solutions is challenging, especially if you want to execute in a faster
                 than ever changing environment. Our technology helps you to focus on your core product, 
@@ -104,7 +107,7 @@ const IndexPage = () => (
             </CardTargetGroup>
           </Col>*/}
           <Col md="6" className="mt-5">
-            <CardTargetGroup icon={faMicrochip} title="For Hardware Producers">
+            <CardTargetGroup icon={FaMicrochip} title="For Hardware Producers">
               <p>
                 You are great in manufacturing hardware, but struggle to provide and implement
                 high quality and developer friendly software in multiple languages, 

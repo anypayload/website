@@ -1,8 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Container, Row, Col, Card, CardBody, CardTitle, CardSubtitle, CardHeader, CardFooter, Button } from "reactstrap"
-import { faCheck } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { FaCheck } from "react-icons/fa"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -18,7 +17,7 @@ const PricingPage = () => (
           <Col md="6" className="text-center">
             <h1>Pricing</h1>
             <h2 className="text-muted lead mt-4">
-              Focus on your core business, we do the rest.
+              Focus on your core business. We take care of your payloads.
             </h2>
           </Col>
         </Row>
@@ -27,8 +26,8 @@ const PricingPage = () => (
 
     <section className="mb-5">
       <Container fluid className="w-xl-75">
-        <Row className="row-cols-1 row-cols-sm-2 row-cols-xl-4">
-          <Col className="mt-5">
+        <Row className="row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
+          <Col className="mt-5 d-none">
             <PricingCard 
               plan="Starter" 
               className="border-0"
@@ -37,40 +36,38 @@ const PricingPage = () => (
               buttonText="Get started"
             >
               <ul className="list-unstyled">
-                <li><FontAwesomeIcon icon={faCheck} fixedWidth className="text-primary mr-2" /> Online Payload Parser</li>
-                <li><FontAwesomeIcon icon={faCheck} fixedWidth className="text-primary mr-2" /> News and Updates</li>
+                <li><FaCheck fixedWidth className="text-primary mr-2" /> Online Payload Parser</li>
+                <li><FaCheck fixedWidth className="text-primary mr-2" /> Product News</li>
               </ul>
             </PricingCard>
           </Col>
 
           <Col className="mt-5">
             <PricingCard 
-              plan="Basic" 
+              plan="Single" 
               className="border-0"
-              description="Adopt our IoT payloads quickly"
+              description="Single payload decoder"
               costs="€ 249"
-              costsPer="/ Payload"
+              costsPer="excl. VAT"
               buttonText="Get started"
             >
               <ul className="list-unstyled">
-                <li><FontAwesomeIcon icon={faCheck} fixedWidth className="text-primary mr-2" /> Everything included in Solo</li>
-                <li><FontAwesomeIcon icon={faCheck} fixedWidth className="text-primary mr-2" /> Source code for a single payload</li>
+                <li><FaCheck fixedWidth className="text-primary mr-2" /> Source code for a single payload in a programming language of your choice</li>
               </ul>
             </PricingCard>
           </Col>
 
           <Col className="mt-5">
             <PricingCard 
-              plan="Pro" 
+              plan="Bundle" 
               className="shadow-lg border-primary"
-              description="Simplify managing your sensors"
-              costs="€ 599"
-              costsPer="/ Year"
+              description="Five payload decoders"
+              costs="€ 999"
+              costsPer="excl. VAT"
               buttonText="Get started"
             >
               <ul className="list-unstyled">
-                <li><FontAwesomeIcon icon={faCheck} fixedWidth className="text-primary mr-2" /> Everything included in Basic</li>
-                <li><FontAwesomeIcon icon={faCheck} fixedWidth className="text-primary mr-2" /> Online Downlink-Generator</li>
+                <li><FaCheck fixedWidth className="text-primary mr-2" /> Source code for five payloads in a programming language of your choice</li>
               </ul>
             </PricingCard>
           </Col>
@@ -84,11 +81,22 @@ const PricingPage = () => (
               buttonText="Contact us"
             >
               <ul className="list-unstyled">
-                <li><FontAwesomeIcon icon={faCheck} fixedWidth className="text-primary mr-2" /> Custom payload implementation</li>
-                <li><FontAwesomeIcon icon={faCheck} fixedWidth className="text-primary mr-2" /> Extensive documentation</li>
-                <li><FontAwesomeIcon icon={faCheck} fixedWidth className="text-primary mr-2" /> White-label solutions</li>
+                <li><FaCheck fixedWidth className="text-primary mr-2" /> Custom payload implementation</li>
+                <li><FaCheck fixedWidth className="text-primary mr-2" /> Extensive documentation</li>
+                <li><FaCheck fixedWidth className="text-primary mr-2" /> White-label solutions</li>
+                <li><FaCheck fixedWidth className="text-primary mr-2" /> Consulting services</li>
               </ul>
             </PricingCard>
+          </Col>
+        </Row>
+
+        <Row className="py-5">
+          <Col className="mx-auto text-center" md="7">
+            <p className="lead">
+              We are already working on a broader set of payload decoders. 
+              Furthermore, we are currently aiming to simplify configurations of sensors over the air.
+            </p>
+            <p>More products coming soon.</p>
           </Col>
         </Row>
       </Container>

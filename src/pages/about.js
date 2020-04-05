@@ -2,11 +2,12 @@ import React from 'react'
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import { Container, Row, Col, ListGroup, ListGroupItem } from 'reactstrap'
+import { FaLinkedin, FaXingSquare, FaGithub, FaStackOverflow } from 'react-icons/fa'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import WorldMap from '../components/world-map'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Callto from '../components/callto'
-import { FaLinkedin, FaXingSquare, FaGithub, FaStackOverflow } from 'react-icons/fa'
 
 export default ({ data }) => (
   <Layout>
@@ -69,8 +70,8 @@ export default ({ data }) => (
               for an Oxford University spin-out.
             </p>
             <ListGroup horizontal>
-              <ListGroupItem title="LinkedIn" tag="a" href="https://www.linkedin.com/in/gerald-berger-357942100/"><FaLinkedin /></ListGroupItem>
-              <ListGroupItem title="Github" tag="a" href="https://github.com/gbrgr"><FaGithub /></ListGroupItem>
+              <ListGroupItem title="LinkedIn" tag={OutboundLink} target="_blank" href="https://www.linkedin.com/in/gerald-berger-357942100/"><FaLinkedin /></ListGroupItem>
+              <ListGroupItem title="Github" tag={OutboundLink} target="_blank" href="https://github.com/gbrgr"><FaGithub /></ListGroupItem>
             </ListGroup>
           </Col>
 
@@ -87,10 +88,10 @@ export default ({ data }) => (
               especially in the energy and marketing industries.
             </p>
             <ListGroup horizontal>
-              <ListGroupItem title="LinkedIn" tag="a" href="https://www.linkedin.com/in/thomas-schmidleithner"><FaLinkedin /></ListGroupItem>
-              <ListGroupItem title="Xing" tag="a" href="https://www.xing.com/profile/Thomas_Schmidleithner"><FaXingSquare /></ListGroupItem>
-              <ListGroupItem title="Github" tag="a" href="https://github.com/tschmidleithner"><FaGithub /></ListGroupItem>
-              <ListGroupItem title="Stack Overflow" tag="a" href="https://stackoverflow.com/users/2571938/tom"><FaStackOverflow /></ListGroupItem>
+              <ListGroupItem title="LinkedIn" tag={OutboundLink} target="_blank" href="https://www.linkedin.com/in/thomas-schmidleithner"><FaLinkedin /></ListGroupItem>
+              <ListGroupItem title="Xing" tag={OutboundLink} target="_blank" href="https://www.xing.com/profile/Thomas_Schmidleithner"><FaXingSquare /></ListGroupItem>
+              <ListGroupItem title="Github" tag={OutboundLink} target="_blank" href="https://github.com/tschmidleithner"><FaGithub /></ListGroupItem>
+              <ListGroupItem title="Stack Overflow" tag={OutboundLink} target="_blank" href="https://stackoverflow.com/users/2571938/tom"><FaStackOverflow /></ListGroupItem>
             </ListGroup>
           </Col>
         </Row>

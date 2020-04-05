@@ -107,10 +107,10 @@ const IndexPage = () => (
             </CardTargetGroup>
           </Col>*/}
           <Col md="6" className="mt-5">
-            <CardTargetGroup icon={FaMicrochip} title="For Hardware Producers">
+            <CardTargetGroup icon={FaMicrochip} title="For Hardware Manufacturers">
               <p>
                 You are great in manufacturing hardware, but struggle to provide and implement
-                high quality and developer friendly software in multiple languages, 
+                high quality and developer-friendly software in multiple languages, 
                 which is crucial for broad adoption of your hardware?<br />
                 We are happy to support you.
               </p>

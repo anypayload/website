@@ -65,9 +65,8 @@ export default ({ data }) => (
             />
             <h6 className="text-uppercase text-primary">Gerald Berger</h6>
             <p className="py-3">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-              sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
-              sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+              PhD in Computer Science with a strong background in data engineering. Works
+              for an Oxford University spin-out.
             </p>
             <ListGroup horizontal>
               <ListGroupItem title="LinkedIn" tag="a" href="https://www.linkedin.com/in/gerald-berger-357942100/"><FaLinkedin /></ListGroupItem>
@@ -83,9 +82,9 @@ export default ({ data }) => (
             />
             <h6 className="text-uppercase text-primary">Thomas Schmidleithner</h6>
             <p className="py-3">
-              Full-Stack Software Engineer with a strong background in web-backend technologies.
-              Studied Software Engineering at TU Wien and worked for several companies as a freelancer 
-              especially in energy and marketing industries.
+              Full-Stack software engineer with a strong background in web-backend technologies.
+              Studied Software Engineering at TU Wien and worked for several companies as a freelancer,
+              especially in the energy and marketing industries.
             </p>
             <ListGroup horizontal>
               <ListGroupItem title="LinkedIn" tag="a" href="https://www.linkedin.com/in/thomas-schmidleithner"><FaLinkedin /></ListGroupItem>

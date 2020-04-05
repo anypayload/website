@@ -1,14 +1,10 @@
 import React from "react"
 import { Container, Row, Col, Form, FormGroup, Label, Input, Button, Card, CardBody, ListGroup, ListGroupItem } from "reactstrap"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faChevronCircleDown, faChevronCircleUp, faPlay } from "@fortawesome/free-solid-svg-icons"
+import { FaPlay } from "react-icons/fa"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Callto from "../components/callto"
-import CardTargetGroup from "../components/card"
-import anypayload from "../images/anypayload-icon.png"
 import workInProgress from "../images/undraw_work_in_progress_uhmv.svg"
-import blobShape from "../images/blob-shape.svg"
 import logoPython from "../images/languages/Python.svg"
 import logoJavaScript from "../images/languages/JavaScript.svg"
 import logoTypeScript from "../images/languages/TypeScript.svg"
@@ -19,7 +15,7 @@ import logoRust from "../images/languages/Rust.svg"
 const ProductsPage = () => (
   <Layout className="bg-light">
     <SEO 
-      title="Easily configure your IoT sensors. Parse any IoT payload."
+      title="Easily configure your IoT sensors. Decode any IoT payload."
       description="We offer a comprehensive collection of IoT payload parser libraries in Python, JavaScript, TypeScript, Elixir and Rust."
     />
 
@@ -29,31 +25,23 @@ const ProductsPage = () => (
           <Col md="6" className="text-center">
             <h1>Products</h1>
             <h2 className="text-muted lead mt-4">
-              Easily configure your IoT sensors. Parse any IoT payload.
+              Easily configure your IoT sensors. Decode any IoT payload.
             </h2>
           </Col>
         </Row>
       </Container>
     </header>
 
-    <section className="py-5">
-      <Container>
+    <section className="py-5 bg blob-right">
+      <Container className="">
         <Row>
           <Col md="5">
             <h6 className="text-uppercase text-muted">Work in Progress</h6>
-            <h2 className="pb-4">Payload Parser</h2>
+            <h2 className="pb-4">Payload Decoder</h2>
             <p className="lead">
               Decode uplink payloads of your IoT platform in a human-readable and machine-interpretable format.
             </p>
             <p>Try it out for free.</p>
-          </Col>
-          <Col>
-            <img 
-              alt="Background Illustration"
-              src={blobShape} 
-              className="position-absolute" 
-              style={{top: -100, right: -150, opacity: 0.1}} 
-            />
           </Col>
         </Row>
         <Row>
@@ -61,7 +49,7 @@ const ProductsPage = () => (
             <Card className="shadow border-0 my-5">
               <CardBody>
                 <Row>
-                  <Col>
+                  <Col md="6">
                     <Form>
                       <FormGroup>
                         <Label size="lg">Select a sensor to decode:</Label>
@@ -77,22 +65,22 @@ const ProductsPage = () => (
                       </FormGroup>
                       <div className="text-right">
                         <Button color="primary" size="lg" className="font-weight-bold">
-                          <FontAwesomeIcon icon={faPlay} className="mr-3" /> Decode
+                          <FaPlay className="mr-3" /> Decode
                         </Button>
                       </div>
                     </Form>
                   </Col>
 
-                  <Col>
+                  <Col md="6" className="mt-5 mt-md-0">
                     <ListGroup>
                       <ListGroupItem className="d-flex justify-content-between align-items-center">
                         Temperature: <span className="badge badge-primary">22.6°C</span>
                       </ListGroupItem>
                       <ListGroupItem className="d-flex justify-content-between align-items-center">
-                        Humidity: <span className="badge badge-primary">41</span>
+                        Humidity: <span className="badge badge-primary">41%</span>
                       </ListGroupItem>
                       <ListGroupItem className="d-flex justify-content-between align-items-center">
-                        Light: <span className="badge badge-primary">39</span>
+                        Light: <span className="badge badge-primary">39%</span>
                       </ListGroupItem>
                     </ListGroup>
                   </Col>
@@ -172,77 +160,6 @@ const ProductsPage = () => (
             <div class="py-5 my-5 rounded px-5 mr-n5 bg-light text-dark">
               <h1>Get. Started. Now.</h1>
             </div>
-          </Col>
-        </Row>
-      </Container>
-    </section>
-
-    <section className="d-none">
-      <Container>
-        <Row>
-          <Col md="6" className="py-5 border-right">
-            <Row>
-              <Col className="text-md-right">
-                <CardTargetGroup icon={faChevronCircleDown} title="Downlink Generator">
-                  Easily configure your sensors of choice by using our downlink generator. Use our intuitive UI or configure your 
-                  sensors with our API.
-                </CardTargetGroup>
-              </Col>
-            </Row>
-
-            <Row className="justify-content-center align-items-center border-top pt-5">
-              <Col xs="4" className="text-right">
-                <h5 className="text-primary mt-3">Input</h5>
-                <pre>
-                  <code>
-                  "Reboot": True<br />
-                  "TempPer": True<br />
-                  </code>
-                </pre>
-              </Col>
-              <Col xs={{size: 2, offset: 1}}>
-                <img src={anypayload} alt="anypayload technology" className="img-fluid rounded shadow" />
-              </Col>
-              <Col xs={{size: 4, offset: 1}}>
-                <h5 className="text-primary mt-3">Output</h5>
-                <pre>
-                  <code>0x3E01FE</code>
-                  <small className="text-muted d-block">– Elsys Dowlink Sample</small>
-                </pre>
-              </Col>
-            </Row>
-          </Col>
-
-          <Col md="6" className="py-5">
-            <Row>
-              <Col>
-                <CardTargetGroup icon={faChevronCircleUp} title="Payload Parser">
-                  Decode uplink payloads of your IoT platform in a human-readable and machine-interpretable format.
-                </CardTargetGroup>
-              </Col>
-            </Row>
-            
-            <Row className="justify-content-center align-items-center border-top pt-5">
-              <Col xs="4" className="text-right">
-                <h5 className="text-primary mt-3">Input</h5>
-                <pre>
-                  <code>0x0100e20229</code>
-                  <small className="text-muted d-block">– Elsys Payload Sample</small>
-                </pre>
-              </Col>
-              <Col xs={{size: 2, offset: 1}}>
-                <img src={anypayload} alt="anypayload technology" className="img-fluid rounded shadow" />
-              </Col>
-              <Col xs={{size: 4, offset: 1}}>
-                <h5 className="text-primary mt-3">Output</h5>
-                <pre>
-                  <code>
-                  "temperature": 22.6<br />
-                  "humidity": 41<br />
-                  </code>
-                </pre>
-              </Col>
-            </Row>
           </Col>
         </Row>
       </Container>

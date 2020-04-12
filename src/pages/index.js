@@ -1,18 +1,20 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Container, Row, Col, Button } from "reactstrap"
-import { FaCloud, FaMicrochip } from "react-icons/fa"
+import { FaCloud, FaMicrochip, FaPlay } from "react-icons/fa"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Callto from "../components/callto"
 import CardTargetGroup from "../components/card"
 import illustrationProf from "../images/undraw_professor_8lrt.svg"
-import anypayload from "../images/anypayload-icon.png"
+import illustrationCircuit from "../images/undraw_circuit_sdmr.svg"
+import illustrationWorld from "../images/undraw_connected_world_wuay.svg"
+// import anypayload from "../images/anypayload-icon.png"
 
 const IndexPage = () => (
   <Layout>
     <SEO
-      title="Production-ready and payload parser and downlink generator for your IoT application"
+      title="Production-ready payload decoder and downlink generator for your IoT application"
     />
 
     <section className="text-white">
@@ -20,60 +22,79 @@ const IndexPage = () => (
         <Container>
           <Row>
             <Col md="7">
-              <div class="py-5 my-5 bg circuit">
-                <h1>Production-ready sensor payloads for your IoT application.</h1>
-                <Button to={`/about`} tag={Link} color="secondary" size="lg" className="mt-4">Get started</Button>
+              <div class="py-5 mt-5 bg circuit">
+                <h1>Production-ready sensor payloads for your IoT business.</h1>
+                <Button to={`/products`} tag={Link} color="secondary" size="lg" className="mt-4">Get started</Button>
               </div>
             </Col>
           </Row>
         </Container>
       </div>
-      {/*<svg className="mt-n7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1cb2a9" fill-opacity="1" d="M0,288L60,266.7C120,245,240,203,360,197.3C480,192,600,224,720,240C840,256,960,256,1080,240C1200,224,1320,192,1380,176L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>*/}
+      <svg className="mt-n75" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1cb2a9" fill-opacity="1" d="M0,224L120,240C240,256,480,288,720,298.7C960,309,1200,299,1320,293.3L1440,288L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg>
     </section>
 
-    <section className="py-5">
+    <section className="py-5 border-bottom">
       <Container className="py-5">
-        <Row className="align-items-center">
-          <Col xl="6">
-            <h2 className="text-primary">Sensor payloads for humans</h2>
+        <Row>
+          <Col md="7">
+            <h2 className="text-primary font-weight-bold">We help you accelerate your IoT business</h2>
             <p className="lead my-4">
-              Your input is any IoT sensor payload.
-              Your output is the interpreted data in human-readable format.
-              Integrates seamlessly into any software or platform.
+              Adopt any sensor and focus on your core business.
+              We take care of providing tested uplink sensor decoders for your IoT platform.
             </p>
           </Col>
           <Col>
-            <Row className="justify-content-center align-items-center">
-              <Col xs="4" className="text-right">
-                <h5 className="text-primary mt-3">Input</h5>
-                <pre>
-                  <code>0x0100e20229</code>
-                  <small className="text-muted d-block">– Elsys Payload Sample</small>
-                </pre>
-              </Col>
-              <Col xs={{ size: 2, offset: 1 }}>
-                <img src={anypayload} alt="anypayload technology" className="img-fluid rounded-circle p-1 shadow" />
-              </Col>
-              <Col xs={{ size: 4, offset: 1 }}>
-                <h5 className="text-primary mt-3">Output</h5>
-                <pre>
-                  <code>
-                    "temperature": 22.6<br />
-                    "humidity": 41<br />
-                  </code>
-                </pre>
-              </Col>
-            </Row>
+            <img src={illustrationCircuit} className="img-fluid position-md-absolute my-4 my-md-0" alt="IoT Illustration" />
+          </Col>
+        </Row>
+        <Row>
+          <Col md="8" lg="7">
+            <p>Many companies recognize great potential in the digital 
+              transformation of their processes and procedures. The 
+              Internet of Things allows one to collect data 
+              from “things” that were not possible until now. Novel 
+              transmission technologies such as {' '}
+              <abbr title="Long Range Wide Area Network">LoRaWAN</abbr> and 
+              {' '}<abbr title="Narrowband Internet of Things">NB-IoT</abbr> enable data 
+              from different devices, meters, levels or even air parameters 
+              to be recorded inexpensively and continuously.
+            </p>
+            <p>
+              A major difference to existing wireless technologies is the 
+              extensive and energy-saving data transmission from LoRaWAN and 
+              NB-IoT. To ensure these properties, communication must rely on 
+              data packets that are as small as possible. So-called payloads 
+              have established themselves here, i.e. information packets in 
+              the form of hexadecimal strings. These hexadecimal strings are 
+              not easy to decipher by humans and must therefore be translated 
+              both into human-friendlier information, as well as into other 
+              machine-readable formats for further processing.
+            </p>
+            <p className="font-weight-bold">
+              We have tackled the problem and developed a solution to 
+              offer an inexpensive way to decode sensor information. Since we are 
+              aware of the plethora of IoT platforms and programming languages, we 
+              offer ready-to-use scripts in multiple programming languages targeting 
+              several IoT platforms. 
+            </p>
+            <p className="mt-4">
+              <Button to={`/products`} tag={Link} color="primary" size="lg">
+                <FaPlay className="mr-3 fa-spin" />
+                Get started
+              </Button>
+            </p>
           </Col>
         </Row>
       </Container>
     </section>
 
-    <Callto
-      top="Interested in a specific payload?"
-      bottom="Get a quote now."
-      btn="Request quote"
-    />
+    <Container className="d-none">
+      <Row>
+        <Col sm="5">
+          <img src={illustrationWorld} className="img-fluid" alt="Illustration World" />
+        </Col>
+      </Row>
+    </Container>
 
     <section className="py-5">
       <Container className="py-5">
@@ -136,62 +157,12 @@ const IndexPage = () => (
         </Row>
       </Container>
     </section>
-
-    <Callto />
-
-    {/*<section className="py-5 bg-light">
-      <Container>
-        <Row>
-          <Col md="7" className="mx-auto text-center">
-            <h5>
-              You want to integrate your sensor into your IoT platform and you are looking for a highly qualitative payload decoder?
-            </h5>
-          </Col>
-        </Row>
-      </Container>
-
-      <Container>
-        <Row className="justify-content-center align-items-center text-center mt-5">
-          <Col>
-            <StepCard title="1" content="Select your sensor model to find your payload" />
-          </Col>
-
-          <Col>
-            <StepCard title="2" content="Select your programming language of choice." />
-          </Col>
-
-          <Col>
-            <StepCard title="3" content="Buy, download and integrate the payload in your platform." />
-          </Col>
-        </Row>
-      </Container>      
-    </section>
-
-    <section>
-      <Container>
-        <Row>
-          <Col>
-            <div class="my-4 py-5">
-              <h2>To be filled with useful content.</h2>
-              <p>We need to fill this block with useful content.</p>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </section>
-
-    <div className="border-top border-bottom py-4 bg-light">
-      <Container>
-        <Row className="align-items-center justify-content-center text-center mx-auto">
-          <Col md="4" className="py-3" style={{background: `url(${map}) no-repeat center`}}>
-            <p className="mono m-0 small">
-              We help IoT innovators adopting IoT platforms by providing production-ready and tested 
-              sensor payloads in programming languages of their choice.
-            </p>
-          </Col>
-        </Row>
-      </Container>
-</div>*/}
+        
+    <Callto
+      top="Interested in a specific payload?"
+      bottom="Get a quote now."
+      btn="Request quote"
+    />
 
   </Layout>
 )

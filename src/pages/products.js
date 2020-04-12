@@ -80,7 +80,7 @@ const ProductsPage = () => (
                         Humidity: <span className="badge badge-primary">41%</span>
                       </ListGroupItem>
                       <ListGroupItem className="d-flex justify-content-between align-items-center">
-                        Light: <span className="badge badge-primary">39%</span>
+                        Light: <span className="badge badge-primary">39 Lux</span>
                       </ListGroupItem>
                     </ListGroup>
                   </Col>

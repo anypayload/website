@@ -32,7 +32,7 @@ const IndexPage = () => (
       <svg className="mt-n75" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1cb2a9" fill-opacity="1" d="M0,224L120,240C240,256,480,288,720,298.7C960,309,1200,299,1320,293.3L1440,288L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg>
     </section>
 
-    <section className="py-5 border-bottom">
+    <section className="py-5">
       <Container className="py-5">
         <Row>
           <Col md="7">
@@ -95,7 +95,7 @@ const IndexPage = () => (
       </Row>
     </Container>
 
-    <section className="py-5">
+    <section className="py-5 bg-light border-bottom">
       <Container className="py-5">
         <Row className="pb-5 align-items-center">
           <Col md="6">

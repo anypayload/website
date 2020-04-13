@@ -29,16 +29,16 @@ const Industries = (props) => {
           </NavLink>
         </NavItem>
       </Nav>
-      <TabContent activeTab={activeTab}>
-        <TabPane tabId="1">
-          <p className="py-4 lead">
+      <TabContent activeTab={activeTab} className="shadow-sm">
+        <TabPane tabId="1" className="bg-white border border-top-0">
+          <p className="p-2 p-md-4 lead">
             Building IoT solutions is challenging, especially if you want to execute in a faster
             than ever changing environment. Our technology helps you to focus on your core product, 
             while we boost your productivity by unburdening you from recurring and work-intensive tasks.
           </p>
         </TabPane>
-        <TabPane tabId="2">
-          <p className="py-4 lead">
+        <TabPane tabId="2" className="bg-white border border-top-0 ">
+          <p className="p-2 p-md-4 lead">
           You are great in manufacturing hardware, but struggle to provide and implement
           high quality and developer-friendly software in multiple languages, 
           which is crucial for broad adoption of your hardware?<br />

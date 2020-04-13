@@ -30,10 +30,10 @@ const Footer = () =>
               <NavLink to="/products/" tag={Link} className="text-uppercase text-muted">Products</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/products/payload-parser/" tag={Link} activeClassName="active">Payload Parser</NavLink>
+              <NavLink to="/products/#payload-decoder" tag={Link} activeClassName="active">Payload Decoder</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/products/downlink-generator/" tag={Link} activeClassName="active">Downlink Generator</NavLink>
+              <NavLink to="/products/#downlink-generator" tag={Link} activeClassName="active">Downlink Generator</NavLink>
             </NavItem>
           </Nav>
         </Col>
@@ -44,17 +44,14 @@ const Footer = () =>
               <NavLink to="/contact/" tag={Link} className="text-uppercase text-muted">Contact</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/privacy/" tag={Link} activeClassName="active">Privacy Policy</NavLink>
-            </NavItem>
-            <NavItem>
               <NavLink to="/imprint/" tag={Link} activeClassName="active">Imprint</NavLink>
             </NavItem>
           </Nav>
         </Col>
 
         <Col xs="12" md="3" className="text-center text-md-right pt-5">
-          <img src={LogoBlack} className="img-fluid mx-md-n1 w-50 mt-5 mt-md-0" alt="blockninjas" />
-          <small className="mt-md-3 d-block">Production-ready sensor payloads for your IoT solutions.</small>
+          <img src={LogoBlack} className="img-fluid mx-md-n1 w-50 mt-5 mt-md-0" alt="anypayload Logo" />
+          <small className="mt-md-3 d-block">Production-ready sensor payloads for your IoT business.</small>
         </Col>
       </Row>
     </Container>

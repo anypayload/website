@@ -32,8 +32,8 @@ const ProductsPage = () => (
       </Container>
     </header>
 
-    <section className="py-5 bg blob-right">
-      <Container className="">
+    <section className="py-5 bg blob-right" id="payload-decoder">
+      <Container>
         <Row>
           <Col md="5">
             <h6 className="text-uppercase text-muted">Work in Progress</h6>
@@ -122,7 +122,7 @@ const ProductsPage = () => (
       </Container>
     </section>
 
-    <section className="py-6 bg-white">
+    <section className="py-6 bg-white" id="downlink-generator">
       <Container>
         <Row>
           <Col md="5">

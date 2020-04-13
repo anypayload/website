@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col, Button } from 'reactstrap'
 
 const Callto = ({ top, bottom, btn }) => (
-  <div className="bg-light py-5">
+  <div className="py-5">
     <Container>
       <Row className="align-items-center justify-content-md-center" noGutters>
         <Col md="6">

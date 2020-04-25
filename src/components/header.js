@@ -37,6 +37,9 @@ export default (props) => {
             <NavItem>
               <NavLink tag={Link} activeClassName="active" to="/about/">About</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink tag={Link} activeClassName="active" to="/contact/">Contact</NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
       </Container>

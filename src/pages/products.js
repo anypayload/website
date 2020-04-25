@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from 'gatsby'
 import { Container, Row, Col, Form, FormGroup, Label, Input, Button, Card, CardBody, ListGroup, ListGroupItem } from "reactstrap"
 import { FaPlay } from "react-icons/fa"
 import Layout from "../components/layout"
@@ -95,7 +96,7 @@ const ProductsPage = () => (
               Our battle-tested payload parser libraries are available in multiple programming languages such as Python, JavaScript, TypeScript, Java, Rust and Elixir.
             </p>
             <p>
-              Feel free to contact us if you are interested in any of them.
+              Feel free to <Link to="/contact/">contact us</Link> if you are interested in any of them.
             </p>
           </Col>
         </Row>
@@ -133,7 +134,7 @@ const ProductsPage = () => (
               Use either our intuitive UI or our API to configure your sensors.
             </p>
             <p>
-              If you are interested on this, feel free to contact us.<br />
+              If you are interested on this, feel free to <Link to="/contact/">contact us</Link>.<br />
               We are happy to give you early access.
             </p>
           </Col>

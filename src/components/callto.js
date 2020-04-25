@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { Container, Row, Col, Button } from 'reactstrap'
 
 const Callto = ({ top, bottom, btn }) => (
@@ -10,7 +11,7 @@ const Callto = ({ top, bottom, btn }) => (
           <h2>{bottom || "Get in touch now."}</h2>
         </Col>
         <Col md="2">
-          <Button color="primary" size="lg">{btn || "Contact us"}</Button>
+          <Button color="primary" size="lg" tag={Link} to="/contact/">{btn || "Contact us"}</Button>
         </Col>
       </Row>
     </Container>

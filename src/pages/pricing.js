@@ -123,7 +123,7 @@ const PricingCard = ({ className, plan, description, costs, costsPer, children, 
       {children}
     </CardBody>
     <CardFooter className="bg-transparent border-0 mt-0 pt-0">
-      <Button color={buttonText === 'Contact us' ? "dark" : "primary"} tag={Link} to="/start" block className="font-weight-bold">
+      <Button color={buttonText === 'Contact us' ? "dark" : "primary"} tag={Link} to="/contact/" block className="font-weight-bold">
         {buttonText}
       </Button>
     </CardFooter>

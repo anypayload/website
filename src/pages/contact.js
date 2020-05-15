@@ -120,35 +120,35 @@ class ContactPage extends React.Component {
                       <Row form>
                         <Col>
                           <FormGroup>
-                            <Input type="text" id="name" placeholder="Your name" />
+                            <Input type="text" name="name" id="name" placeholder="Your name" onChange={this.handleChange} />
                           </FormGroup>
                         </Col>
                       </Row>
                       <Row form>
                         <Col>
                           <FormGroup>
-                            <Input type="text" id="email" placeholder="Company email" />
+                            <Input type="text" name="email" id="email" placeholder="Company email" onChange={this.handleChange} />
                           </FormGroup>
                         </Col>
                       </Row>
                       <Row form>
                         <Col>
                           <FormGroup>
-                            <Input type="text" id="phone" placeholder="Phone" />
+                            <Input type="text" name="phone" id="phone" placeholder="Phone" onChange={this.handleChange} />
                           </FormGroup>
                         </Col>
                       </Row>
                       <Row form>
                         <Col>
                           <FormGroup>
-                            <Input type="text" id="country" placeholder="Country" />
+                            <Input type="text" name="country" id="country" placeholder="Country" onChange={this.handleChange} />
                           </FormGroup>
                         </Col>
                       </Row>
                       <Row form>
                         <Col>
                           <FormGroup>
-                            <Input type="textarea" id="details" placeholder="Project details or questions" />
+                            <Input type="textarea" name="details" id="details" placeholder="Project details or questions" onChange={this.handleChange} />
                           </FormGroup>
                         </Col>
                       </Row>

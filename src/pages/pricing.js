@@ -46,13 +46,13 @@ const PricingPage = () => (
             <PricingCard 
               plan="Single" 
               className="border-0"
-              description="Single payload decoder"
+              description="Single sensor payload decoder"
               costs="€ 249"
               costsPer="excl. VAT"
               buttonText="Get started"
             >
               <ul className="list-unstyled">
-                <li><FaCheck fixedWidth className="text-primary mr-2" /> Source code for a single payload decoder in a programming language of your choice</li>
+                <li><FaCheck fixedWidth className="text-primary mr-2" /> Source code for a single sensor payload decoder in a programming language of your choice</li>
               </ul>
             </PricingCard>
           </Col>
@@ -61,13 +61,13 @@ const PricingPage = () => (
             <PricingCard 
               plan="Bundle" 
               className="shadow-lg border-primary"
-              description="Five payload decoders"
+              description="Five sensor payload decoders"
               costs="€ 999"
               costsPer="excl. VAT"
               buttonText="Get started"
             >
               <ul className="list-unstyled">
-                <li><FaCheck fixedWidth className="text-primary mr-2" /> Source code for five payload decoders in a programming language of your choice</li>
+                <li><FaCheck fixedWidth className="text-primary mr-2" /> Source code for five sensor payload decoders in a programming language of your choice</li>
               </ul>
             </PricingCard>
           </Col>

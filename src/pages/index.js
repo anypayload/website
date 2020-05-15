@@ -16,20 +16,22 @@ const IndexPage = () => (
       title="Production-ready payload decoder and downlink generator for your IoT application"
     />
 
-    <section className="text-white">
-      <div className="bg-primary">
-        <Container>
-          <Row>
-            <Col md="7">
-              <div class="py-5 mt-5 bg circuit">
-                <h1>Production-ready sensor payloads for your IoT business.</h1>
-                <Button to={`/products`} tag={Link} color="secondary" size="lg" className="mt-4">Get started</Button>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-      <svg className="mt-n75" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1cb2a9" fill-opacity="1" d="M0,224L120,240C240,256,480,288,720,298.7C960,309,1200,299,1320,293.3L1440,288L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg>
+    <section className="bg circuit">
+      <Container>
+        <Row className="justify-content-center text-center">
+          <Col md="12">
+            <div class="py-5 mt-5 px-lg-7">
+              <h1>Production-ready sensor payloads for your <span className="text-primary">IoT business</span></h1>
+              <p className="lead mt-4">We help you to make adoption of IoT technology simple.</p>
+              <Button to={`/products`} tag={Link} color="primary" size="lg" className="mt-4">
+                <FaPlay className="mr-3 mt-n1 fa-spin" />
+                Get started
+              </Button>
+              <Button to={`/contact`} tag={Link} color="light" size="lg" className="mt-4 ml-4">Contact us</Button>
+            </div>
+          </Col>
+        </Row>
+      </Container>
     </section>
 
     <section className="py-5">
@@ -78,7 +80,7 @@ const IndexPage = () => (
             </p>
             <p className="mt-4">
               <Button to={`/products`} tag={Link} color="primary" size="lg">
-                <FaPlay className="mr-3 fa-spin" />
+                <FaPlay className="mr-3 mt-n1 fa-spin" />
                 Get started
               </Button>
             </p>

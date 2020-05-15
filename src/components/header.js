@@ -20,14 +20,14 @@ export default (props) => {
     <Navbar color="transparent" light expand="lg" sticky>
       <Container>
         <NavbarBrand tag={Link} to="/">
-          <img src={Logo} style={{height: "50px"}} alt={props.siteTitle} />
+          <img src={Logo} style={{height: "60px"}} alt={props.siteTitle} />
         </NavbarBrand>
         <NavbarToggler onClick={toggleNavbar} />
         <Collapse isOpen={!collapsed} navbar>
           <Nav className="ml-auto text-uppercase" navbar>
-            <NavItem>
+            {/*<NavItem>
               <NavLink tag={Link} activeClassName="active" to="/industries/">Industries</NavLink>
-            </NavItem>
+            </NavItem>*/}
             <NavItem>
               <NavLink tag={Link} activeClassName="active" to="/products/">Products</NavLink>
             </NavItem>

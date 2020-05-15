@@ -43,13 +43,13 @@ const ContactPage = () => (
                 <Button color="dark" outline block href="mailto:info@serverless.at">
                   <FaEnvelope />
                   {/*<div>office@anypayload.com</div>*/}
-                  <div>info@serverless.at</div>
+                  <div className="mt-1">info@serverless.at</div>
                 </Button>
               </Col>
               <Col>
                 <Button color="dark" outline block href="tel:+436641455590">
                   <FaPhone />
-                  <div>+43 664 14 555 90</div>
+                  <div className="mt-1">+43 664 14 555 90</div>
                 </Button>
               </Col>
             </Row>

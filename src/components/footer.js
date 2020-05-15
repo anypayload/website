@@ -13,13 +13,10 @@ const Footer = () =>
         <Col xs="6" md="3" className="pt-5">
           <Nav vertical>
             <NavItem>
-              <NavLink tag={Link} to="/payloads/" className="text-uppercase text-muted">Payloads</NavLink>
+              <NavLink tag={Link} to="/changelog/" className="text-uppercase text-muted">Payloads</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={Link} to="/articles/topics">Recent</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink tag={Link} to="/articles/submit">Changelog</NavLink>
+              <NavLink tag={Link} to="/changelog">Changelog</NavLink>
             </NavItem>
           </Nav>
         </Col>

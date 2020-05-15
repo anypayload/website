@@ -29,7 +29,7 @@ const ImprintPage = () => (
             <h2>Datenschutz</h2>
           </Col>
         </Row>
-        <Row className="py-5 pb-lg-5">
+        <Row className="py-5">
           <Col md="4">
             <h5>Anbieter und Verantwortlicher</h5>
             <address>
@@ -47,6 +47,13 @@ const ImprintPage = () => (
             <h5>Email</h5>
             <p>
               <a href="mailto:info@serverless.at">info@serverless.at</a>
+            </p>
+          </Col>
+        </Row>
+        <Row className="pb-5">
+          <Col lg="6">
+            <p><strong>VAT ID:</strong> ATU72845228<br />
+            Mitglied der Wirtschaftskammer Oberösterreich, Fachgruppe Unternehmensberatung, Buchhaltung und Informationstechnologie
             </p>
           </Col>
         </Row>

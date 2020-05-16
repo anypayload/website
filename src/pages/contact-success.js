@@ -1,7 +1,6 @@
 import React from "react"
-import { navigate } from "gatsby"
-import { Container, Row, Col, Card, CardBody,Button, Form, FormGroup, Input, Alert } from "reactstrap"
-import { FaLock, FaPhone, FaEnvelope } from "react-icons/fa"
+import { Container, Row, Col,Button, Alert } from "reactstrap"
+import { FaPhone, FaEnvelope } from "react-icons/fa"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 

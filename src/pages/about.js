@@ -43,7 +43,7 @@ export default ({ data }) => (
 
             <Col md={{size: 5, offset: 1}} className="mt-4 text-center text-md-left">
               <h6 className="text-uppercase text-primary">About Us</h6>
-              <h3 className="pb-4">We are a small team of software engineers and product managers, embracing IoT technologies.</h3>
+              <h3 className="pb-4">We are a small team of software engineers and product managers embracing IoT technologies.</h3>
             </Col>
           </Row>
         </Container>

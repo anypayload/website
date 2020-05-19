@@ -47,6 +47,9 @@ const ProductsPage = () => (
         </Row>
         <Row>
           <Col>
+            <div className="position-absolute h-100 w-100 bg-white text-center justify-content-center d-flex align-items-center" style={{ zIndex: 10000, opacity: 0.8, left: 0, top: 0}}>
+              <h4>Work in Progress.</h4>
+            </div>
             <Card className="shadow border-0 my-5">
               <CardBody>
                 <Row>

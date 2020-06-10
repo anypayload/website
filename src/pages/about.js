@@ -12,7 +12,7 @@ import Callto from '../components/callto'
 export default ({ data }) => (
   <Layout>
     <SEO 
-      title="An Internet of Things initative from Austria" 
+      title="An Internet of Things initiative from Austria" 
       description="We seek to simplify the use of IoT sensors and devices in production by eliminating repetitive tasks.
       We are a small team located in Austria engaging in software consulting in IoT and related areas."
     />

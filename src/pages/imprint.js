@@ -46,7 +46,7 @@ const ImprintPage = () => (
           <Col md="4">
             <h5>Email</h5>
             <p>
-              <a href="mailto:info@serverless.at">info@serverless.at</a>
+              <a href="mailto:office@anypayload.com">office@anypayload.com</a>
             </p>
           </Col>
         </Row>

@@ -80,11 +80,9 @@ class ContactPage extends React.Component {
 
                 <Row className="my-4">
                   <Col>
-                    {/*<Button color="dark" outline block href="mailto:office@anypayload.com">*/}
-                    <Button color="dark" outline block href="mailto:info@serverless.at">
+                    <Button color="dark" outline block href="mailto:office@anypayload.com">
                       <FaEnvelope />
-                      {/*<div>office@anypayload.com</div>*/}
-                      <div className="mt-1">info@serverless.at</div>
+                      <div className="mt-1">office@anypayload.com</div>
                     </Button>
                   </Col>
                   <Col>

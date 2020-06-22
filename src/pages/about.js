@@ -65,6 +65,7 @@ export default ({ data }) => (
               alt="Gerald Berger" 
             />
             <h6 className="text-uppercase text-primary">Gerald Berger</h6>
+            <a href="mailto:gerald@anypayload.com" className="text-muted">gerald@anypayload.com</a>
             <p className="py-3">
               PhD in Computer Science with a strong background in data engineering. Works
               for an Oxford University spin-out.
@@ -82,6 +83,7 @@ export default ({ data }) => (
               alt="Thomas Schmidleithner"
             />
             <h6 className="text-uppercase text-primary">Thomas Schmidleithner</h6>
+            <a href="mailto:thomas@anypayload.com" className="text-muted">thomas@anypayload.com</a>
             <p className="py-3">
               Full-Stack software engineer with a strong background in web-backend technologies.
               Studied Software Engineering at TU Wien and worked for several companies as a freelancer,

@@ -29,10 +29,19 @@ const ProductsPage = () => (
         <Row className="justify-content-center">
           <Col md="8" className="text-center">
             <article className="py-5">
+              <h4>Elvaco CMi4160</h4>
+              <h6 className="text-muted font-weight-light mb-4">June 24, 2020</h6>
+              <p>
+                We have implemented the Elvaco CMi4160 sensor in most recent 
+                version 1.0 and added the decoder to our payload collection.
+              </p>
+            </article>
+            <article className="py-5 border-top">
               <h4>Adeunis Dry Contacts</h4>
               <h6 className="text-muted font-weight-light mb-4">May 11, 2020</h6>
               <p>
-                We have implemented the Adeunis Dry Contacts sensor to our payload collection.
+                We have implemented the Adeunis Dry Contacts sensor and added the 
+                decoder to our payload collection.
               </p>
             </article>
             <article className="py-5 border-top">

@@ -1,87 +1,67 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import { FaPlay } from "react-icons/fa"
+import { Container, Row, Col } from "reactstrap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Container, Row, Col, Card, CardBody, CardTitle, Button, CardText, ListGroup, ListGroupItem, Form, FormGroup, Label, Input } from "reactstrap"
-
-const StepCard = ({title, content}) => (
-  <Card className="shadow-sm border-0" body>
-    <CardTitle className="font-weight-bold h4 mt-n5">
-      <span className="badge badge-pill badge-primary" style={{padding: "0.75rem"}}>
-      {title}
-      </span>
-    </CardTitle>
-    <CardText>
-      {content}
-    </CardText>
-  </Card>
-)
 
 export default ({ data }) => (
   <Layout>
     <SEO title="Payloads" />
 
-    <section>
+    <header className="py-5">
+      <Container>
+        <Row className="justify-content-center">
+          <Col className="text-center">
+            <h1>Excerpt of Sensor Payloads</h1>
+            <h2 className="text-muted lead mt-4">
+            {`We are offering production-ready sensor payloads`}
+            </h2>
+          </Col>
+        </Row>
+      </Container>
+    </header>
+
+    <section className="bg-light pt-5">
       <Container>
         <Row>
           <Col>
-            <table className="table">
+            <table className="table text-center table-hover table-borderless">
+              <thead>
+                <th>
+                  Manufacturer
+                </th>
+                <th>
+                  Sensor
+                </th>
+                <th></th>
+              </thead>
               <tbody>
-                {data.allMarkdownRemark.edges.map((edge, idx) => 
+                {data.allMarkdownRemark.edges.map(edge => 
                 <tr>
                   <td>{edge.node.frontmatter.manufacturer}</td>
-                  <td>{edge.node.frontmatter.payload}</td>
-                  <td><Link to={edge.node.fields.slug}>Show</Link></td>
+                  <td>{edge.node.frontmatter.sensor}</td>
+                  <td>
+                    <Link to={edge.node.fields.slug}>
+                      <FaPlay className="mr-3" /> More
+                    </Link>
+                  </td>
                 </tr>
                 )}
               </tbody>
             </table>
           </Col>
         </Row>
-      </Container>
-    </section>
-
-    <section className="py-5 bg-light">
-      <Container>
-        <Row>
-          <Col>
-            <h6 className="text-muted">Payloads</h6>
-            <h1>Elsys</h1>
-          </Col>
-        </Row>
-      </Container>
-    </section>
-    <section class="py-5 my-5">
-      <Container>
-        <Row>
-          <Col md="3">
-            <ListGroup>
-              <ListGroupItem className="active">
-                <Link to="/elsys">Elsys</Link>
-              </ListGroupItem>
-              <ListGroupItem>
-                Senseo
-              </ListGroupItem>
-              <ListGroupItem>
-                Senseo
-              </ListGroupItem>
-            </ListGroup>
-          </Col>
-          <Col md="9">
-            <p>Description ...</p>
-            {/*<p>Work in progress, please contact us.</p>*/}
-
-            <h2>Try it out.</h2>
-            <Form inline>
-              <FormGroup>
-                <Input type="text" name="payload" id="exampleEmail" placeholder="0100e202290400270506060308070d62" />
-                <Button>Convert</Button>
-              </FormGroup>
-            </Form>
-
-            <div className="bg-light p-5 mt-2">
-              <p>Temperature: 10</p>
-            </div>
+        
+        <Row className="py-5">
+          <Col className="mx-auto text-center" md="7">
+            <p className="lead">
+              This list is not complete and is just an excerpt yet. 
+              We offer a lot of other sensor payload decoders as well.  
+              Furthermore, we are happy to help in integrating your sensors of 
+              choice on request.
+            </p>
+            <p>More payload decoders coming soon.</p>
           </Col>
         </Row>
       </Container>
@@ -91,7 +71,7 @@ export default ({ data }) => (
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___payload], order: ASC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___sensor], order: ASC }) {
       totalCount
       edges {
         node {
@@ -100,7 +80,7 @@ export const query = graphql`
           }
           frontmatter {
             manufacturer
-            payload
+            sensor
           }
           excerpt
         }

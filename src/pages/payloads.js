@@ -34,7 +34,7 @@ export default ({ data }) => (
                 <th>
                   Sensor
                 </th>
-                <th></th>
+                <th>{}</th>
               </thead>
               <tbody>
                 {data.allMarkdownRemark.edges.map(edge => 

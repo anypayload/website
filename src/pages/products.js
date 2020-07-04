@@ -13,6 +13,127 @@ import logoElixir from "../images/languages/Elixir.png"
 import logoJava from "../images/languages/Java.svg"
 import logoRust from "../images/languages/Rust.svg"
 
+const DECODER_API = "https://europe-west3-silent-octagon-281319.cloudfunctions.net/website-lambda-api"
+
+class Decoder extends React.Component {
+  state = {
+    decoder: "elsys",
+    payload: "",
+    decoded: null
+  }
+
+  handleInputChange = event => {
+    const target = event.target
+    const value = target.value
+    const name = target.name
+    this.setState({
+      [name]: value,
+    })
+  }
+
+  handleSubmit = event => {
+    event.preventDefault()
+  
+    const decoder = this.state.decoder;
+
+    // Remove optional hex prefix
+    const payload = this.state.payload.replace('0x', '')
+    
+    console.info(`Decode payload '${payload}' using '${decoder}'`)
+
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ payload: payload })
+    }
+
+    fetch(`${DECODER_API}/decoders/${decoder}`, requestOptions)
+      .then(response => response.json())
+      .then(data => this.setState({ decoded: data }))
+  }
+
+  render() {
+    return (
+      <Card className="shadow border-0 my-5">
+        <CardBody>
+          <Row>
+            <Col md="6">
+              <Form onSubmit={this.handleSubmit} method="post">
+                <FormGroup>
+                  <Label size="lg">Select a sensor to decode:</Label>
+                  <Input 
+                    type="select" 
+                    name="decoder" 
+                    onChange={this.handleInputChange} 
+                    className="custom-select custom-select-lg" 
+                    bsSize="lg"
+                    defaultValue={'elsys'}
+                  >
+                    <option value="adeunis-dc">Adeunius Dry Contacts</option>
+                    <option value="elsys">Elsys</option>
+                    <option value="elvaco-CMi4160">Elvaco CMi4160</option>
+                    <option value="libelium-smart-parking-v1">Libelium Smart Parking (v1)</option>
+                  </Input>
+                </FormGroup>
+                <FormGroup>
+                  <Label size="lg">Insert your sensor payload:</Label>
+                  <Input 
+                    type="text" 
+                    name="payload"
+                    onChange={this.handleInputChange}
+                    placeholder="0x0100e20229040027" 
+                    bsSize="lg" 
+                  />
+                </FormGroup>
+                <div className="text-right">
+                  <Button type="submit" color="primary" size="lg" className="font-weight-bold">
+                    <FaPlay className="mr-3" /> Decode
+                  </Button>
+                </div>
+              </Form>
+            </Col>
+
+            <Col md="6" className="mt-5 mt-md-0">
+              {this.state.decoded && <PrettyPrintJson data={this.state.decoded} />}
+              {!this.state.decoded && <>
+                <h4 className="my-2">Getting started</h4>
+                
+                <p>
+                  Select a sensor and the payload you want to decode. You can 
+                  also try out one of the following examples:
+                </p>
+                
+                <ul className="mt-2">
+                  <li>Adeunis Dry Contacts: <code>0x1020900143140700020000</code></li>
+                  <li>Elsys: <code>0x0100CD021E07005F</code></li>
+                  <li>Elvaco CMi4160: <code>0x1E0403A00000000413FF000000022BFF00023BFF00025AA000025EA000ABCD0A010000FF00010F01FD17FF</code></li>
+                  <li>Libelium Smart Parking v1: <code>0x00281515adef6b0ae300c5</code></li>
+                </ul>
+              </>}
+              {/*<ListGroup>
+                <ListGroupItem className="d-flex justify-content-between align-items-center">
+                  Temperature: <span className="badge badge-primary">22.6°C</span>
+                </ListGroupItem>
+                <ListGroupItem className="d-flex justify-content-between align-items-center">
+                  Humidity: <span className="badge badge-primary">41%</span>
+                </ListGroupItem>
+                <ListGroupItem className="d-flex justify-content-between align-items-center">
+                  Light: <span className="badge badge-primary">39 Lux</span>
+                </ListGroupItem>
+              </ListGroup>*/}
+            </Col>
+          </Row>
+        </CardBody>
+      </Card>
+    )
+  }
+}
+
+const PrettyPrintJson = ({data}) => (
+  <div className={`pre-scrollable ${data.status ? 'bg-decode-success' : 'bg-decode-danger'}`}>
+    <pre>{JSON.stringify(data, null, 2) }</pre>
+  </div>)
+
 const ProductsPage = () => (
   <Layout className="bg-light">
     <SEO 
@@ -42,55 +163,12 @@ const ProductsPage = () => (
             <p className="lead">
               Decode uplink payloads of your IoT platform in a human-readable and machine-interpretable format.
             </p>
-            <p>Try it out for free.</p>
+            <p>Simply try out some of our decoders for free.</p>
           </Col>
         </Row>
         <Row>
           <Col>
-            <div className="position-absolute h-100 w-100 bg-white text-center justify-content-center d-flex align-items-center" style={{ zIndex: 10000, opacity: 0.8, left: 0, top: 0}}>
-              <h4>Work in Progress.</h4>
-            </div>
-            <Card className="shadow border-0 my-5">
-              <CardBody>
-                <Row>
-                  <Col md="6">
-                    <Form>
-                      <FormGroup>
-                        <Label size="lg">Select a sensor to decode:</Label>
-                        <Input type="select" className="custom-select custom-select-lg" bsSize="lg">
-                          <option>Adeunius</option>
-                          <option selected>Elsys</option>
-                          <option>Sensoneo</option>
-                        </Input>
-                      </FormGroup>
-                      <FormGroup>
-                        <Label size="lg">Insert your sensor payload:</Label>
-                        <Input type="text" placeholder="0x0100e20229040027"  bsSize="lg" />
-                      </FormGroup>
-                      <div className="text-right">
-                        <Button color="primary" size="lg" className="font-weight-bold">
-                          <FaPlay className="mr-3" /> Decode
-                        </Button>
-                      </div>
-                    </Form>
-                  </Col>
-
-                  <Col md="6" className="mt-5 mt-md-0">
-                    <ListGroup>
-                      <ListGroupItem className="d-flex justify-content-between align-items-center">
-                        Temperature: <span className="badge badge-primary">22.6°C</span>
-                      </ListGroupItem>
-                      <ListGroupItem className="d-flex justify-content-between align-items-center">
-                        Humidity: <span className="badge badge-primary">41%</span>
-                      </ListGroupItem>
-                      <ListGroupItem className="d-flex justify-content-between align-items-center">
-                        Light: <span className="badge badge-primary">39 Lux</span>
-                      </ListGroupItem>
-                    </ListGroup>
-                  </Col>
-                </Row>
-              </CardBody>
-            </Card>
+            <Decoder />
           </Col>
         </Row>
         <Row className="justify-content-center text-md-center">
@@ -156,12 +234,12 @@ const ProductsPage = () => (
       <Container>
         <Row>
           <Col md="6">
-            <div class="py-5 my-5 rounded px-5 ml-n5 bg-primary bg circuit">
+            <div className="py-5 my-5 rounded px-5 ml-n5 bg-primary bg circuit">
               <h1>Easily configure your sensor. Parse any payload.</h1>
             </div>
           </Col>
           <Col md="6">
-            <div class="py-5 my-5 rounded px-5 mr-n5 bg-light text-dark">
+            <div className="py-5 my-5 rounded px-5 mr-n5 bg-light text-dark">
               <h1>Get. Started. Now.</h1>
             </div>
           </Col>

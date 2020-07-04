@@ -17,7 +17,7 @@ export default (props) => {
   const toggleNavbar = () => setCollapsed(!collapsed);
 
   return (
-    <Navbar color="transparent" light expand="lg" sticky>
+    <Navbar color="transparent" light expand="lg">
       <Container>
         <NavbarBrand tag={Link} to="/">
           <img src={Logo} style={{height: "60px"}} alt={props.siteTitle} />

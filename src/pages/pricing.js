@@ -36,8 +36,8 @@ const PricingPage = () => (
               buttonText="Get started"
             >
               <ul className="list-unstyled">
-                <li><FaCheck fixedWidth className="text-primary mr-2" /> Online Payload Parser</li>
-                <li><FaCheck fixedWidth className="text-primary mr-2" /> Product News</li>
+                <li><FaCheck className="text-primary mr-2" /> Online Payload Parser</li>
+                <li><FaCheck className="text-primary mr-2" /> Product News</li>
               </ul>
             </PricingCard>
           </Col>
@@ -52,7 +52,7 @@ const PricingPage = () => (
               buttonText="Get started"
             >
               <ul className="list-unstyled">
-                <li><FaCheck fixedWidth className="text-primary mr-2" /> Source code for a single sensor payload decoder in a programming language of your choice</li>
+                <li><FaCheck className="text-primary mr-2" /> Source code for a single sensor payload decoder in a programming language of your choice</li>
               </ul>
             </PricingCard>
           </Col>
@@ -67,7 +67,7 @@ const PricingPage = () => (
               buttonText="Get started"
             >
               <ul className="list-unstyled">
-                <li><FaCheck fixedWidth className="text-primary mr-2" /> Source code for five sensor payload decoders in a programming language of your choice</li>
+                <li><FaCheck className="text-primary mr-2" /> Source code for five sensor payload decoders in a programming language of your choice</li>
               </ul>
             </PricingCard>
           </Col>

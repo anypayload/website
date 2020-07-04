@@ -4,6 +4,7 @@ manufacturer: "Elsys"
 manufacturer_web: "https://www.elsys.se"
 sensor: "Elsys"
 slug: "elsys"
+use_cases: ["smart-city"]
 ---
 
 We are supporting the popular Elsys sensor.

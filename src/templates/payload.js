@@ -11,7 +11,8 @@ export default ({ data }) => {
   const title = content.frontmatter.title
   const sensor = content.frontmatter.sensor
   const manufacturer = content.frontmatter.manufacturer
-  const manufacturer_web = content.frontmatter.manufacturer_web
+  const manufacturerWeb = content.frontmatter.manufacturer_web
+  const useCases = content.frontmatter.use_cases
 
   return (
     <Layout className="bg-light">
@@ -41,10 +42,13 @@ export default ({ data }) => {
             </Col>
             <Col md="3" className="text-md-right mt-4 mt-md-0">
               <h6 className="text-uppercase">Manufacturer</h6>
-              {renderManufacturer(manufacturer, manufacturer_web)}
+              {renderManufacturer(manufacturer, manufacturerWeb)}
 
               <h6 className="text-uppercase mt-4">Sensor</h6>
               <span>{sensor}</span>
+
+              <h6 className="text-uppercase mt-4">Use Cases</h6>
+              {useCases.map(useCase => <span className="badge badge-primary ml-1">{useCase}</span>)}
             </Col>
           </Row>
         </Container>
@@ -77,6 +81,7 @@ export const query = graphql`
         sensor
         manufacturer
         manufacturer_web
+        use_cases
       }
     }
   }

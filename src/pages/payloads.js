@@ -13,9 +13,9 @@ export default ({ data }) => (
       <Container>
         <Row className="justify-content-center">
           <Col className="text-center">
-            <h1>Excerpt of Sensor Payloads</h1>
+            <h1>Sensor Payloads</h1>
             <h2 className="text-muted lead mt-4">
-            {`We are offering production-ready sensor payloads`}
+            {`Production-ready sensor payloads for your IoT platform`}
             </h2>
           </Col>
         </Row>

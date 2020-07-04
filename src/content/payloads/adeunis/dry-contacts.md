@@ -3,7 +3,8 @@ title: "Adeunis Dry-Contacts"
 manufacturer: "Adeunis"
 manufacturer_web: "https://www.adeunis.com"
 sensor: "Dry-Contacts"
-slug: "adeunis-cmi4160"
+slug: "adeunis-dc"
+use_cases: ["smart-city"]
 ---
 
 We are supporting Adeunis Dry-Contacts (DC) sensors has been implemented and we 

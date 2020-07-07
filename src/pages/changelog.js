@@ -42,8 +42,8 @@ const ProductsPage = () => (
               <h4>Elvaco CMi4160</h4>
               <h6 className="text-muted font-weight-light mb-4">June 24, 2020</h6>
               <p>
-                We have implemented the <Link to='/payloads/elvaco/CMi4160/'>Elvaco CMi4160</Link> 
-                sensor in most recent version 1.0 and added the decoder to our 
+                We have implemented the <Link to='/payloads/elvaco/CMi4160/'>Elvaco CMi4160</Link> sensor 
+                in most recent version 1.0 and added the decoder to our 
                 payload collection.
               </p>
             </article>

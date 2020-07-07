@@ -1,0 +1,6 @@
+# To be removed as soon as Google has updated the elsys path
+[[redirects]]
+  from = "/elsys"
+  to = "/payloads/elsys"
+  status = 301
+  force = false

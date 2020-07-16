@@ -138,8 +138,8 @@ const PrettyPrintJson = ({data}) => (
 const DevelopmentPage = () => (
   <Layout className="bg-light">
     <SEO 
-      title="Easily configure your IoT sensors. Decode any IoT payload."
-      description="We offer a comprehensive collection of IoT payload parser libraries in Python, JavaScript, TypeScript, Elixir and Rust."
+      title="Development"
+      description="Test IoT sensor that are currently in development."
     />
 
     <header className="py-5">

@@ -74,6 +74,7 @@ class Decoder extends React.Component {
                     <option value="elvaco-CMi4160">Elvaco CMi4160</option>
                     <option value="gavazzi-R56">Gavazzi R56 (in development)</option>
                     <option value="libelium-smart-parking-v1">Libelium Smart Parking (v1)</option>
+                    <option value="ursalink-am100">Ursalink AM100/AM102 series (in development)</option>
                   </Input>
                 </FormGroup>
                 <FormGroup>

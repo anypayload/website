@@ -4,7 +4,7 @@ manufacturer: "Adeunis"
 manufacturer_web: "https://www.adeunis.com"
 sensor: "Dry-Contacts"
 slug: "adeunis-dc"
-use_cases: ["smart-city"]
+use_cases: ["smart-city", "smart-metering"]
 ---
 
 We are supporting Adeunis Dry-Contacts (DC) sensors has been implemented and we 

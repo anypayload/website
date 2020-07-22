@@ -30,6 +30,14 @@ const ProductsPage = () => (
         <Row className="justify-content-center">
           <Col md="8" className="text-center">
             <article className="py-5">
+              <h4>Ursalink AM100/AM102</h4>
+              <h6 className="text-muted font-weight-light mb-4">July 22, 2020</h6>
+              <p>
+                We have implemented the <Link to='/payloads/ursalink/AM100/'>Ursalink AM100/AM102 series</Link>{' '}
+                sensor and added the decoder to our payload collection.
+              </p>
+            </article>
+            <article className="py-5 border-top">
               <h4>Libelium Smart Parking (v1)</h4>
               <h6 className="text-muted font-weight-light mb-4">July 04, 2020</h6>
               <p>

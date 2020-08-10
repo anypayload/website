@@ -19,7 +19,8 @@ class Decoder extends React.Component {
   state = {
     decoder: "elsys",
     payload: "",
-    decoded: null
+    decoded: null,
+    loading: false
   }
 
   handleInputChange = event => {
@@ -33,8 +34,10 @@ class Decoder extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault()
+
+    this.setState({ loading: true })
   
-    const decoder = this.state.decoder;
+    const decoder = this.state.decoder
 
     // Remove optional hex prefix
     const payload = this.state.payload.replace('0x', '')
@@ -49,10 +52,13 @@ class Decoder extends React.Component {
 
     fetch(`${DECODER_API}/decoders/${decoder}`, requestOptions)
       .then(response => response.json())
-      .then(data => this.setState({ decoded: data }))
+      .then(data => this.setState({ decoded: data, loading: false }))
+      .catch(error => this.setState({ loading: false }))
   }
 
   render() {
+    const { loading } = this.state
+
     return (
       <Card className="shadow border-0 my-5">
         <CardBody>
@@ -68,11 +74,13 @@ class Decoder extends React.Component {
                     className="custom-select custom-select-lg" 
                     bsSize="lg"
                     defaultValue={'elsys'}
+                    disabled={loading}
                   >
                     <option value="adeunis-dc">Adeunius Dry Contacts</option>
                     <option value="elsys">Elsys</option>
                     <option value="elvaco-CMi4160">Elvaco CMi4160</option>
-                    <option value="libelium-smart-parking-v1">Libelium Smart Parking (v1)</option>
+                    <option value="libelium-smart-parking-v1">Libelium Smart Parking V1</option>
+                    <option value="ursalink-AM100">Ursalink AM100/AM102 series</option>
                   </Input>
                 </FormGroup>
                 <FormGroup>
@@ -83,11 +91,12 @@ class Decoder extends React.Component {
                     onChange={this.handleInputChange}
                     placeholder="0x0100e20229040027" 
                     bsSize="lg" 
+                    disabled={loading}
                   />
                 </FormGroup>
                 <div className="text-right">
-                  <Button type="submit" color="primary" size="lg" className="font-weight-bold">
-                    <FaPlay className="mr-3" /> Decode
+                  <Button type="submit" color="primary" size="lg" className="font-weight-bold" disabled={loading}>
+                    <FaPlay className={`mr-3 ${loading ? 'fa-spin' : ''}`} /> Decode
                   </Button>
                 </div>
               </Form>
@@ -154,7 +163,7 @@ const ProductsPage = () => (
       </Container>
     </header>
 
-    <section className="py-5 bg blob-right" id="payload-decoder">
+    <section className="py-5 bg dotted" id="payload-decoder">
       <Container>
         <Row>
           <Col md="5">

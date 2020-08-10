@@ -120,11 +120,12 @@ footer {
     transform-origin: 0;
     z-index: -10;
   }
-  &.blob-right {
-    background-position-y: top;
-    background-position-x: right;
-    background-repeat: no-repeat;
-    background-image: url("data:image/svg+xml,%3Csvg width='600' height='600' viewBox='0 0 600 600' xmlns='http://www.w3.org/2000/svg'%0A%3E%3Cg transform='translate(300,300)'%3E%3Cpath d='M141,-125.3C183,-99,217.5,-49.5,218.3,0.8C219.1,51.1,186.3,102.3,144.3,122.8C102.3,143.3,51.1,133.1,-9.4,142.6C-70,152,-140,181,-163.8,160.5C-187.7,140,-165.3,70,-146.5,18.9C-127.6,-32.3,-112.2,-64.6,-88.4,-90.9C-64.6,-117.2,-32.3,-137.6,8.6,-146.2C49.5,-154.8,99,-151.7,141,-125.3Z' fill='%231cb2a9' fill-opacity='0.2' /%3E%3C/g%3E%3C/svg%3E");
+  &.dotted {
+    background: 
+      linear-gradient(90deg,#f9f9f9 18px,transparent 1%) 50%, 
+      linear-gradient(#f9f9f9 18px,transparent 1%) 50%,#e3e6e7;
+    background-size: 20px 20px;
+
   }
 }
 

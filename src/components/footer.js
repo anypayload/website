@@ -32,6 +32,9 @@ const Footer = () =>
             <NavItem>
               <NavLink to="/products/#downlink-generator" tag={Link} activeClassName="active">Downlink Generator</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink to="/changelog" tag={Link} activeClassName="active">Changelog</NavLink>
+            </NavItem>
           </Nav>
         </Col>
 

@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from 'gatsby'
-import { Container, Row, Col, Form, FormGroup, Label, Input, Button, Card, CardBody, ListGroup, ListGroupItem } from "reactstrap"
+import { Container, Row, Col, Form, FormGroup, Label, Input, Button, Card, CardBody } from "reactstrap"
 import { FaPlay } from "react-icons/fa"
 import Layout from "../components/layout"
 import SEO from "../components/seo"

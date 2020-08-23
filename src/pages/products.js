@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from 'gatsby'
-import { Container, Row, Col, Form, FormGroup, Label, Input, Button, Card, CardBody, ListGroup, ListGroupItem } from "reactstrap"
+import { Container, Row, Col, Form, FormGroup, Label, Input, Button, Card, CardBody } from "reactstrap"
 import { FaPlay } from "react-icons/fa"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -12,6 +12,7 @@ import logoTypeScript from "../images/languages/TypeScript.svg"
 import logoElixir from "../images/languages/Elixir.png"
 import logoJava from "../images/languages/Java.svg"
 import logoRust from "../images/languages/Rust.svg"
+import Newsletter from "../components/newsletter"
 
 const DECODER_API = "https://europe-west3-silent-octagon-281319.cloudfunctions.net/website-lambda-api"
 
@@ -164,7 +165,7 @@ const ProductsPage = () => (
       </Container>
     </header>
 
-    <section className="py-5 bg dotted" id="payload-decoder">
+    <section className="pt-5 bg dotted" id="payload-decoder">
       <Container>
         <Row>
           <Col md="5">
@@ -212,6 +213,10 @@ const ProductsPage = () => (
           </Col>
         </Row>
       </Container>
+
+      <div className="bg-primary py-5">
+        <Newsletter />
+      </div>
     </section>
 
     <section className="py-6 bg-white" id="downlink-generator">

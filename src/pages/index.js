@@ -9,6 +9,7 @@ import illustrationProf from "../images/undraw_professor_8lrt.svg"
 import illustrationCircuit from "../images/undraw_circuit_sdmr.svg"
 import illustrationWorld from "../images/undraw_connected_world_wuay.svg"
 import Industries from "../components/industries"
+import Newsletter from "../components/newsletter"
 
 const IndexPage = () => (
   <Layout>
@@ -118,6 +119,10 @@ const IndexPage = () => (
         </Row>
       </Container>
     </section>
+
+    <div className="bg-primary py-5">
+      <Newsletter />
+    </div>
         
     <Callto
       top="Interested in a specific payload?"

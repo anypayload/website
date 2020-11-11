@@ -151,6 +151,7 @@ class Decoder extends React.Component {
                   <li>Gavazzi: <code>0x01200A000000000F000000</code></li>
                   <li>Gavazzi R56: <code>0x801122334411F400011122334401111122334411223344111122</code></li>
                   <li>Libelium Smart Parking v1: <code>0x00281515adef6b0ae300c5</code></li>
+                  <li>PNI PlacePod Vehicle Detection: <code>0x156601</code></li>
                   <li>Senseair Explora CO<sub>2</sub>: <code>0x12A02300FF</code> with Port <code>2</code></li>
                   <li>Sensoneo Single Sensor: <code>0xffff22b262d090700105050505701b0075</code></li>
                   <li>Tabs Healthy Home Sensor: <code>0xFFCA250A0A000F00</code> with Port <code>103</code></li>

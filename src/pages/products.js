@@ -20,6 +20,7 @@ class Decoder extends React.Component {
   state = {
     decoder: "elsys",
     payload: "",
+    port: 1,
     decoded: null,
     loading: false
   }
@@ -42,13 +43,14 @@ class Decoder extends React.Component {
 
     // Remove optional hex prefix
     const payload = this.state.payload.replace('0x', '')
+    const port = parseInt(this.state.port)
     
     console.info(`Decode payload '${payload}' using '${decoder}'`)
 
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ payload: payload })
+      body: JSON.stringify({ payload: payload, port: port })
     }
 
     fetch(`${DECODER_API}/decoders/${decoder}`, requestOptions)
@@ -78,24 +80,49 @@ class Decoder extends React.Component {
                     disabled={loading}
                   >
                     <option value="adeunis-dc">Adeunius Dry Contacts</option>
+                    <option value="bosch-parking-lot-sensor">Bosch Parking Lot Sensor</option>
+                    <option value="cayenne-lpp">Cayenne LPP</option>
                     <option value="elsys">Elsys</option>
                     <option value="elvaco-CMi4160">Elvaco CMi4160</option>
+                    <option value="emz-slx-1307">EMZ SLX-1307</option>
+                    <option value="gavazzi">Gavazzi</option>
                     <option value="gavazzi-R56">Gavazzi R56</option>
+                    <option value="pni-placepod">PNI PlacePod Vehicle Detection Sensor</option>
+                    <option value="senseair-explora-co2">Senseair Explora CO2</option>
+                    <option value="sensoneo-single-sensor">Sensoneo Single Sensor</option>
+                    <option value="tabs-healthy-home">Tabs Healthy Home Sensor</option>
                     <option value="libelium-smart-parking-v1">Libelium Smart Parking V1</option>
                     <option value="ursalink-AM100">Ursalink AM100/AM102 series</option>
                   </Input>
                 </FormGroup>
-                <FormGroup>
-                  <Label size="lg">Insert your sensor payload:</Label>
-                  <Input 
-                    type="text" 
-                    name="payload"
-                    onChange={this.handleInputChange}
-                    placeholder="0x0100e20229040027" 
-                    bsSize="lg" 
-                    disabled={loading}
-                  />
-                </FormGroup>
+                <Row>
+                  <Col md={9}>
+                    <FormGroup>
+                      <Label size="lg">Insert your sensor payload:</Label>
+                      <Input 
+                        type="text" 
+                        name="payload"
+                        onChange={this.handleInputChange}
+                        placeholder="0x0100e20229040027" 
+                        bsSize="lg" 
+                        disabled={loading}
+                      />
+                    </FormGroup>
+                  </Col>
+                  <Col>
+                    <FormGroup>
+                      <Label size="lg">Port:</Label>
+                      <Input 
+                        type="text" 
+                        name="port"
+                        onChange={this.handleInputChange}
+                        placeholder="1" 
+                        bsSize="lg" 
+                        disabled={loading}
+                      />
+                    </FormGroup>
+                  </Col>
+                </Row>
                 <div className="text-right">
                   <Button type="submit" color="primary" size="lg" className="font-weight-bold" disabled={loading}>
                     <FaPlay className={`mr-3 ${loading ? 'fa-spin' : ''}`} /> Decode
@@ -116,9 +143,18 @@ class Decoder extends React.Component {
                 
                 <ul className="mt-2">
                   <li>Adeunis Dry Contacts: <code>0x1020900143140700020000</code></li>
+                  <li>Bosch Parking Lot Sensor: <code>0x00FE</code></li>
+                  <li>Cayenne LPP: <code>0x6701106700FF</code> with Port <code>2</code></li>
                   <li>Elsys: <code>0x0100CD021E07005F</code></li>
                   <li>Elvaco CMi4160: <code>0x1E0403A00000000413FF000000022BFF00023BFF00025AA000025EA000ABCD0A010000FF00010F01FD17FF</code></li>
+                  <li>EMZ SLX-1307: <code>0x43303A31353233</code></li>
+                  <li>Gavazzi: <code>0x01200A000000000F000000</code></li>
+                  <li>Gavazzi R56: <code>0x801122334411F400011122334401111122334411223344111122</code></li>
                   <li>Libelium Smart Parking v1: <code>0x00281515adef6b0ae300c5</code></li>
+                  <li>Senseair Explora CO<sub>2</sub>: <code>0x12A02300FF</code></li>
+                  <li>Sensoneo Single Sensor: <code>0xffff22b262d090700105050505701b0075</code></li>
+                  <li>Tabs Healthy Home Sensor: <code>0xFFCA250A0A000F00</code></li>
+                  <li>Ursalink AM100/AM102 series: <code>0x0367fc00046849</code></li>
                 </ul>
               </>}
               {/*<ListGroup>

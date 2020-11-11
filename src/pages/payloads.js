@@ -71,7 +71,7 @@ export default ({ data }) => (
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___sensor], order: ASC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___manufacturer], order: ASC }) {
       totalCount
       edges {
         node {

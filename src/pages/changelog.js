@@ -29,7 +29,63 @@ const ProductsPage = () => (
       <Container>
         <Row className="justify-content-center">
           <Col md="8" className="text-center">
-            <article className="py-5">
+            <article className="py-5 border-top">
+              <h4>Bosch Parking Lot Sensor</h4>
+              <h6 className="text-muted font-weight-light mb-4">November 11, 2020</h6>
+              <p>
+                We have implemented the <Link to='/payloads/bosch/parking-lot-sensor'>Bosch Parking Lot Sensor</Link>{' '}
+                and added the decoder to our payload collection.
+              </p>
+            </article>
+            <article className="py-5 border-top">
+              <h4>Sensoneo Single Sensor 3.0</h4>
+              <h6 className="text-muted font-weight-light mb-4">November 11, 2020</h6>
+              <p>
+                We have implemented the <Link to='/payloads/sensoneo/single-sensor'>Sensoneo Single Sensor 3.0</Link>{' '}
+                and added the decoder to our payload collection.
+              </p>
+            </article>
+            <article className="py-5 border-top">
+              <h4>Senseair Explora CO<sub>2</sub> Sensor</h4>
+              <h6 className="text-muted font-weight-light mb-4">November 11, 2020</h6>
+              <p>
+                We have implemented the <Link to='/payloads/senseair/explora-co2/'>Senseair Explora CO<sub>2</sub> Sensor</Link>{' '}
+                and added the decoder to our payload collection.
+              </p>
+            </article>
+            <article className="py-5 border-top">
+              <h4>PNI PlacePod Vehicle Detection Sensor</h4>
+              <h6 className="text-muted font-weight-light mb-4">November 11, 2020</h6>
+              <p>
+                We have implemented the <Link to='/payloads/pni/place-pod-vehicle-detection-sensor/'>PNI PlacePod Vehicle Detection Sensor</Link>{' '}
+                and added the decoder to our payload collection.
+              </p>
+            </article>
+            <article className="py-5 border-top">
+              <h4>Tabs Healthy Home Sensor</h4>
+              <h6 className="text-muted font-weight-light mb-4">November 11, 2020</h6>
+              <p>
+                We have implemented the <Link to='/payloads/tabs/healthy-home-sensor/'>Tabs Healthy Home Sensor</Link>{' '}
+                and added the decoder to our payload collection.
+              </p>
+            </article>
+            <article className="py-5 border-top">
+              <h4>CayenneLPP</h4>
+              <h6 className="text-muted font-weight-light mb-4">November 11, 2020</h6>
+              <p>
+                We have implemented the <Link to='/payloads/cayenne/lpp'>CayenneLPP protocol</Link>{' '}
+                and added the decoder to our payload collection.
+              </p>
+            </article>
+            <article className="py-5 border-top">
+              <h4>Gavazzi</h4>
+              <h6 className="text-muted font-weight-light mb-4">November 11, 2020</h6>
+              <p>
+                We have implemented the <Link to='/payloads/gavazzi/gavazzi/'>Gavazzi</Link>{' '}
+                sensor and added the decoder to our payload collection.
+              </p>
+            </article>
+            <article className="py-5 border-top">
               <h4>Gavazzi R56</h4>
               <h6 className="text-muted font-weight-light mb-4">August 13, 2020</h6>
               <p>

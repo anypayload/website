@@ -16,7 +16,12 @@ export default (props) => {
   const [collapsed, setCollapsed] = useState(true);
   const toggleNavbar = () => setCollapsed(!collapsed);
 
-  return (
+  return (<>
+    <div className="bg-secondary text-center small py-2 position-relative">
+      <Link to={'/products'} className="text-dark stretched-link">
+        <strong>November 11, 2020</strong> <span className="mx-2">🚀</span> Check out our latest payload sensor decoders for Bosch, Gavazzi, PNI, Sensoneo, and many others.
+      </Link>
+    </div>
     <Navbar color="transparent" light expand="lg">
       <Container>
         <NavbarBrand tag={Link} to="/">
@@ -44,6 +49,6 @@ export default (props) => {
         </Collapse>
       </Container>
     </Navbar>
-  )
+  </>)
 }
   

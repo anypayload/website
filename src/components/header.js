@@ -18,7 +18,7 @@ export default (props) => {
 
   return (<>
     <div class="bg-secondary position-relative">
-      <Container className="text-center small py-2 position-relative">
+      <Container className="text-center small py-2">
         <Link to={'/products'} className="text-dark stretched-link">
           <strong>November 11, 2020</strong> <span className="mx-2">🚀</span> Check out our latest payload sensor decoders for Bosch, Gavazzi, PNI, Sensoneo, and many others.
         </Link>

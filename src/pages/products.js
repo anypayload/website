@@ -91,6 +91,7 @@ class Decoder extends React.Component {
                     <option value="senseair-explora-co2">Senseair Explora CO2</option>
                     <option value="sensoneo-single-sensor">Sensoneo Single Sensor</option>
                     <option value="tabs-healthy-home">Tabs Healthy Home Sensor</option>
+                    <option value="teneo-co2-stoplicht">Teneo CO2 Stoplicht</option>
                     <option value="libelium-smart-parking-v1">Libelium Smart Parking V1</option>
                     <option value="ursalink-AM100">Ursalink AM100/AM102 series</option>
                   </Input>
@@ -155,6 +156,7 @@ class Decoder extends React.Component {
                   <li>Senseair Explora CO<sub>2</sub>: <code>0x12A02300FF</code> with Port <code>2</code></li>
                   <li>Sensoneo Single Sensor: <code>0xffff22b262d090700105050505701b0075</code></li>
                   <li>Tabs Healthy Home Sensor: <code>0xFFCA250A0A000F00</code> with Port <code>103</code></li>
+                  <li>Teneo CO2 Stoplicht: <code>0x0F000001533B0753114D</code> with Port <code>1</code></li>
                   <li>Ursalink AM100/AM102 series: <code>0x0367fc00046849</code></li>
                 </ul>
               </>}

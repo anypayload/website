@@ -29,6 +29,14 @@ const ProductsPage = () => (
       <Container>
         <Row className="justify-content-center">
           <Col md="8" className="text-center">
+            <article className="py-5">
+              <h4>Teneo CO2 Stoplicht Sensor</h4>
+              <h6 className="text-muted font-weight-light mb-4">January 26, 2021</h6>
+              <p>
+                We have implemented the <Link to='/payloads/teneo/co2-stoplicht/'>Teneo CO2 Stoplicht Sensor</Link>{' '}
+                and added the decoder to our payload collection.
+              </p>
+            </article>
             <article className="py-5 border-top">
               <h4>Bosch Parking Lot Sensor</h4>
               <h6 className="text-muted font-weight-light mb-4">November 11, 2020</h6>

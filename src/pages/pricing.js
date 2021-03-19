@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 
 const PricingPage = () => (
   <Layout className="bg-light">
-    <SEO 
+    <SEO
       title="Pricing"
     />
 
@@ -28,8 +28,8 @@ const PricingPage = () => (
       <Container fluid className="w-xl-75">
         <Row className="row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
           <Col className="mt-5 d-none">
-            <PricingCard 
-              plan="Starter" 
+            <PricingCard
+              plan="Starter"
               className="border-0"
               description="Use for your personal projects"
               costs="Free"
@@ -43,11 +43,11 @@ const PricingPage = () => (
           </Col>
 
           <Col className="mt-5">
-            <PricingCard 
-              plan="Single" 
+            <PricingCard
+              plan="Single"
               className="border-0"
               description="Single sensor payload decoder"
-              costs="€ 299"
+              costs="€ 395"
               costsPer="excl. VAT"
               buttonText="Get started"
             >
@@ -58,11 +58,11 @@ const PricingPage = () => (
           </Col>
 
           <Col className="mt-5">
-            <PricingCard 
-              plan="Bundle" 
+            <PricingCard
+              plan="Bundle"
               className="shadow-lg border-primary"
               description="Five sensor payload decoders"
-              costs="€ 999"
+              costs="€ 1495"
               costsPer="excl. VAT"
               buttonText="Get started"
             >
@@ -73,8 +73,8 @@ const PricingPage = () => (
           </Col>
 
           <Col className="mt-5">
-            <PricingCard 
-              plan="Enterprise" 
+            <PricingCard
+              plan="Enterprise"
               className="border-0"
               description="Boost productivity and iterate fast"
               costs="Contact us"
@@ -93,7 +93,7 @@ const PricingPage = () => (
         <Row className="py-5">
           <Col className="mx-auto text-center" md="7">
             <p className="lead">
-              We are already working on a broader set of payload decoders. 
+              We are already working on a broader set of payload decoders.
               Furthermore, we are currently aiming to simplify configurations of sensors over the air.
             </p>
             <p>More products coming soon.</p>

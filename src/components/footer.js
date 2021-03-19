@@ -1,11 +1,8 @@
 import React from 'react'
 import { Link } from "gatsby"
 import { Container, Row, Col, Nav, NavItem, NavLink } from 'reactstrap'
-import { FaGithub, FaGithubSquare, FaLinkedin, FaLinkedinIn } from "react-icons/fa"
+import { FaGithub, FaLinkedinIn } from "react-icons/fa"
 import LogoBlack from '../images/anypayload-black.png'
-/*import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import faMeetup from '@fortawesome/fontawesome-free-brands/faMeetup'
-import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'*/
 
 const Footer = () =>
   <footer className="pb-5">
@@ -45,12 +42,12 @@ const Footer = () =>
               <NavLink to="/contact/" tag={Link} className="text-uppercase text-muted">Social</NavLink>
             </NavItem>
             <NavItem className="d-flex">
-              <NavLink to="https://www.github.com/anypayload" tag={Link}>
+              <a href="https://www.github.com/anypayload" className="nav-link">
                 <FaGithub className="h4" />
-              </NavLink>
-              <NavLink to="https://www.linkedin.com/company/anypayload" tag={Link}>
+              </a>
+              <a href="https://www.linkedin.com/company/anypayload" className="nav-link">
                 <FaLinkedinIn className="h4" />
-              </NavLink>
+              </a>
             </NavItem>
           </Nav>
         </Col>

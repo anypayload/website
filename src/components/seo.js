@@ -68,7 +68,23 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <script type="application/ld+json">
+        {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "url": "https://www.anypayload.com",
+              "name": "anypayload",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+43 664 14 555 90",
+                "contactType": "Customer Support"
+              }
+            }
+          `}
+      </script>
+    </Helmet>
   )
 }
 

@@ -17,7 +17,7 @@ const Header = (props) => {
   const toggleNavbar = () => setCollapsed(!collapsed);
 
   return (<>
-    <div class="bg-secondary position-relative">
+    <div className="bg-secondary position-relative">
       <Container className="text-center small py-2">
         <Link to={'/products'} className="text-dark stretched-link">
           <strong>January 26, 2021</strong> <span className="mx-2" role="img" aria-label="Updates">🚀</span> Check out our latest payload sensor decoders for Bosch, Gavazzi, PNI, Sensoneo, Teneo, and many others.

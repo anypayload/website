@@ -81,10 +81,10 @@ const PricingPage = () => (
               buttonText="Contact us"
             >
               <ul className="list-unstyled">
-                <li><FaCheck fixedWidth className="text-primary mr-2" /> Custom payload implementation</li>
-                <li><FaCheck fixedWidth className="text-primary mr-2" /> Extensive documentation</li>
-                <li><FaCheck fixedWidth className="text-primary mr-2" /> White-label solutions</li>
-                <li><FaCheck fixedWidth className="text-primary mr-2" /> Consulting services</li>
+                <li><FaCheck className="text-primary mr-2" /> Custom payload implementation</li>
+                <li><FaCheck className="text-primary mr-2" /> Extensive documentation</li>
+                <li><FaCheck className="text-primary mr-2" /> White-label solutions</li>
+                <li><FaCheck className="text-primary mr-2" /> Consulting services</li>
               </ul>
             </PricingCard>
           </Col>

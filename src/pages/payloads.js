@@ -5,7 +5,7 @@ import { Container, Row, Col } from "reactstrap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-export default ({ data }) => (
+const Payloads = ({ data }) => (
   <Layout>
     <SEO title="Payloads" />
 
@@ -15,7 +15,7 @@ export default ({ data }) => (
           <Col className="text-center">
             <h1>Sensor Payloads</h1>
             <h2 className="text-muted lead mt-4">
-            {`Production-ready sensor payloads for your IoT platform`}
+              {`Production-ready sensor payloads for your IoT platform`}
             </h2>
           </Col>
         </Row>
@@ -34,31 +34,31 @@ export default ({ data }) => (
                 <th>
                   Sensor
                 </th>
-                <th>{}</th>
+                <th>{ }</th>
               </thead>
               <tbody>
-                {data.allMarkdownRemark.edges.map(edge => 
-                <tr>
-                  <td>{edge.node.frontmatter.manufacturer}</td>
-                  <td>{edge.node.frontmatter.sensor}</td>
-                  <td>
-                    <Link to={edge.node.fields.slug}>
-                      <FaPlay className="mr-3" /> More
+                {data.allMarkdownRemark.edges.map(edge =>
+                  <tr>
+                    <td>{edge.node.frontmatter.manufacturer}</td>
+                    <td>{edge.node.frontmatter.sensor}</td>
+                    <td>
+                      <Link to={edge.node.fields.slug}>
+                        <FaPlay className="mr-3" /> More
                     </Link>
-                  </td>
-                </tr>
+                    </td>
+                  </tr>
                 )}
               </tbody>
             </table>
           </Col>
         </Row>
-        
+
         <Row className="py-5">
           <Col className="mx-auto text-center" md="7">
             <p className="lead">
-              This list is not complete and is just an excerpt yet. 
-              We offer a lot of other sensor payload decoders as well.  
-              Furthermore, we are happy to help in integrating your sensors of 
+              This list is not complete and is just an excerpt yet.
+              We offer a lot of other sensor payload decoders as well.
+              Furthermore, we are happy to help in integrating your sensors of
               choice on request.
             </p>
             <p>More payload decoders coming soon.</p>
@@ -68,6 +68,8 @@ export default ({ data }) => (
     </section>
   </Layout>
 )
+
+export default Payloads;
 
 export const query = graphql`
   query {

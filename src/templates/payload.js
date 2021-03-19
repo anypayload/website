@@ -6,7 +6,7 @@ import { Container, Row, Col } from "reactstrap"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 import Callto from "../components/callto"
 
-export default ({ data }) => {
+const Payload = ({ data }) => {
   const content = data.markdownRemark
   const title = content.frontmatter.title
   const sensor = content.frontmatter.sensor
@@ -16,7 +16,7 @@ export default ({ data }) => {
 
   return (
     <Layout className="bg-light">
-      <SEO 
+      <SEO
         title={`${title} Payload Decoder`}
         description={`Production-ready sensor payload decoder ${title}`}
       />
@@ -27,7 +27,7 @@ export default ({ data }) => {
             <Col className="text-left">
               <h1>{`${title}`}</h1>
               <h2 className="text-muted lead mt-4">
-              {`Production-ready sensor payload decoder ${title}`}
+                {`Production-ready sensor payload decoder ${title}`}
               </h2>
             </Col>
           </Row>
@@ -70,6 +70,8 @@ const renderManufacturer = (manufacturer, web) => {
   }
   return <span>{manufacturer}</span>
 }
+
+export default Payload
 
 export const query = graphql`
   query($slug: String!) {

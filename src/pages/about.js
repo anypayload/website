@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { Container, Row, Col, ListGroup, ListGroupItem } from 'reactstrap'
 import { FaLinkedin, FaXingSquare, FaGithub, FaStackOverflow } from 'react-icons/fa'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
@@ -9,10 +9,10 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Callto from '../components/callto'
 
-export default ({ data }) => (
+const About = ({ data }) => (
   <Layout>
-    <SEO 
-      title="An Internet of Things initiative from Austria" 
+    <SEO
+      title="An Internet of Things initiative from Austria"
       description="We seek to simplify the use of IoT sensors and devices in production by eliminating repetitive tasks.
       We are a small team located in Austria engaging in software consulting in IoT and related areas."
     />
@@ -41,7 +41,7 @@ export default ({ data }) => (
               <h3 className="pb-4">Make adoption of IoT technology simple.</h3>
             </Col>
 
-            <Col md={{size: 5, offset: 1}} className="mt-4 text-center text-md-left">
+            <Col md={{ size: 5, offset: 1 }} className="mt-4 text-center text-md-left">
               <h6 className="text-uppercase text-primary">About Us</h6>
               <h3 className="pb-4">We are a small team of software engineers and product managers embracing IoT technologies.</h3>
             </Col>
@@ -59,10 +59,10 @@ export default ({ data }) => (
         </Row>
         <Row className="justify-content-center">
           <Col md="5" className="my-5">
-            <Img 
-              fluid={data.geraldImg.childImageSharp.fluid}
-              className="w-25 rounded mb-4 shadow" 
-              alt="Gerald Berger" 
+            <GatsbyImage
+              image={data.geraldImg.childImageSharp.gatsbyImageData}
+              className="w-25 rounded mb-4 shadow"
+              alt="Gerald Berger"
             />
             <h6 className="text-uppercase text-primary">Gerald Berger</h6>
             <a href="mailto:gerald@anypayload.com" className="text-muted">gerald@anypayload.com</a>
@@ -77,9 +77,9 @@ export default ({ data }) => (
           </Col>
 
           <Col md="5" className="my-5">
-            <Img 
-              fluid={data.thomasImg.childImageSharp.fluid}
-              className="w-25 rounded mb-4 shadow" 
+            <GatsbyImage
+              image={data.thomasImg.childImageSharp.gatsbyImageData}
+              className="w-25 rounded mb-4 shadow"
               alt="Thomas Schmidleithner"
             />
             <h6 className="text-uppercase text-primary">Thomas Schmidleithner</h6>
@@ -104,20 +104,18 @@ export default ({ data }) => (
   </Layout>
 )
 
+export default About
+
 export const query = graphql`
   query {
     thomasImg: file(relativePath: { eq: "team/tschmidleithner.jpg" }) {
       childImageSharp {
-        fluid(maxHeight: 400, maxWidth: 400) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData
       }
     }
     geraldImg: file(relativePath: { eq: "team/gberger.jpg" }) {
       childImageSharp {
-        fluid(maxHeight: 400, maxWidth: 400) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData
       }
     }
   }

@@ -24,7 +24,7 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
     },
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -39,6 +39,7 @@ module.exports = {
         icon: `src/images/anypayload-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -53,11 +54,11 @@ module.exports = {
     },
     `gatsby-plugin-sitemap`,
     {
-        resolve: 'gatsby-plugin-mailchimp',
-        options: {
-            endpoint: 'https://anypayload.us17.list-manage.com/subscribe/post?u=2f39c0703adc0a7321326a376&amp;id=bcf14cf832', // string; add your MC list endpoint here; see instructions below
-            timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
-        },
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: 'https://anypayload.us17.list-manage.com/subscribe/post?u=2f39c0703adc0a7321326a376&amp;id=bcf14cf832', // string; add your MC list endpoint here; see instructions below
+        timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

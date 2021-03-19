@@ -12,7 +12,7 @@ import {
 } from 'reactstrap'
 import Logo from '../images/anypayload.png'
 
-export default (props) => {
+const Header = (props) => {
   const [collapsed, setCollapsed] = useState(true);
   const toggleNavbar = () => setCollapsed(!collapsed);
 
@@ -20,21 +20,18 @@ export default (props) => {
     <div class="bg-secondary position-relative">
       <Container className="text-center small py-2">
         <Link to={'/products'} className="text-dark stretched-link">
-          <strong>January 26, 2021</strong> <span className="mx-2">🚀</span> Check out our latest payload sensor decoders for Bosch, Gavazzi, PNI, Sensoneo, Teneo, and many others.
+          <strong>January 26, 2021</strong> <span className="mx-2" role="img" aria-label="Updates">🚀</span> Check out our latest payload sensor decoders for Bosch, Gavazzi, PNI, Sensoneo, Teneo, and many others.
         </Link>
       </Container>
     </div>
     <Navbar color="transparent" light expand="lg">
       <Container>
         <NavbarBrand tag={Link} to="/">
-          <img src={Logo} style={{height: "60px"}} alt={props.siteTitle} />
+          <img src={Logo} style={{ height: "60px" }} alt={props.siteTitle} />
         </NavbarBrand>
         <NavbarToggler onClick={toggleNavbar} />
         <Collapse isOpen={!collapsed} navbar>
           <Nav className="ml-auto text-uppercase" navbar>
-            {/*<NavItem>
-              <NavLink tag={Link} activeClassName="active" to="/industries/">Industries</NavLink>
-            </NavItem>*/}
             <NavItem>
               <NavLink tag={Link} activeClassName="active" to="/products/">Products</NavLink>
             </NavItem>
@@ -53,4 +50,5 @@ export default (props) => {
     </Navbar>
   </>)
 }
-  
+
+export default Header

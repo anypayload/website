@@ -38,13 +38,13 @@ class Decoder extends React.Component {
     event.preventDefault()
 
     this.setState({ loading: true })
-  
+
     const decoder = this.state.decoder
 
     // Remove optional hex prefix
     const payload = this.state.payload.replace('0x', '')
     const port = parseInt(this.state.port)
-    
+
     console.info(`Decode payload '${payload}' using '${decoder}'`)
 
     const requestOptions = {
@@ -70,11 +70,11 @@ class Decoder extends React.Component {
               <Form onSubmit={this.handleSubmit} method="post">
                 <FormGroup>
                   <Label size="lg">Select a sensor to decode:</Label>
-                  <Input 
-                    type="select" 
-                    name="decoder" 
-                    onChange={this.handleInputChange} 
-                    className="custom-select custom-select-lg" 
+                  <Input
+                    type="select"
+                    name="decoder"
+                    onChange={this.handleInputChange}
+                    className="custom-select custom-select-lg"
                     bsSize="lg"
                     defaultValue={'elsys'}
                     disabled={loading}
@@ -100,12 +100,12 @@ class Decoder extends React.Component {
                   <Col md={9}>
                     <FormGroup>
                       <Label size="lg">Insert your sensor payload:</Label>
-                      <Input 
-                        type="text" 
+                      <Input
+                        type="text"
                         name="payload"
                         onChange={this.handleInputChange}
-                        placeholder="0x0100e20229040027" 
-                        bsSize="lg" 
+                        placeholder="0x0100e20229040027"
+                        bsSize="lg"
                         disabled={loading}
                       />
                     </FormGroup>
@@ -113,19 +113,19 @@ class Decoder extends React.Component {
                   <Col>
                     <FormGroup>
                       <Label size="lg">Port:</Label>
-                      <Input 
-                        type="text" 
+                      <Input
+                        type="text"
                         name="port"
                         onChange={this.handleInputChange}
-                        placeholder="1" 
-                        bsSize="lg" 
+                        placeholder="1"
+                        bsSize="lg"
                         disabled={loading}
                       />
                     </FormGroup>
                   </Col>
                 </Row>
                 <div className="text-right">
-                  <Button type="submit" color="primary" size="lg" className="font-weight-bold" disabled={loading}>
+                  <Button type="submit" color="primary" size="lg" block className="font-weight-bold" disabled={loading}>
                     <FaPlay className={`mr-3 ${loading ? 'fa-spin' : ''}`} /> Decode
                   </Button>
                 </div>
@@ -136,12 +136,12 @@ class Decoder extends React.Component {
               {this.state.decoded && <PrettyPrintJson data={this.state.decoded} />}
               {!this.state.decoded && <>
                 <h4 className="my-2">Getting started</h4>
-                
+
                 <p>
-                  Select a sensor and the payload you want to decode. You can 
+                  Select a sensor and the payload you want to decode. You can
                   also try out one of the following examples:
                 </p>
-                
+
                 <ul className="mt-2">
                   <li>Adeunis Dry Contacts: <code>0x1020900143140700020000</code></li>
                   <li>Bosch Parking Lot Sensor: <code>0x00FE</code></li>
@@ -179,14 +179,14 @@ class Decoder extends React.Component {
   }
 }
 
-const PrettyPrintJson = ({data}) => (
+const PrettyPrintJson = ({ data }) => (
   <div className={`pre-scrollable ${data.status ? 'bg-decode-success' : 'bg-decode-danger'}`}>
-    <pre>{JSON.stringify(data, null, 2) }</pre>
+    <pre>{JSON.stringify(data, null, 2)}</pre>
   </div>)
 
 const ProductsPage = () => (
   <Layout className="bg-light">
-    <SEO 
+    <SEO
       title="Easily configure your IoT sensors. Decode any IoT payload."
       description="We offer a comprehensive collection of IoT payload parser libraries in Python, JavaScript, TypeScript, Elixir and Rust."
     />
@@ -265,7 +265,7 @@ const ProductsPage = () => (
             <h6 className="text-uppercase text-muted">Work in Progress</h6>
             <h2 className="pb-4">Downlink Generator</h2>
             <p className="lead">
-              Easily configure your sensors of choice by using our downlink generator. 
+              Easily configure your sensors of choice by using our downlink generator.
               Use either our intuitive UI or our API to configure your sensors.
             </p>
             <p>
@@ -274,10 +274,10 @@ const ProductsPage = () => (
             </p>
           </Col>
           <Col>
-            <img 
+            <img
               alt="Work in progress"
-              src={workInProgress} 
-              className="img-fluid" 
+              src={workInProgress}
+              className="img-fluid"
             />
           </Col>
         </Row>

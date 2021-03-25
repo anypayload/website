@@ -36,12 +36,12 @@ const About = ({ data }) => (
           </Row>
 
           <Row className="mt-md-5 justify-content-center">
-            <Col md="5" className="mt-4 text-center text-md-left">
+            <Col md="5" className="mt-4 text-center text-md-start">
               <h6 className="text-uppercase text-primary">Our Mission</h6>
               <h3 className="pb-4">Make adoption of IoT technology simple.</h3>
             </Col>
 
-            <Col md={{ size: 5, offset: 1 }} className="mt-4 text-center text-md-left">
+            <Col md={{ size: 5, offset: 1 }} className="mt-4 text-center text-md-start">
               <h6 className="text-uppercase text-primary">About Us</h6>
               <h3 className="pb-4">We are a small team of software engineers and product managers embracing IoT technologies.</h3>
             </Col>

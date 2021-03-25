@@ -1,6 +1,6 @@
 import React from "react"
 import { navigate } from "gatsby"
-import { Container, Row, Col, Card, CardBody,Button, Form, FormGroup, Input } from "reactstrap"
+import { Container, Row, Col, Card, CardBody, Button, Form, FormGroup, Input } from "reactstrap"
 import { FaLock, FaPhone, FaEnvelope } from "react-icons/fa"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -25,7 +25,7 @@ class ContactPage extends React.Component {
   handleSubmit = e => {
     e.preventDefault()
     const form = e.target
-  
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -34,20 +34,20 @@ class ContactPage extends React.Component {
         ...this.state
       }),
     })
-    .then(response => {
-      console.log(`${JSON.stringify(response, null, 2)}`)
-      navigate(form.getAttribute("action"))
-    })
-    .catch(error => {
-      console.error(`error in submiting the form data:${error}`)
-      alert('Sorry, we are not able to submit your message. Please try to contact us directly via email.')
-    })
+      .then(response => {
+        console.log(`${JSON.stringify(response, null, 2)}`)
+        navigate(form.getAttribute("action"))
+      })
+      .catch(error => {
+        console.error(`error in submiting the form data:${error}`)
+        alert('Sorry, we are not able to submit your message. Please try to contact us directly via email.')
+      })
   }
 
   render() {
     return (
       <Layout className="bg-light">
-        <SEO 
+        <SEO
           title="Contact"
         />
 
@@ -66,13 +66,13 @@ class ContactPage extends React.Component {
 
         <section className="py-5">
           <Container>
-            <Row className="align-items-center">
+            <Row className="align-items-center gx-5">
               <Col lg="6">
                 <Row>
                   <Col>
-                    <h2 className="font-weight-bold">Let's discuss your IoT project</h2>
+                    <h2 className="fw-bold">Let's discuss your IoT project</h2>
                     <p className="lead my-4">
-                      We can help you to get your IoT project up and running quickly 
+                      We can help you to get your IoT project up and running quickly
                       from prototyping to production.
                     </p>
                   </Col>
@@ -80,13 +80,13 @@ class ContactPage extends React.Component {
 
                 <Row className="my-4">
                   <Col>
-                    <Button color="dark" outline block href="mailto:office@anypayload.com">
+                    <Button color="dark" className="d-block" outline block href="mailto:office@anypayload.com">
                       <FaEnvelope />
                       <div className="mt-1">office@anypayload.com</div>
                     </Button>
                   </Col>
                   <Col>
-                    <Button color="dark" outline block href="tel:+436641455590">
+                    <Button color="dark" className="d-block" outline block href="tel:+436641455590">
                       <FaPhone />
                       <div className="mt-1">+43 664 14 555 90</div>
                     </Button>
@@ -96,7 +96,7 @@ class ContactPage extends React.Component {
                 <Row>
                   <Col>
                     <h5 className="mt-5 border-top pt-4">Address</h5>
-                    <address className="font-weight-light">
+                    <address className="fw-light">
                       Thomas Schmidleithner, BSc<br />
                       Meggenhofen 95/11<br />
                       A-4714 Meggenhofen<br />
@@ -106,61 +106,65 @@ class ContactPage extends React.Component {
               </Col>
 
               <Col lg="6">
-                <Card className="bg-white border-0 shadow">
+                <Card className="bg-white border-0 shadow p-md-3">
                   <CardBody>
-                    <Form 
-                      name="contact" 
-                      netlify-honeypot="bot-field" 
-                      data-netlify="true" 
+                    <Form
+                      name="contact"
+                      netlify-honeypot="bot-field"
+                      data-netlify="true"
                       action="/contact-success"
                       onSubmit={this.handleSubmit}>
                       <input type="hidden" name="bot-field" />
-                      <Row form>
+                      <Row form className="mb-3">
                         <Col>
                           <FormGroup>
                             <Input type="text" name="name" id="name" placeholder="Your name" onChange={this.handleChange} />
                           </FormGroup>
                         </Col>
                       </Row>
-                      <Row form>
+                      <Row form className="mb-3">
                         <Col>
                           <FormGroup>
                             <Input type="text" name="email" id="email" placeholder="Company email" onChange={this.handleChange} />
                           </FormGroup>
                         </Col>
                       </Row>
-                      <Row form>
+                      <Row form className="mb-3">
                         <Col>
                           <FormGroup>
                             <Input type="text" name="phone" id="phone" placeholder="Phone" onChange={this.handleChange} />
                           </FormGroup>
                         </Col>
                       </Row>
-                      <Row form>
+                      <Row form className="mb-3">
                         <Col>
                           <FormGroup>
                             <Input type="text" name="country" id="country" placeholder="Country" onChange={this.handleChange} />
                           </FormGroup>
                         </Col>
                       </Row>
-                      <Row form>
+                      <Row form className="mb-3">
                         <Col>
                           <FormGroup>
                             <Input type="textarea" name="details" id="details" placeholder="Project details or questions" onChange={this.handleChange} />
                           </FormGroup>
                         </Col>
                       </Row>
-                      <Row form className="mb-3">
-                        <Col sm="1" className="text-center"><FaLock className="text-secondary" /></Col>
-                        <Col>
+                      <Row className="mb-3">
+                        <Col className="d-flex align-items-center">
+                          <FaLock className="text-secondary h2 me-3" />
                           <p className="small mb-0">
-                            On submitting the form, you agree that we are allowed to store 
-                            your data on our server for the purposes of contacting you.<br />
+                            On submitting the form, you agree that we are allowed to store
+                            your data on our server for the purposes of contacting you.
                             Your data will of course be treated confidentially.
                           </p>
                         </Col>
                       </Row>
-                      <Button color="primary" size="lg" block className="font-weight-bold">Get in touch</Button>
+                      <Row>
+                        <Col>
+                          <Button color="primary" size="lg" block className="fw-bold text-white w-100">Get in touch</Button>
+                        </Col>
+                      </Row>
                     </Form>
                   </CardBody>
                 </Card>
@@ -170,7 +174,7 @@ class ContactPage extends React.Component {
             <Row className="py-5 my-md-5">
               <Col className="mx-auto text-center" md="9">
                 <p className="lead">
-                  We are already working on a broader set of payload decoders. 
+                  We are already working on a broader set of payload decoders.
                   Furthermore, we are currently aiming to simplify configurations of sensors over the air.
                 </p>
                 <p>More products coming soon.</p>

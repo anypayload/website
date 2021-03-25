@@ -48,7 +48,7 @@ const Payload = ({ data }) => {
               <span>{sensor}</span>
 
               <h6 className="text-uppercase mt-4">Use Cases</h6>
-              {useCases.map(useCase => <span className="badge badge-primary ml-1">{useCase}</span>)}
+              {useCases.map(useCase => <span className="badge badge-primary ms-1">{useCase}</span>)}
             </Col>
           </Row>
         </Container>

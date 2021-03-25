@@ -19,8 +19,8 @@ const Header = (props) => {
   return (<>
     <div className="bg-secondary position-relative">
       <Container className="text-center small py-2">
-        <Link to={'/products'} className="text-dark stretched-link">
-          <strong>January 26, 2021</strong> <span className="mx-2" role="img" aria-label="Updates">🚀</span> Check out our latest payload sensor decoders for Bosch, Gavazzi, PNI, Sensoneo, Teneo, and many others.
+        <Link to={'/products/'} className="text-dark stretched-link text-decoration-none">
+          <strong>March 25, 2021</strong> <span className="mx-2" role="img" aria-label="Updates">🚀</span> Check out our latest payload sensor decoders for Bosch, Elvaco, Gavazzi, PNI, Sensoneo, Teneo, and many others.
         </Link>
       </Container>
     </div>
@@ -31,7 +31,10 @@ const Header = (props) => {
         </NavbarBrand>
         <NavbarToggler onClick={toggleNavbar} />
         <Collapse isOpen={!collapsed} navbar>
-          <Nav className="ml-auto text-uppercase" navbar>
+          <Nav className="ms-auto text-uppercase" navbar>
+            <NavItem>
+              <NavLink tag={Link} activeClassName="active" to="/">Home</NavLink>
+            </NavItem>
             <NavItem>
               <NavLink tag={Link} activeClassName="active" to="/products/">Products</NavLink>
             </NavItem>

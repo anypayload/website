@@ -43,7 +43,7 @@ const Payloads = ({ data }) => (
                     <td>{edge.node.frontmatter.sensor}</td>
                     <td>
                       <Link to={edge.node.fields.slug}>
-                        <FaPlay className="mr-3" /> More
+                        <FaPlay className="me-3" /> More
                     </Link>
                     </td>
                   </tr>

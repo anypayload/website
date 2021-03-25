@@ -36,8 +36,8 @@ const PricingPage = () => (
               buttonText="Get started"
             >
               <ul className="list-unstyled">
-                <li><FaCheck className="text-primary mr-2" /> Online Payload Parser</li>
-                <li><FaCheck className="text-primary mr-2" /> Product News</li>
+                <li><FaCheck className="text-primary me-2" /> Online Payload Parser</li>
+                <li><FaCheck className="text-primary me-2" /> Product News</li>
               </ul>
             </PricingCard>
           </Col>
@@ -52,7 +52,7 @@ const PricingPage = () => (
               buttonText="Get started"
             >
               <ul className="list-unstyled">
-                <li><FaCheck className="text-primary mr-2" /> Source code for a single sensor payload decoder in a programming language of your choice</li>
+                <li><FaCheck className="text-primary me-2" /> Source code for a single sensor payload decoder in a programming language of your choice</li>
               </ul>
             </PricingCard>
           </Col>
@@ -67,7 +67,7 @@ const PricingPage = () => (
               buttonText="Get started"
             >
               <ul className="list-unstyled">
-                <li><FaCheck className="text-primary mr-2" /> Source code for five sensor payload decoders in a programming language of your choice</li>
+                <li><FaCheck className="text-primary me-2" /> Source code for five sensor payload decoders in a programming language of your choice</li>
               </ul>
             </PricingCard>
           </Col>
@@ -81,10 +81,10 @@ const PricingPage = () => (
               buttonText="Contact us"
             >
               <ul className="list-unstyled">
-                <li><FaCheck className="text-primary mr-2" /> Custom payload implementation</li>
-                <li><FaCheck className="text-primary mr-2" /> Extensive documentation</li>
-                <li><FaCheck className="text-primary mr-2" /> White-label solutions</li>
-                <li><FaCheck className="text-primary mr-2" /> Consulting services</li>
+                <li><FaCheck className="text-primary me-2" /> Custom payload implementation</li>
+                <li><FaCheck className="text-primary me-2" /> Extensive documentation</li>
+                <li><FaCheck className="text-primary me-2" /> White-label solutions</li>
+                <li><FaCheck className="text-primary me-2" /> Consulting services</li>
               </ul>
             </PricingCard>
           </Col>
@@ -106,16 +106,16 @@ const PricingPage = () => (
 )
 
 const PricingCard = ({ className, plan, description, costs, costsPer, children, buttonText }) => (
-  <Card className={`${className} shadow-sm h-100`}>
+  <Card className={`${className} shadow-sm h-100 pb-2`}>
     <CardHeader className="bg-transparent border-0">
       <CardTitle className="text-center mt-2">
-        <h4 className="font-weight-light">{plan}</h4>
-        <h6 className="font-weight-normal text-muted mt-3 mb-4">{description}</h6>
+        <h4 className="fw-light">{plan}</h4>
+        <h6 className="fw-normal text-muted mt-3 mb-4">{description}</h6>
       </CardTitle>
       <CardSubtitle className="border-top border-bottom lead text-center py-4 my-0">
         <h4>
           {costs}
-          {costsPer && <small className="text-muted ml-2">{costsPer}</small>}
+          {costsPer && <small className="text-muted ms-2">{costsPer}</small>}
         </h4>
       </CardSubtitle>
     </CardHeader>
@@ -123,7 +123,7 @@ const PricingCard = ({ className, plan, description, costs, costsPer, children, 
       {children}
     </CardBody>
     <CardFooter className="bg-transparent border-0 mt-0 pt-0">
-      <Button color={buttonText === 'Contact us' ? "dark" : "primary"} tag={Link} to="/contact/" block className="font-weight-bold">
+      <Button color={buttonText === 'Contact us' ? "dark" : "primary"} tag={Link} to="/contact/" block className="fw-bold d-block text-white">
         {buttonText}
       </Button>
     </CardFooter>

@@ -33,12 +33,12 @@ class Decoder extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault()
-  
+
     const decoder = this.state.decoder;
 
     // Remove optional hex prefix
     const payload = this.state.payload.replace('0x', '')
-    
+
     console.info(`Decode payload '${payload}' using '${decoder}'`)
 
     const requestOptions = {
@@ -61,11 +61,11 @@ class Decoder extends React.Component {
               <Form onSubmit={this.handleSubmit} method="post">
                 <FormGroup>
                   <Label size="lg">Select a sensor to decode:</Label>
-                  <Input 
-                    type="select" 
-                    name="decoder" 
-                    onChange={this.handleInputChange} 
-                    className="custom-select custom-select-lg" 
+                  <Input
+                    type="select"
+                    name="decoder"
+                    onChange={this.handleInputChange}
+                    className="custom-select custom-select-lg"
                     bsSize="lg"
                     defaultValue={'elsys'}
                   >
@@ -79,17 +79,17 @@ class Decoder extends React.Component {
                 </FormGroup>
                 <FormGroup>
                   <Label size="lg">Insert your sensor payload:</Label>
-                  <Input 
-                    type="text" 
+                  <Input
+                    type="text"
                     name="payload"
                     onChange={this.handleInputChange}
-                    placeholder="0x0100e20229040027" 
-                    bsSize="lg" 
+                    placeholder="0x0100e20229040027"
+                    bsSize="lg"
                   />
                 </FormGroup>
                 <div className="text-right">
-                  <Button type="submit" color="primary" size="lg" className="font-weight-bold">
-                    <FaPlay className="mr-3" /> Decode
+                  <Button type="submit" color="primary" size="lg" className="fw-bold">
+                    <FaPlay className="me-3" /> Decode
                   </Button>
                 </div>
               </Form>
@@ -99,12 +99,12 @@ class Decoder extends React.Component {
               {this.state.decoded && <PrettyPrintJson data={this.state.decoded} />}
               {!this.state.decoded && <>
                 <h4 className="my-2">Getting started</h4>
-                
+
                 <p>
-                  Select a sensor and the payload you want to decode. You can 
+                  Select a sensor and the payload you want to decode. You can
                   also try out one of the following examples:
                 </p>
-                
+
                 <ul className="mt-2">
                   <li>Adeunis Dry Contacts: <code>0x1020900143140700020000</code></li>
                   <li>Elsys: <code>0x0100CD021E07005F</code></li>
@@ -131,14 +131,14 @@ class Decoder extends React.Component {
   }
 }
 
-const PrettyPrintJson = ({data}) => (
+const PrettyPrintJson = ({ data }) => (
   <div className={`pre-scrollable ${data.status ? 'bg-decode-success' : 'bg-decode-danger'}`}>
-    <pre>{JSON.stringify(data, null, 2) }</pre>
+    <pre>{JSON.stringify(data, null, 2)}</pre>
   </div>)
 
 const DevelopmentPage = () => (
   <Layout className="bg-light">
-    <SEO 
+    <SEO
       title="Development"
       description="Test IoT sensor that are currently in development."
     />
@@ -213,7 +213,7 @@ const DevelopmentPage = () => (
             <h6 className="text-uppercase text-muted">Work in Progress</h6>
             <h2 className="pb-4">Downlink Generator</h2>
             <p className="lead">
-              Easily configure your sensors of choice by using our downlink generator. 
+              Easily configure your sensors of choice by using our downlink generator.
               Use either our intuitive UI or our API to configure your sensors.
             </p>
             <p>
@@ -222,10 +222,10 @@ const DevelopmentPage = () => (
             </p>
           </Col>
           <Col>
-            <img 
+            <img
               alt="Work in progress"
-              src={workInProgress} 
-              className="img-fluid" 
+              src={workInProgress}
+              className="img-fluid"
             />
           </Col>
         </Row>
@@ -236,12 +236,12 @@ const DevelopmentPage = () => (
       <Container>
         <Row>
           <Col md="6">
-            <div className="py-5 my-5 rounded px-5 ml-n5 bg-primary bg circuit">
+            <div className="py-5 my-5 rounded px-5 ms-n5 bg-primary bg circuit">
               <h1>Easily configure your sensor. Parse any payload.</h1>
             </div>
           </Col>
           <Col md="6">
-            <div className="py-5 my-5 rounded px-5 mr-n5 bg-light text-dark">
+            <div className="py-5 my-5 rounded px-5 me-n5 bg-light text-dark">
               <h1>Get. Started. Now.</h1>
             </div>
           </Col>

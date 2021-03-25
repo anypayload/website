@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, Row, Col,Button, Alert } from "reactstrap"
+import { Container, Row, Col, Button, Alert } from "reactstrap"
 import { FaPhone, FaEnvelope } from "react-icons/fa"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 const ContactSuccessPage = () => (
 
   <Layout className="bg-light">
-    <SEO 
+    <SEO
       title="Contact"
     />
 
@@ -26,13 +26,13 @@ const ContactSuccessPage = () => (
 
     <section className="py-5">
       <Container>
-        <Row>
+        <Row className="gx-5">
           <Col lg="6">
             <Row>
               <Col>
-                <h2 className="font-weight-bold">Let's discuss your IoT project</h2>
+                <h2 className="fw-bold">Let's discuss your IoT project</h2>
                 <p className="lead my-4">
-                  We can help you to get your IoT project up and running quickly 
+                  We can help you to get your IoT project up and running quickly
                   from prototyping to production.
                 </p>
               </Col>
@@ -41,14 +41,13 @@ const ContactSuccessPage = () => (
             <Row className="my-4">
               <Col>
                 {/*<Button color="dark" outline block href="mailto:office@anypayload.com">*/}
-                <Button color="dark" outline block href="mailto:info@serverless.at">
+                <Button color="dark" outline block href="mailto:office@anypayload.com" className="w-100">
                   <FaEnvelope />
-                  {/*<div>office@anypayload.com</div>*/}
-                  <div className="mt-1">info@serverless.at</div>
+                  <div className="mt-1">office@anypayload.com</div>
                 </Button>
               </Col>
               <Col>
-                <Button color="dark" outline block href="tel:+436641455590">
+                <Button color="dark" outline block href="tel:+436641455590" className="w-100">
                   <FaPhone />
                   <div className="mt-1">+43 664 14 555 90</div>
                 </Button>
@@ -58,7 +57,7 @@ const ContactSuccessPage = () => (
             <Row>
               <Col>
                 <h5 className="mt-5 border-top pt-4">Address</h5>
-                <address className="font-weight-light">
+                <address className="fw-light">
                   Thomas Schmidleithner, BSc<br />
                   Meggenhofen 95/11<br />
                   A-4714 Meggenhofen<br />
@@ -69,7 +68,7 @@ const ContactSuccessPage = () => (
 
           <Col lg="6">
             <Alert color="success">
-              Your contact request has been successfully sent. We will come 
+              Your contact request has been successfully sent. We will come
               back to you shortly.
             </Alert>
           </Col>
@@ -78,7 +77,7 @@ const ContactSuccessPage = () => (
         <Row className="py-5 my-md-5">
           <Col className="mx-auto text-center" md="9">
             <p className="lead">
-              We are already working on a broader set of payload decoders. 
+              We are already working on a broader set of payload decoders.
               Furthermore, we are currently aiming to simplify configurations of sensors over the air.
             </p>
             <p>More products coming soon.</p>

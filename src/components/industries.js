@@ -17,7 +17,7 @@ const Industries = (props) => {
             className={activeTab === '1' && "active"}
             onClick={() => { toggle('1'); }}
           >
-            <FaCloud className="mr-2 text-muted" /> For Organizations adopting IoT
+            <FaCloud className="me-2 text-muted" /> For Organizations adopting IoT
           </NavLink>
         </NavItem>
         <NavItem>
@@ -25,7 +25,7 @@ const Industries = (props) => {
             className={activeTab === '2' && "active"}
             onClick={() => { toggle('2'); }}
           >
-            <FaMicrochip className="mr-2 text-muted" /> For Hardware Manufacturers
+            <FaMicrochip className="me-2 text-muted" /> For Hardware Manufacturers
           </NavLink>
         </NavItem>
       </Nav>

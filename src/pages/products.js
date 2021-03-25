@@ -68,13 +68,13 @@ class Decoder extends React.Component {
           <Row>
             <Col md="6">
               <Form onSubmit={this.handleSubmit} method="post">
-                <FormGroup>
+                <FormGroup className="mb-3">
                   <Label size="lg">Select a sensor to decode:</Label>
                   <Input
                     type="select"
                     name="decoder"
                     onChange={this.handleInputChange}
-                    className="custom-select custom-select-lg"
+                    className="form-select form-select-lg"
                     bsSize="lg"
                     defaultValue={'elsys'}
                     disabled={loading}
@@ -96,7 +96,7 @@ class Decoder extends React.Component {
                     <option value="ursalink-AM100">Ursalink AM100/AM102 series</option>
                   </Input>
                 </FormGroup>
-                <Row>
+                <Row className="mb-3">
                   <Col md={9}>
                     <FormGroup>
                       <Label size="lg">Insert your sensor payload:</Label>
@@ -125,8 +125,8 @@ class Decoder extends React.Component {
                   </Col>
                 </Row>
                 <div className="text-right">
-                  <Button type="submit" color="primary" size="lg" block className="font-weight-bold" disabled={loading}>
-                    <FaPlay className={`mr-3 ${loading ? 'fa-spin' : ''}`} /> Decode
+                  <Button type="submit" color="primary" size="lg" block className="fw-bold w-100 text-white" disabled={loading}>
+                    <FaPlay className={`me-3 ${loading ? 'fa-spin' : ''}`} /> Decode
                   </Button>
                 </div>
               </Form>
@@ -231,7 +231,7 @@ const ProductsPage = () => (
             </p>
           </Col>
         </Row>
-        <Row className="justify-content-center align-items-center">
+        <Row className="justify-content-center align-items-center gx-5">
           <Col xs="4" md="2">
             <img src={logoPython} alt="Python" className="img-fluid" />
           </Col>
@@ -288,12 +288,12 @@ const ProductsPage = () => (
       <Container>
         <Row>
           <Col md="6">
-            <div className="py-5 my-5 rounded px-5 ml-n5 bg-primary bg circuit">
+            <div className="py-5 my-5 rounded px-5 ms-n5 bg-primary bg circuit">
               <h1>Easily configure your sensor. Parse any payload.</h1>
             </div>
           </Col>
           <Col md="6">
-            <div className="py-5 my-5 rounded px-5 mr-n5 bg-light text-dark">
+            <div className="py-5 my-5 rounded px-5 me-n5 bg-light text-dark">
               <h1>Get. Started. Now.</h1>
             </div>
           </Col>

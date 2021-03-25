@@ -83,6 +83,7 @@ class Decoder extends React.Component {
                     <option value="bosch-parking-lot-sensor">Bosch Parking Lot Sensor</option>
                     <option value="cayenne-lpp">Cayenne LPP</option>
                     <option value="elsys">Elsys</option>
+                    <option value="elvaco-CMi4110">Elvaco CMi4110</option>
                     <option value="elvaco-CMi4160">Elvaco CMi4160</option>
                     <option value="emz-slx-1307">EMZ SLX-1307</option>
                     <option value="gavazzi">Gavazzi</option>
@@ -147,6 +148,7 @@ class Decoder extends React.Component {
                   <li>Bosch Parking Lot Sensor: <code>0x00FE</code></li>
                   <li>Cayenne LPP: <code>0x6701106700FF</code> with Port <code>2</code></li>
                   <li>Elsys: <code>0x0100CD021E07005F</code></li>
+                  <li>Elvaco CMi4110: <code>0x000c06010000000c14010000000b2b0100000b3b0100000a5a01000a5e01000c781234567802fd170000</code></li>
                   <li>Elvaco CMi4160: <code>0x1E0403A00000000413FF000000022BFF00023BFF00025AA000025EA000ABCD0A010000FF00010F01FD17FF</code></li>
                   <li>EMZ SLX-1307: <code>0x43303A31353233</code></li>
                   <li>Gavazzi: <code>0x01200A000000000F000000</code></li>

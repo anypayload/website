@@ -92,7 +92,7 @@ const IndexPage = ({ data }) => (
       </div>
 
       <Container className="py-5">
-        <Row className="align-items-center ">
+        <Row className="align-items-center">
           <Col lg="5" className="mb-5 mb-lg-0">
             <h2 className="text-primary fw-bold text-dark">Some of our <span className="text-primary">customers</span> who are successfully building upon our services</h2>
           </Col>

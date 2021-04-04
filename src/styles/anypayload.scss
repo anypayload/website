@@ -125,7 +125,12 @@ footer {
       linear-gradient(90deg,#f9f9f9 18px,transparent 1%) 50%, 
       linear-gradient(#f9f9f9 18px,transparent 1%) 50%,#e3e6e7;
     background-size: 20px 20px;
-
+  }
+  &.dotted-white {
+    background: 
+      linear-gradient(90deg,#fff 18px,transparent 1%) 50%, 
+      linear-gradient(#fff 18px,transparent 1%) 50%,#c6c7c9;
+    background-size: 20px 20px;
   }
 }
 

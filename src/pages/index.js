@@ -1,20 +1,21 @@
 import React from "react"
+import { graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
-import { Container, Row, Col, Button } from "reactstrap"
+import { Container, Row, Col, Button, Card } from "reactstrap"
 import { FaPlay } from "react-icons/fa"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Callto from "../components/callto"
 import illustrationProf from "../images/undraw_professor_8lrt.svg"
 import illustrationCircuit from "../images/undraw_circuit_sdmr.svg"
-import illustrationWorld from "../images/undraw_connected_world_wuay.svg"
 import Industries from "../components/industries"
 import Newsletter from "../components/newsletter"
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO
-      title="Production-ready payload decoder and downlink generator for your IoT application"
+      title="Production-ready payload decoder for your IoT application"
     />
 
     <section className="bg circuit">
@@ -86,15 +87,48 @@ const IndexPage = () => (
       </Container>
     </section>
 
-    <Container className="d-none">
-      <Row>
-        <Col sm="5">
-          <img src={illustrationWorld} className="img-fluid" alt="Illustration World" />
-        </Col>
-      </Row>
-    </Container>
+    <section className="py-5 position-relative">
+      <div className="position-absolute bg dotted-white w-25 h-25 top-0 start-0" style={{ zIndex: -1 }}>
+      </div>
 
-    <section className="py-5 bg-light border-bottom">
+      <Container className="py-5">
+        <Row className="align-items-center ">
+          <Col lg="5" className="mb-5 mb-lg-0">
+            <h2 className="text-primary fw-bold text-dark">Some of our <span className="text-primary">customers</span> who are successfully building upon our services</h2>
+          </Col>
+
+          <Col lg={{ size: 6, offset: 1 }}>
+            <Row className="row-cols-2 g-5 align-items-center">
+              <Col>
+                <Card className="h-100 border-0">
+                  <a href="https://www.wienenergie.at">
+                    <GatsbyImage
+                      image={data.wienEnergie.childImageSharp.gatsbyImageData}
+                      className="border-0"
+                      alt="WIEN ENERGIE GmbH"
+                    />
+                  </a>
+                </Card>
+              </Col>
+
+              <Col>
+                <Card className="h-100 border-0">
+                  <a href="https://www.linzag.at">
+                    <GatsbyImage
+                      image={data.linzAG.childImageSharp.gatsbyImageData}
+                      className="border-0"
+                      alt="Linz AG"
+                    />
+                  </a>
+                </Card>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Container>
+    </section>
+
+    <section className="py-5">
       <Container className="py-5">
         <Row className="pb-5 align-items-center">
           <Col md="6">
@@ -126,7 +160,22 @@ const IndexPage = () => (
       btn="Request quote"
     />
 
-  </Layout>
+  </Layout >
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query {
+    wienEnergie: file(relativePath: { eq: "customers/wien_energie.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    linzAG: file(relativePath: { eq: "customers/linz_ag.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+  }
+`

@@ -29,7 +29,7 @@ const IndexPage = ({ data }) => (
                 <FaPlay className="me-3 mt-n1 fa-spin" />
                 Get started
               </Button>
-              <Button to={`/contact`} tag={Link} color="light" size="lg" className="mt-4 ms-4">Contact us</Button>
+              <Button to={`/contact`} tag={Link} color="dark" size="lg" className="mt-4 ms-4">Contact us</Button>
             </div>
           </Col>
         </Row>

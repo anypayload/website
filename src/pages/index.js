@@ -1,4 +1,5 @@
 import React from "react"
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
@@ -101,25 +102,25 @@ const IndexPage = ({ data }) => (
             <Row className="row-cols-2 g-5 align-items-center">
               <Col>
                 <Card className="h-100 border-0">
-                  <a href="https://www.wienenergie.at">
+                  <OutboundLink href="https://www.wienenergie.at">
                     <GatsbyImage
                       image={data.wienEnergie.childImageSharp.gatsbyImageData}
                       className="border-0"
                       alt="WIEN ENERGIE GmbH"
                     />
-                  </a>
+                  </OutboundLink>
                 </Card>
               </Col>
 
               <Col>
                 <Card className="h-100 border-0">
-                  <a href="https://www.linzag.at">
+                  <OutboundLink href="https://www.linzag.at">
                     <GatsbyImage
                       image={data.linzAG.childImageSharp.gatsbyImageData}
                       className="border-0"
                       alt="Linz AG"
                     />
-                  </a>
+                  </OutboundLink>
                 </Card>
               </Col>
             </Row>

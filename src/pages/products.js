@@ -63,7 +63,7 @@ const DECODERS = {
   },
   'senseair-explora-co2': {
     name: 'Senseair Explora CO2',
-    payload: '0x12A02300FF',
+    payload: '0x3E441D021B',
     port: 2
   },
   'sensoneo-single-sensor': {

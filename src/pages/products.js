@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from 'gatsby'
 import { Container, Row, Col, Form, FormGroup, Label, Input, Button, Card, CardBody } from "reactstrap"
-import { FaPlay } from "react-icons/fa"
+import { FaPlay, FaTimes } from "react-icons/fa"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Callto from "../components/callto"
@@ -15,20 +15,105 @@ import logoRust from "../images/languages/Rust.svg"
 import Newsletter from "../components/newsletter"
 
 const DECODER_API = "https://europe-west3-silent-octagon-281319.cloudfunctions.net/website-lambda-api"
+const DECODERS = {
+  'adeunis-dc': {
+    name: 'Adeunis Dry Contacts',
+    payload: '0x1020900143140700020000'
+  },
+  'bosch-parking-lot-sensor': {
+    name: 'Bosch Parking Lot Sensor',
+    payload: '0x00FE'
+  },
+  'cayenne-lpp': {
+    name: 'Cayenne LPP',
+    payload: '0x6701106700FF',
+    port: 2
+  },
+  'elsys': {
+    name: 'Elsys',
+    payload: '0x0100CD021E07005F',
+  },
+  'elvaco-CMi4110': {
+    name: 'Elvaco CMi4110',
+    payload: '0x000c06010000000c14010000000b2b0100000b3b0100000a5a01000a5e01000c781234567802fd170000',
+  },
+  'elvaco-CMi4160': {
+    name: 'Elvaco CMi4160',
+    payload: '0x1E0403A00000000413FF000000022BFF00023BFF00025AA000025EA000ABCD0A010000FF00010F01FD17FF',
+  },
+  'emz-slx-1307': {
+    name: 'EMZ SLX-1307',
+    payload: '0x43303A31353233',
+  },
+  'gavazzi': {
+    name: 'Gavazzi',
+    payload: '0x01200A000000000F000000',
+  },
+  'gavazzi-R56': {
+    name: 'Gavazzi R56',
+    payload: '0x801122334411F400011122334401111122334411223344111122',
+  },
+  'libelium-smart-parking-v1': {
+    name: 'Libelium Smart Parking v1',
+    payload: '0x00281515adef6b0ae300c5',
+  },
+  'pni-placepod': {
+    name: 'PNI PlacePod Vehicle Detection',
+    payload: '0x156601',
+  },
+  'senseair-explora-co2': {
+    name: 'Senseair Explora CO2',
+    payload: '0x12A02300FF',
+    port: 2
+  },
+  'sensoneo-single-sensor': {
+    name: 'Sensoneo Single Sensor',
+    payload: '0xffff22b262d090700105050505701b0075',
+  },
+  'tabs-healthy-home': {
+    name: 'Tabs Healthy Home Sensor',
+    payload: '0xFFCA250A0A000F00',
+    port: 103
+  },
+  'teneo-CO2-stoplicht': {
+    name: 'Teneo CO2 Stoplicht',
+    payload: '0x0F000001533B0753114D',
+    port: 1
+  },
+  'ursalink-AM100': {
+    name: 'Ursalink AM100/AM102 series',
+    payload: '0x0367fc00046849',
+  }
+}
 
 class Decoder extends React.Component {
-  state = {
-    decoder: "elsys",
-    payload: "",
-    port: 1,
-    decoded: null,
-    loading: false
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      decoder: "elsys",
+      payload: "",
+      port: null,
+      decoded: null,
+      loading: false
+    }
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleInputChange = event => {
+  handleChange = event => {
     const target = event.target
     const value = target.value
     const name = target.name
+
+    if (name === 'decoder') {
+      var decoder = DECODERS[value]
+      this.setState({
+        port: decoder.port
+      })
+    }
+
     this.setState({
       [name]: value,
     })
@@ -60,7 +145,7 @@ class Decoder extends React.Component {
   }
 
   render() {
-    const { loading } = this.state
+    const { loading, decoder, payload, port } = this.state
 
     return (
       <Card className="shadow border-0 my-5">
@@ -68,62 +153,55 @@ class Decoder extends React.Component {
           <Row>
             <Col md="6">
               <Form onSubmit={this.handleSubmit} method="post">
+                <h4 className="mt-1 mb-3">Decoding</h4>
+                <p>
+                  Select a sensor and the payload you want to decode.
+                </p>
                 <FormGroup className="mb-3">
                   <Label size="lg">Select a sensor to decode:</Label>
                   <Input
                     type="select"
                     name="decoder"
-                    onChange={this.handleInputChange}
+                    value={decoder}
+                    onChange={this.handleChange}
                     className="form-select form-select-lg"
                     bsSize="lg"
-                    defaultValue={'elsys'}
                     disabled={loading}
                   >
-                    <option value="adeunis-dc">Adeunius Dry Contacts</option>
-                    <option value="bosch-parking-lot-sensor">Bosch Parking Lot Sensor</option>
-                    <option value="cayenne-lpp">Cayenne LPP</option>
-                    <option value="elsys">Elsys</option>
-                    <option value="elvaco-CMi4110">Elvaco CMi4110</option>
-                    <option value="elvaco-CMi4160">Elvaco CMi4160</option>
-                    <option value="emz-slx-1307">EMZ SLX-1307</option>
-                    <option value="gavazzi">Gavazzi</option>
-                    <option value="gavazzi-R56">Gavazzi R56</option>
-                    <option value="pni-placepod">PNI PlacePod Vehicle Detection Sensor</option>
-                    <option value="senseair-explora-co2">Senseair Explora CO2</option>
-                    <option value="sensoneo-single-sensor">Sensoneo Single Sensor</option>
-                    <option value="tabs-healthy-home">Tabs Healthy Home Sensor</option>
-                    <option value="teneo-CO2-stoplicht">Teneo CO2 Stoplicht</option>
-                    <option value="libelium-smart-parking-v1">Libelium Smart Parking V1</option>
-                    <option value="ursalink-AM100">Ursalink AM100/AM102 series</option>
+                    {Object.entries(DECODERS).map(([key, value]) => (
+                      <option value={key} key={key}>{value.name}</option>
+                    ))}
                   </Input>
                 </FormGroup>
                 <Row className="mb-3">
-                  <Col md={9}>
+                  <Col>
                     <FormGroup>
                       <Label size="lg">Insert your sensor payload:</Label>
                       <Input
                         type="text"
                         name="payload"
-                        onChange={this.handleInputChange}
+                        value={payload}
+                        onChange={this.handleChange}
                         placeholder="0x0100e20229040027"
                         bsSize="lg"
                         disabled={loading}
                       />
                     </FormGroup>
                   </Col>
-                  <Col>
+                  {DECODERS[decoder].port && <Col md={3}>
                     <FormGroup>
                       <Label size="lg">Port:</Label>
                       <Input
                         type="text"
                         name="port"
-                        onChange={this.handleInputChange}
+                        value={port}
+                        onChange={this.handleChange}
                         placeholder="1"
                         bsSize="lg"
                         disabled={loading}
                       />
                     </FormGroup>
-                  </Col>
+                  </Col>}
                 </Row>
                 <div className="text-right">
                   <Button type="submit" color="primary" size="lg" block className="fw-bold w-100 text-white" disabled={loading}>
@@ -134,33 +212,36 @@ class Decoder extends React.Component {
             </Col>
 
             <Col md="6" className="mt-5 mt-md-0">
-              {this.state.decoded && <PrettyPrintJson data={this.state.decoded} />}
+              {this.state.decoded &&
+                <div className={`pre-scrollable rounded h-100 ${this.state.decoded.status ? 'bg-decode-success' : 'bg-decode-danger'}`}>
+                  <Button
+                    type="button"
+                    color="transparent"
+                    name="decoded"
+                    className="float-end"
+                    value={null}
+                    onClick={this.handleChange}>
+                    <FaTimes />
+                  </Button>
+                  <pre className="p-2">{JSON.stringify(this.state.decoded, null, 2)}</pre>
+                </div>
+              }
               {!this.state.decoded && <>
-                <h4 className="my-2">Getting started</h4>
-
+                <h4 className="mt-1 mb-3">Sample Payloads</h4>
                 <p>
-                  Select a sensor and the payload you want to decode. You can
-                  also try out one of the following examples:
+                  You can also try out our decoder with one of the sample payloads provided below.
                 </p>
-
-                <ul className="mt-2">
-                  <li>Adeunis Dry Contacts: <code>0x1020900143140700020000</code></li>
-                  <li>Bosch Parking Lot Sensor: <code>0x00FE</code></li>
-                  <li>Cayenne LPP: <code>0x6701106700FF</code> with Port <code>2</code></li>
-                  <li>Elsys: <code>0x0100CD021E07005F</code></li>
-                  <li>Elvaco CMi4110: <code>0x000c06010000000c14010000000b2b0100000b3b0100000a5a01000a5e01000c781234567802fd170000</code></li>
-                  <li>Elvaco CMi4160: <code>0x1E0403A00000000413FF000000022BFF00023BFF00025AA000025EA000ABCD0A010000FF00010F01FD17FF</code></li>
-                  <li>EMZ SLX-1307: <code>0x43303A31353233</code></li>
-                  <li>Gavazzi: <code>0x01200A000000000F000000</code></li>
-                  <li>Gavazzi R56: <code>0x801122334411F400011122334401111122334411223344111122</code></li>
-                  <li>Libelium Smart Parking v1: <code>0x00281515adef6b0ae300c5</code></li>
-                  <li>PNI PlacePod Vehicle Detection: <code>0x156601</code></li>
-                  <li>Senseair Explora CO<sub>2</sub>: <code>0x12A02300FF</code> with Port <code>2</code></li>
-                  <li>Sensoneo Single Sensor: <code>0xffff22b262d090700105050505701b0075</code></li>
-                  <li>Tabs Healthy Home Sensor: <code>0xFFCA250A0A000F00</code> with Port <code>103</code></li>
-                  <li>Teneo CO2 Stoplicht: <code>0x0F000001533B0753114D</code> with Port <code>1</code></li>
-                  <li>Ursalink AM100/AM102 series: <code>0x0367fc00046849</code></li>
-                </ul>
+                <div className="mt-2 list-group">
+                  {Object.entries(DECODERS).map(([key, value]) => (
+                    <div key={key} className="list-group-item d-flex justify-content-between align-items-center overflow-auto">
+                      <div>
+                        <h6>{value.name}</h6>
+                        <code>{value.payload}</code>
+                      </div>
+                      {value.port && <span className="badge bg-dark text-light">Port {value.port}</span>}
+                    </div>
+                  ))}
+                </div>
               </>}
               {/*<ListGroup>
                 <ListGroupItem className="d-flex justify-content-between align-items-center">
@@ -180,11 +261,6 @@ class Decoder extends React.Component {
     )
   }
 }
-
-const PrettyPrintJson = ({ data }) => (
-  <div className={`pre-scrollable ${data.status ? 'bg-decode-success' : 'bg-decode-danger'}`}>
-    <pre>{JSON.stringify(data, null, 2)}</pre>
-  </div>)
 
 const ProductsPage = () => (
   <Layout className="bg-light">
@@ -210,7 +286,7 @@ const ProductsPage = () => (
       <Container>
         <Row>
           <Col md="5">
-            <h6 className="text-uppercase text-muted">Work in Progress</h6>
+            <h6 className="text-uppercase text-muted">Parse any IoT Payload</h6>
             <h2 className="pb-4">Payload Decoder</h2>
             <p className="lead">
               Decode uplink payloads of your IoT platform in a human-readable and machine-interpretable format.

@@ -217,10 +217,9 @@ class Decoder extends React.Component {
                   <Button
                     type="button"
                     color="transparent"
-                    name="decoded"
                     className="float-end"
-                    value={null}
-                    onClick={this.handleChange}>
+                    onClick={() => this.setState({ decoded: null })}
+                  >
                     <FaTimes />
                   </Button>
                   <pre className="p-2">{JSON.stringify(this.state.decoded, null, 2)}</pre>

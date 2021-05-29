@@ -22,7 +22,8 @@ const DECODERS = {
   },
   'bosch-parking-lot-sensor': {
     name: 'Bosch Parking Lot Sensor',
-    payload: '0x00FE'
+    payload: '0x00FE',
+    port: 2,
   },
   'cayenne-lpp': {
     name: 'Cayenne LPP',

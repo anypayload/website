@@ -53,7 +53,7 @@ const DECODERS = {
     name: 'Gavazzi R56',
     payload: '0x801122334411F400011122334401111122334411223344111122',
   },
-  'imbuildings': {
+  'IMBuildings': {
     name: 'imbuildings',
     payload: '0x02060004a30b00f0d40e0001000000000020000d000a6a'
   },

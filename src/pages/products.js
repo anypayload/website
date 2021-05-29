@@ -53,6 +53,10 @@ const DECODERS = {
     name: 'Gavazzi R56',
     payload: '0x801122334411F400011122334401111122334411223344111122',
   },
+  'imbuildings': {
+    name: 'imbuildings',
+    payload: '0x02060004a30b00f0d40e0001000000000020000d000a6a'
+  },
   'libelium-smart-parking-v1': {
     name: 'Libelium Smart Parking v1',
     payload: '0x00281515adef6b0ae300c5',

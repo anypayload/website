@@ -30,6 +30,14 @@ const ProductsPage = () => (
         <Row className="justify-content-center">
           <Col md="8" className="text-center">
             <article className="py-5">
+              <h4>IMBuildings</h4>
+              <h6 className="text-muted fw-light mb-4">May 29, 2021</h6>
+              <p>
+                We have implemented the <Link to='/payloads/imbuildings'>IMBuildings</Link> sensor
+                in the latest version with all variants including the Comfort Sensor CO2, People Counter, Buttons, Pulse Counter, and Tracker and added the decoder to our payload collection.
+              </p>
+            </article>
+            <article className="py-5 border-top">
               <h4>Elvaco CMi4110</h4>
               <h6 className="text-muted fw-light mb-4">March 25, 2021</h6>
               <p>

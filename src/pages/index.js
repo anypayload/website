@@ -26,11 +26,11 @@ const IndexPage = ({ data }) => (
             <div className="py-5 mt-5 px-lg-7">
               <h1>Production-ready sensor payloads for your <span className="text-primary">IoT business</span></h1>
               <p className="lead mt-4">We help you to make adoption of IoT technology simple.</p>
-              <Button to={`/products`} tag={Link} color="primary" size="lg" className="mt-4 text-white">
+              <Button to={`/products/`} tag={Link} color="primary" size="lg" className="mt-4 text-white">
                 <FaPlay className="me-3 mt-n1 fa-spin" />
                 Get started
               </Button>
-              <Button to={`/contact`} tag={Link} color="dark" size="lg" className="mt-4 ms-4">Contact us</Button>
+              <Button to={`/contact/`} tag={Link} color="dark" size="lg" className="mt-4 ms-4">Contact us</Button>
             </div>
           </Col>
         </Row>

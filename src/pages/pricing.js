@@ -25,7 +25,7 @@ const PricingPage = () => (
     </header>
 
     <section className="mb-5 bg dotted">
-      <Container fluid className="w-xl-75">
+      <Container>
         <Row className="row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
           <Col className="mt-5 d-none">
             <PricingCard

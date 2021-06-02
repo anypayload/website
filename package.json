@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Thomas Schmidleithner <info@serverless.at>",
   "dependencies": {
-    "bootstrap": "^5.0.0-beta3",
+    "bootstrap": "^5.0.1",
     "gatsby": "^3.1.1",
     "gatsby-cli": "^3.1.0",
     "gatsby-image": "^3.1.0",

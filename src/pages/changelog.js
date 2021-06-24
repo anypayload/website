@@ -30,11 +30,21 @@ const ProductsPage = () => (
         <Row className="justify-content-center">
           <Col md="8" className="text-center">
             <article className="py-5">
-              <h4>Bernhard CM3021</h4>
+              <h4>NAS CM3021</h4>
               <h6 className="text-muted fw-light mb-4">June 24, 2021</h6>
               <p>
-                We have implemented the <Link to='/payloads/bernhard/CM3021/'>Bernhard C3021</Link> sensor
+                We have implemented the <Link to='/payloads/nas/CM3021/'>NAS CM3021</Link> sensor
                 compatible with FW ≥ 1.0.0 has been implemented and added to our decoders.
+                The decoder is compatible with
+                <ul>
+                  <li>Wehrle Modularis meters</li>
+                  <li>Bernhardt Modularis compatible meters</li>
+                  <li>Maddalena CD SD PLUS EVO</li>
+                  <li>Maddalena VTZ</li>
+                  <li>Siemens WFW30/WFK30 series</li>
+                  <li>Wasser-Geräte ECO type meters</li>
+                  <li>WaterTech Polaris-S</li>
+                </ul>
               </p>
             </article>
             <article className="py-5 border-top">

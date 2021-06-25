@@ -20,11 +20,6 @@ const DECODERS = {
     name: 'Adeunis Dry Contacts',
     payload: '0x1020900143140700020000'
   },
-  'nas-CM3021': {
-    name: 'NAS CM3021',
-    payload: '0x013000ff1110004f0701000000000000',
-    port: 24,
-  },
   'bosch-parking-lot-sensor': {
     name: 'Bosch Parking Lot Sensor',
     payload: '0x00FE',
@@ -66,6 +61,11 @@ const DECODERS = {
   'libelium-smart-parking-v1': {
     name: 'Libelium Smart Parking v1',
     payload: '0x00281515adef6b0ae300c5',
+  },
+  'nas-CM3021': {
+    name: 'NAS CM3021',
+    payload: '0x013000ff1110004f0701000000000000',
+    port: 24,
   },
   'pni-placepod': {
     name: 'PNI PlacePod Vehicle Detection',

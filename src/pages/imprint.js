@@ -29,9 +29,9 @@ const ImprintPage = () => (
             <h2>Datenschutz</h2>
           </Col>
         </Row>
-        <Row className="py-5">
+        <Row className="pt-5">
           <Col md="4">
-            <h5>Anbieter und Verantwortlicher</h5>
+            <h5>Anbieter und Verantwortliche</h5>
             <address>
               Thomas Schmidleithner, BSc<br />
               Meggenhofen 95/11<br />
@@ -46,14 +46,41 @@ const ImprintPage = () => (
           <Col md="4">
             <h5>Email</h5>
             <p>
-              <a href="mailto:office@anypayload.com">office@anypayload.com</a>
+              <a href="mailto:thomas@anypayload.com">thomas@anypayload.com</a>
             </p>
           </Col>
         </Row>
-        <Row className="pb-5">
+        <Row className="pb-3">
           <Col lg="6">
             <p><strong>VAT ID:</strong> ATU72845228<br />
             Mitglied der Wirtschaftskammer Oberösterreich, Fachgruppe Unternehmensberatung, Buchhaltung und Informationstechnologie
+            </p>
+          </Col>
+        </Row>
+        <Row className="pt-3">
+          <Col md="4">
+            <address>
+              Dr. Gerald Berger<br />
+              Schönbrunner Straße 254/14<br />
+              1120 Wien<br />
+              Austria
+            </address>
+          </Col>
+          <Col md="4">
+            <h5>Telefon</h5>
+            <p>+43 660 12 348 99</p>
+          </Col>
+          <Col md="4">
+            <h5>Email</h5>
+            <p>
+              <a href="mailto:gerald@anypayload.com">gerald@anypayload.com</a>
+            </p>
+          </Col>
+        </Row>
+        <Row className="pb-3">
+          <Col lg="6">
+            <p>
+            Mitglied der Wirtschaftskammer Wien, Fachgruppe Unternehmensberatung, Buchhaltung und Informationstechnologie
             </p>
           </Col>
         </Row>

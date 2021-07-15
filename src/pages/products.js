@@ -20,6 +20,10 @@ const DECODERS = {
     name: 'Adeunis Dry Contacts',
     payload: '0x1020900143140700020000'
   },
+  'adeunis-field-test-device': {
+    name: 'Adeunis Field Test Device',
+    payload: '0xBF1B45159690005534502720200FC95207',
+  },
   'bosch-parking-lot-sensor': {
     name: 'Bosch Parking Lot Sensor',
     payload: '0x00FE',

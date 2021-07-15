@@ -28,8 +28,16 @@ const ProductsPage = () => (
     <section className="bg-white py-5">
       <Container>
         <Row className="justify-content-center">
-          <Col md="8" className="text-center">
+          <Col md="8">
             <article className="py-5">
+              <h4>Adeunis Field Test Device</h4>
+              <h6 className="text-muted fw-light mb-4">July 15, 2021</h6>
+              <p>
+                We have implemented the <Link to='/payloads/adeunis/field-test-device/'>Adeunis Field Test Device</Link> decoder
+                compatible with V1.2.0 and added the decoder to our decoder repository.
+              </p>
+            </article>
+            <article className="py-5 border-top">
               <h4>NAS CM3021</h4>
               <h6 className="text-muted fw-light mb-4">June 24, 2021</h6>
               <p>

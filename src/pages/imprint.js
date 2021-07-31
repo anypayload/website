@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 
 const ImprintPage = () => (
   <Layout className="bg-light">
-    <SEO 
+    <SEO
       title="Imprint"
     />
 
@@ -53,7 +53,7 @@ const ImprintPage = () => (
         <Row className="pb-3">
           <Col lg="6">
             <p><strong>VAT ID:</strong> ATU72845228<br />
-            Mitglied der Wirtschaftskammer Oberösterreich, Fachgruppe Unternehmensberatung, Buchhaltung und Informationstechnologie
+              Mitglied der Wirtschaftskammer Oberösterreich, Fachgruppe Unternehmensberatung, Buchhaltung und Informationstechnologie
             </p>
           </Col>
         </Row>
@@ -79,8 +79,8 @@ const ImprintPage = () => (
         </Row>
         <Row className="pb-3">
           <Col lg="6">
-            <p>
-            Mitglied der Wirtschaftskammer Wien, Fachgruppe Unternehmensberatung, Buchhaltung und Informationstechnologie
+            <p><strong>VAT ID:</strong> ATU74014158<br />
+              Mitglied der Wirtschaftskammer Wien, Fachgruppe Unternehmensberatung, Buchhaltung und Informationstechnologie
             </p>
           </Col>
         </Row>
@@ -90,11 +90,11 @@ const ImprintPage = () => (
             <p>Zu den personenbezogenen Daten, die diese Anwendung selbstständig oder durch Dritte verarbeitet, gehören: Firma/Projektname, E-Mail, Nachricht, Budgetrahmen, Cookie und Nutzungsdaten.</p>
 
             <p>
-            Vollständige Details zu jeder Art von verarbeiteten personenbezogenen Daten werden in den dafür vorgesehenen Abschnitten dieser Datenschutzerklärung oder durch konkrete Erklärungstexte bereitgestellt, die vor der Datenverarbeitung angezeigt werden.
-            Die personenbezogenen Daten können vom Nutzer freiwillig bereitgestellt oder, im Falle von Nutzungsdaten, automatisch verarbeitet werden, wenn diese Anwendung genutzt wird.
-            Alle durch diese Anwendung angeforderten Daten sind obligatorisch. Sollten diese Daten nicht bereitgestellt werden, kann dies dazu führen, dass diese Anwendung nicht in der Lage ist, ihre Dienste zur Verfügung zu stellen. In Fällen, in denen diese Anwendung ausdrücklich angibt, dass einige Daten nicht obligatorisch sind, dürfen sich die Nutzer dafür entscheiden, diese Daten ohne jegliche Folgen für die Verfügbarkeit oder die Funktion des Dienstes nicht weiterzugeben.
-            Nutzer, die sich darüber im Unklaren sind, welche personenbezogenen Daten obligatorisch sind, können gerne den Eigentümer kontaktieren.
-            Jegliche Verwendung von Cookies - oder anderer Tracking-Tools - durch diese Anwendung oder die Besitzer von Drittdiensten, die durch diese Anwendung genutzt werden, dient dem Zweck, den vom Nutzer gewünschten Dienst bereitzustellen, und allen anderen Zwecken, die im vorliegenden Dokument und, falls vorhanden, in der Cookie-Richtlinie beschrieben sind.
+              Vollständige Details zu jeder Art von verarbeiteten personenbezogenen Daten werden in den dafür vorgesehenen Abschnitten dieser Datenschutzerklärung oder durch konkrete Erklärungstexte bereitgestellt, die vor der Datenverarbeitung angezeigt werden.
+              Die personenbezogenen Daten können vom Nutzer freiwillig bereitgestellt oder, im Falle von Nutzungsdaten, automatisch verarbeitet werden, wenn diese Anwendung genutzt wird.
+              Alle durch diese Anwendung angeforderten Daten sind obligatorisch. Sollten diese Daten nicht bereitgestellt werden, kann dies dazu führen, dass diese Anwendung nicht in der Lage ist, ihre Dienste zur Verfügung zu stellen. In Fällen, in denen diese Anwendung ausdrücklich angibt, dass einige Daten nicht obligatorisch sind, dürfen sich die Nutzer dafür entscheiden, diese Daten ohne jegliche Folgen für die Verfügbarkeit oder die Funktion des Dienstes nicht weiterzugeben.
+              Nutzer, die sich darüber im Unklaren sind, welche personenbezogenen Daten obligatorisch sind, können gerne den Eigentümer kontaktieren.
+              Jegliche Verwendung von Cookies - oder anderer Tracking-Tools - durch diese Anwendung oder die Besitzer von Drittdiensten, die durch diese Anwendung genutzt werden, dient dem Zweck, den vom Nutzer gewünschten Dienst bereitzustellen, und allen anderen Zwecken, die im vorliegenden Dokument und, falls vorhanden, in der Cookie-Richtlinie beschrieben sind.
             </p>
 
             <p>Die Nutzer sind für alle personenbezogenen Daten Dritter verantwortlich, die durch diese Anwendung beschafft, veröffentlicht oder weitergegeben werden, und bestätigen, dass sie die Zustimmung zur Übermittlung personenbezogener Daten etwaiger Dritter an diese Anwendung eingeholt haben.</p>
@@ -102,10 +102,10 @@ const ImprintPage = () => (
             <h2 className="mt-5">Art und Ort der Datenverarbeitung</h2>
             <h3>Verarbeitungsmethoden</h3>
             <p>Die verantwortliche Stelle verarbeitet die Nutzerdaten auf ordnungsgemäße Weise und ergreift angemessene Sicherheitsmaßnahmen, um den unbefugten Zugriff und die unbefugte Weiterleitung, Modifizierung oder Vernichtung von Daten zu vermeiden.<br />Die Datenverarbeitung wird mittels Computern oder IT-basierten Systemen durchgeführt, einem organisatorischen Verfahren und Modus folgend die strikt auf die angegebenen Zwecke abzielen. Neben der verantwortlichen Stelle wird möglicherweise auch bestimmten Kategorien von Verantwortlichen Zugriff auf die Daten gewährt, die an der Betreibung der Website beteiligt sind (Personalverwaltung, Vertrieb, Marketing, Recht, Systemadministratoren) oder externen Parteien (wie Fremdanbietern technischer Dienstleistungen, Zustellunternehmen, Hosting-Anbietern, IT-Unternehmen oder Kommunikationsagenturen), die, falls notwendig, vom Eigentümer als Auftragsverarbeiter eingesetzt werden. Eine aktuelle Liste dieser Beteiligten kann jederzeit von der verantwortlichen Stelle verlangt werden.</p>
-            
+
             <h3>Ort</h3>
             <p>Die Daten werden am Betriebsort der verantwortlichen Stelle und an allen anderen Orten, an denen sich die mit der Datenverarbeitung beteiligten Parteien befinden, verarbeitet. Für weitere Informationen, kontaktieren Sie bitte die verantwortliche Stelle.</p>
-            
+
             <h3>Speicherdauer</h3>
             <p>Die Daten werden so lange gespeichert, wie es für das Erbringen der vom Nutzer gewünschten Dienstleistungen notwendig ist oder für die in diesem Dokument aufgeführten Zwecke angegeben ist. Der Nutzer kann die verantwortliche Stelle jederzeit auffordern, die Daten zu sperren oder zu entfernen.</p>
 
@@ -129,8 +129,8 @@ const ImprintPage = () => (
             Man unterscheidet drei Kategorien von Cookies: unbedingt notwendige Cookies um grundlegende Funktionen der Website sicherzustellen, funktionelle Cookies um die Leistung der Webseite sicherzustellen und zielorientierte Cookies um das Benutzererlebnis zu verbessern.<br />
             Wir nutzen Cookies, um unsere Webseite nutzerfreundlicher zu gestalten. Einige Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese löschen. Sie ermöglichen es uns, Ihren Browser beim nächsten Besuch wiederzuerkennen.<br />
             <p>Wenn Sie dies nicht wünschen, so können Sie Ihren Browser so einrichten, dass er Sie über das Setzen von Cookies informiert und Sie dies nur im Einzelfall erlauben.<br />
-            Sie können jederzeit Cookies, die sich bereits auf Ihrem Computer befinden, löschen oder Cookies deaktivieren. Die Vorgangsweise dazu ist nach Browser unterschiedlich, am besten Sie suchen die Anleitung in Google mit dem Suchbegriff „cookies löschen chrome“ oder „cookies deaktivieren chrome“ im Falle eines Chrome Browsers oder tauschen das Wort „chrome“ gegen den Namen Ihres Browsers, z. B. edge, firefox, safari aus.<br />
-            Wenn Sie uns generell nicht gestatten, Cookies zu nutzen, d.h. diese per Browsereinstellung deaktivieren, können manche Funktionen und Seiten nicht wie erwartet funktionieren.</p>
+              Sie können jederzeit Cookies, die sich bereits auf Ihrem Computer befinden, löschen oder Cookies deaktivieren. Die Vorgangsweise dazu ist nach Browser unterschiedlich, am besten Sie suchen die Anleitung in Google mit dem Suchbegriff „cookies löschen chrome“ oder „cookies deaktivieren chrome“ im Falle eines Chrome Browsers oder tauschen das Wort „chrome“ gegen den Namen Ihres Browsers, z. B. edge, firefox, safari aus.<br />
+              Wenn Sie uns generell nicht gestatten, Cookies zu nutzen, d.h. diese per Browsereinstellung deaktivieren, können manche Funktionen und Seiten nicht wie erwartet funktionieren.</p>
 
             <h2 className="mt-5">Google Analytics Datenschutzerklärung</h2>
             <p>Wir verwenden auf dieser Webseite Google Analytics der Firma Google Inc. (1600 Amphitheatre Parkway Mountain View, CA 94043, USA) um Besucherdaten statistisch auszuwerten. Dabei verwendet Google Analytics zielorientierte Cookies.</p>

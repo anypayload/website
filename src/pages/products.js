@@ -34,6 +34,10 @@ const DECODERS = {
     payload: '0x6701106700FF',
     port: 2
   },
+  'decentlab-DL-SHT35': {
+    name: 'Decentlab DL-SHT35',
+    payload: '02030e000364a079b10c60'
+  },
   'elsys': {
     name: 'Elsys',
     payload: '0x0100CD021E07005F',

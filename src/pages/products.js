@@ -36,7 +36,7 @@ const DECODERS = {
   },
   'decentlab-DL-SHT35': {
     name: 'Decentlab DL-SHT35',
-    payload: '02030e000364a079b10c60'
+    payload: '0x02030e000364a079b10c60'
   },
   'elsys': {
     name: 'Elsys',

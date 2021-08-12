@@ -30,6 +30,13 @@ const ProductsPage = () => (
         <Row className="justify-content-center">
           <Col md="8">
             <article className="py-5">
+              <h4>Decentlab DL-SHT35</h4>
+              <h6 className="text-muted fw-light mb-4">August 12, 2021</h6>
+              <p>
+                We have implemented the <Link to='/payloads/decentlab/DL-SHT35/'>Decentlab DL-SHT35</Link> decoder.
+              </p>
+            </article>
+            <article className="py-5 border-top">
               <h4>Adeunis Field Test Device</h4>
               <h6 className="text-muted fw-light mb-4">July 15, 2021</h6>
               <p>
@@ -37,7 +44,7 @@ const ProductsPage = () => (
                 compatible with V1.2.0 and added the decoder to our decoder repository.
               </p>
             </article>
-            <article className="py-5 border-top">
+            <article className="py-5">
               <h4>NAS CM3021</h4>
               <h6 className="text-muted fw-light mb-4">June 24, 2021</h6>
               <p>

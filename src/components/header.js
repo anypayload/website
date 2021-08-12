@@ -20,7 +20,7 @@ const Header = (props) => {
     <div className="bg-secondary position-relative">
       <Container className="text-center small py-2">
         <Link to={'/products/'} className="text-dark stretched-link text-decoration-none">
-          <strong>July 15, 2021</strong> <span className="mx-2" role="img" aria-label="Updates">🚀</span> Check out our latest payload sensor decoders for Adeunis, NAS, Bosch, IMBuildings, PNI, Sensoneo, Teneo, and many others.
+          <strong>August 12, 2021</strong> <span className="mx-2" role="img" aria-label="Updates">🚀</span> Check out our latest payload sensor decoders for Adeunis, NAS, Bosch, Decentlab, IMBuildings, PNI, Sensoneo, Teneo, and many others.
         </Link>
       </Container>
     </div>

@@ -62,7 +62,7 @@ const PricingPage = () => (
               plan="Bundle"
               className="shadow-lg border-primary"
               description="Five sensor payload decoders"
-              costs="€ 1495"
+              costs="€ 1995"
               costsPer="excl. VAT"
               buttonText="Get started"
             >

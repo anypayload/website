@@ -47,7 +47,7 @@ const PricingPage = () => (
               plan="Single"
               className="border-0"
               description="Single sensor payload decoder"
-              costs="€ 395"
+              costs="€ 475"
               costsPer="excl. VAT"
               buttonText="Get started"
             >

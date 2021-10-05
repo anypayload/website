@@ -30,6 +30,14 @@ const ProductsPage = () => (
         <Row className="justify-content-center">
           <Col md="8">
             <article className="py-5">
+              <h4>Elvaco CMi4180</h4>
+              <h6 className="text-muted fw-light mb-4">October 5, 2021</h6>
+              <p>
+                We have implemented the <Link to='/payloads/elvaco/CMi4180/'>Elvaco CMi4180</Link> sensor
+                in most recent version and added the decoder to our payload collection.
+              </p>
+            </article>
+            <article className="py-5 border-top">
               <h4>Decentlab DL-SHT35</h4>
               <h6 className="text-muted fw-light mb-4">August 12, 2021</h6>
               <p>

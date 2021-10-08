@@ -59,8 +59,8 @@ const ContactSuccessPage = () => (
                 <h5 className="mt-5 border-top pt-4">Address</h5>
                 <address className="fw-light">
                   Thomas Schmidleithner, BSc<br />
-                  Meggenhofen 95/11<br />
-                  A-4714 Meggenhofen<br />
+                  Grolzham 2D<br />
+                  A-4680 Weibern<br />
                 </address>
               </Col>
             </Row>

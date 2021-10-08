@@ -34,8 +34,8 @@ const ImprintPage = () => (
             <h5>Anbieter und Verantwortliche</h5>
             <address>
               Thomas Schmidleithner, BSc<br />
-              Meggenhofen 95/11<br />
-              4714 Meggenhofen<br />
+              Grolzham 2D<br />
+              4680 Weibern<br />
               Austria
             </address>
           </Col>

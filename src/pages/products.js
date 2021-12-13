@@ -38,6 +38,10 @@ const DECODERS = {
     name: 'Decentlab DL-SHT35',
     payload: '0x02030e000364a079b10c60'
   },
+  'diehl-HRL-c-G3': {
+    name: 'Diehl HRLc-G3',
+    payload: '33120000004078000000E00000A700004000008081470000110000000000000000000000000000DCCCC600F9FFEB00000000D3'
+  },
   'elsys': {
     name: 'Elsys',
     payload: '0x0100CD021E07005F',

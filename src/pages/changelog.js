@@ -30,6 +30,47 @@ const ProductsPage = () => (
         <Row className="justify-content-center">
           <Col md="8">
             <article className="py-5">
+              <h4>Milesight EM500</h4>
+              <h6 className="text-muted fw-light mb-4">December 16, 2021</h6>
+              <p>
+                We have implemented the <Link to='/payloads/milesight/EM500/'>Milesight EM500</Link> sensor
+                in most recent version and added the decoder to our payload collection.
+              </p>
+            </article>
+            <article className="py-5 border-top">
+              <h4>Decentlab DL-SHT35</h4>
+              <h6 className="text-muted fw-light mb-4">August 12, 2021</h6>
+              <p>
+                We have implemented the <Link to='/payloads/decentlab/DL-SHT35/'>Decentlab DL-SHT35</Link> decoder.
+              </p>
+            </article>
+            <article className="py-5 border-top">
+              <h4>Adeunis Field Test Device</h4>
+              <h6 className="text-muted fw-light mb-4">July 15, 2021</h6>
+              <p>
+                We have implemented the <Link to='/payloads/adeunis/field-test-device/'>Adeunis Field Test Device</Link> decoder
+                compatible with V1.2.0 and added the decoder to our decoder repository.
+              </p>
+            </article>
+            <article className="py-5">
+              <h4>NAS CM3021</h4>
+              <h6 className="text-muted fw-light mb-4">June 24, 2021</h6>
+              <p>
+                We have implemented the <Link to='/payloads/nas/CM3021/'>NAS CM3021</Link> sensor
+                compatible with FW ≥ 1.0.0 has been implemented and added to our decoders.
+                The decoder is compatible with
+                <ul>
+                  <li>Wehrle Modularis meters</li>
+                  <li>Bernhardt Modularis compatible meters</li>
+                  <li>Maddalena CD SD PLUS EVO</li>
+                  <li>Maddalena VTZ</li>
+                  <li>Siemens WFW30/WFK30 series</li>
+                  <li>Wasser-Geräte ECO type meters</li>
+                  <li>WaterTech Polaris-S</li>
+                </ul>
+              </p>
+            </article>
+            <article className="py-5 border-top">
               <h4>Elvaco CMi4180</h4>
               <h6 className="text-muted fw-light mb-4">October 5, 2021</h6>
               <p>
@@ -70,7 +111,7 @@ const ProductsPage = () => (
                 </ul>
               </p>
             </article>
-            <article className="py-5 border-top">
+            <article className="py-5">
               <h4>IMBuildings</h4>
               <h6 className="text-muted fw-light mb-4">May 29, 2021</h6>
               <p>

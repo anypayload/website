@@ -78,6 +78,10 @@ const DECODERS = {
     name: 'Libelium Smart Parking v1',
     payload: '0x00281515adef6b0ae300c5',
   },
+  'milesight-EM500': {
+    name: 'Milesight EM500',
+    payload: '0x01756403671001046871057d670406736827'
+  },
   'nas-CM3021': {
     name: 'NAS CM3021',
     payload: '0x013000ff1110004f0701000000000000',

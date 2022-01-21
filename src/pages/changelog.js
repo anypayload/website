@@ -30,6 +30,14 @@ const ProductsPage = () => (
         <Row className="justify-content-center">
           <Col md="8">
             <article className="py-5">
+              <h4>Milesight EM300 series</h4>
+              <h6 className="text-muted fw-light mb-4">January 21, 2022</h6>
+              <p>
+                We have implemented the <Link to='/payloads/milesight/AM300/'>Milesight AM300 series</Link>
+                decoder including both sensors AM307 and AM319 in most recent version and added the decoder to our payload collection.
+              </p>
+            </article>
+            <article className="py-5 border-top">
               <h4>Milesight EM500</h4>
               <h6 className="text-muted fw-light mb-4">December 16, 2021</h6>
               <p>

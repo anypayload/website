@@ -42,6 +42,14 @@ const DECODERS = {
     name: 'Diehl HRLc G3',
     payload: '0x33120000004078000000E00000A700004000008081470000110000000000000000000000000000DCCCC600F9FFEB00000000D3'
   },
+  'dragino-LHT65': {
+    name: 'Dragino LHT65',
+    payload: '0x00000000000000003cff41'
+  },
+  'dragino-LT22222-L': {
+    name: 'Dragino LT22222-L',
+    payload: '0x00000000000000003cff41'
+  },
   'elsys': {
     name: 'Elsys',
     payload: '0x0100CD021E07005F',

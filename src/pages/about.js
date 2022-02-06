@@ -66,7 +66,7 @@ const About = ({ data }) => (
             />
             <h6 className="text-uppercase text-primary">Gerald</h6>
             <a href="mailto:gerald@anypayload.com" className="text-muted">gerald@anypayload.com</a>
-            <ListGroup horizontal>
+            <ListGroup horizontal className="mt-3">
               <ListGroupItem title="LinkedIn" tag={OutboundLink} target="_blank" href="https://www.linkedin.com/in/gerald-berger-357942100/"><FaLinkedin /></ListGroupItem>
               <ListGroupItem title="Github" tag={OutboundLink} target="_blank" href="https://github.com/gbrgr"><FaGithub /></ListGroupItem>
             </ListGroup>
@@ -80,7 +80,7 @@ const About = ({ data }) => (
             />
             <h6 className="text-uppercase text-primary">Thomas</h6>
             <a href="mailto:thomas@anypayload.com" className="text-muted">thomas@anypayload.com</a>
-            <ListGroup horizontal>
+            <ListGroup horizontal className="mt-3">
               <ListGroupItem title="LinkedIn" tag={OutboundLink} target="_blank" href="https://www.linkedin.com/in/thomas-schmidleithner"><FaLinkedin /></ListGroupItem>
               <ListGroupItem title="Xing" tag={OutboundLink} target="_blank" href="https://www.xing.com/profile/Thomas_Schmidleithner"><FaXingSquare /></ListGroupItem>
               <ListGroupItem title="Github" tag={OutboundLink} target="_blank" href="https://github.com/tschmidleithner"><FaGithub /></ListGroupItem>

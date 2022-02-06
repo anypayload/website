@@ -43,7 +43,7 @@ const About = ({ data }) => (
 
             <Col md={{ size: 4, offset: 2 }} className="mt-4 text-center text-md-start">
               <h6 className="text-uppercase text-primary">About Us</h6>
-              <h3 className="pb-4">We are a small team of software engineers and product managers embracing IoT technologies.</h3>
+              <h3 className="pb-4">We are a small team of software engineers embracing IoT technologies.</h3>
             </Col>
           </Row>
         </WorldMap>

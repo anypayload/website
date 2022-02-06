@@ -64,7 +64,7 @@ const About = ({ data }) => (
               className="w-25 rounded mb-4 shadow"
               alt="Gerald Berger"
             />
-            <h6 className="text-uppercase text-primary">Gerald Berger</h6>
+            <h6 className="text-uppercase text-primary">Gerald</h6>
             <a href="mailto:gerald@anypayload.com" className="text-muted">gerald@anypayload.com</a>
             <p className="py-3">
               PhD in Computer Science with a strong background in data engineering. Works

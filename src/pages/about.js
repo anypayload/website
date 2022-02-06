@@ -82,7 +82,7 @@ const About = ({ data }) => (
               className="w-25 rounded mb-4 shadow"
               alt="Thomas Schmidleithner"
             />
-            <h6 className="text-uppercase text-primary">Thomas Schmidleithner</h6>
+            <h6 className="text-uppercase text-primary">Thomas</h6>
             <a href="mailto:thomas@anypayload.com" className="text-muted">thomas@anypayload.com</a>
             <p className="py-3">
               Full-Stack software engineer with a strong background in web-backend technologies.

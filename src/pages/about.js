@@ -66,10 +66,6 @@ const About = ({ data }) => (
             />
             <h6 className="text-uppercase text-primary">Gerald</h6>
             <a href="mailto:gerald@anypayload.com" className="text-muted">gerald@anypayload.com</a>
-            <p className="py-3">
-              PhD in Computer Science with a strong background in data engineering. Works
-              for an Oxford University spin-out.
-            </p>
             <ListGroup horizontal>
               <ListGroupItem title="LinkedIn" tag={OutboundLink} target="_blank" href="https://www.linkedin.com/in/gerald-berger-357942100/"><FaLinkedin /></ListGroupItem>
               <ListGroupItem title="Github" tag={OutboundLink} target="_blank" href="https://github.com/gbrgr"><FaGithub /></ListGroupItem>
@@ -84,11 +80,6 @@ const About = ({ data }) => (
             />
             <h6 className="text-uppercase text-primary">Thomas</h6>
             <a href="mailto:thomas@anypayload.com" className="text-muted">thomas@anypayload.com</a>
-            <p className="py-3">
-              Full-Stack software engineer with a strong background in web-backend technologies.
-              Studied Software Engineering at TU Wien and worked for several companies as a freelancer,
-              especially in the energy and marketing industries.
-            </p>
             <ListGroup horizontal>
               <ListGroupItem title="LinkedIn" tag={OutboundLink} target="_blank" href="https://www.linkedin.com/in/thomas-schmidleithner"><FaLinkedin /></ListGroupItem>
               <ListGroupItem title="Xing" tag={OutboundLink} target="_blank" href="https://www.xing.com/profile/Thomas_Schmidleithner"><FaXingSquare /></ListGroupItem>

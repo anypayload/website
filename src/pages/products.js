@@ -86,6 +86,10 @@ const DECODERS = {
     name: 'Libelium Smart Parking v1',
     payload: '0x00281515adef6b0ae300c5',
   },
+  'LoRa-EC': {
+    name: 'LoRa-EC',
+    payload: 'f26162636465666768696a6b6c6d6e6f707878e06100150004160000093a',
+  },
   'milesight-AM300': {
     name: 'Milesight AM300',
     payload: '0367EE0004687C05000106CB02077DA803087D2500097366270A7D04000B7D20000C7D3000'

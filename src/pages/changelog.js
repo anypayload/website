@@ -30,11 +30,91 @@ const ProductsPage = () => (
         <Row className="justify-content-center">
           <Col md="8">
             <article className="py-5">
+              <h4>Wehrle WECOUNT-S</h4>
+              <h6 className="text-muted fw-light mb-4">July 2, 2024</h6>
+              <p>
+                We have implemented the decoder for Wehrle/Sontex WECOUNT-S in version 0.3.4.
+              </p>
+            </article>
+            <article className="py-5 border-top">
+              <h4>Axioma Qalcosonic W1 Ultrasonic Water Meter</h4>
+              <h6 className="text-muted fw-light mb-4">May 29, 2024</h6>
+              <p>
+                We have implemented the decoder for Axioma Qalcosonic W1 Ultrasonic Water Meter in V01.4, V01.8, and V01_20240201.
+              </p>
+            </article>
+            <article className="py-5 border-top">
+              <h4>Integra TOPAS SONIC/RUBIN SONIC</h4>
+              <h6 className="text-muted fw-light mb-4">May 21, 2024</h6>
+              <p>
+                We have implemented the decoder for Integra TOPAS SONIC/RUBIN SONIC in TOPAS SONIC V 3.X and RUBIN SONIC V 0.X10.
+              </p>
+            </article>
+            <article className="py-5 border-top">
+              <h4>Sagemcom WM-L Siconia Water Meter</h4>
+              <h6 className="text-muted fw-light mb-4">May 7, 2024</h6>
+              <p>
+                We have implemented the decoder for Sagemcom WM-L Siconia Water Meter in V22.
+              </p>
+            </article>
+            <article className="py-5 border-top">
+              <h4>Diehl HRL-c-G3</h4>
+              <h6 className="text-muted fw-light mb-4">March 11, 2024</h6>
+              <p>
+                We have implemented the decoder for Diehl HRL-c-G3 according to specification version 1.7 2020.08.18.
+              </p>
+            </article>
+            <article className="py-5 border-top">
+              <h4>MClimate Wireless Thermostat</h4>
+              <h6 className="text-muted fw-light mb-4">January 25, 2024</h6>
+              <p>
+                We have implemented the decoder for MClimate Wireless Thermostat.
+              </p>
+            </article>
+            <article className="py-5 border-top">
+              <h4>Socomec Diris-B-10L</h4>
+              <h6 className="text-muted fw-light mb-4">November 28, 2023</h6>
+              <p>
+                We have implemented the decoder for Socomec Diris-B-10L.
+              </p>
+            </article>
+            <article className="py-5 border-top">
+              <h4>Adeunis Temp</h4>
+              <h6 className="text-muted fw-light mb-4">November 28, 2023</h6>
+              <p>
+                We have implemented the decoder for Adeunis Temp and Temp2S.
+              </p>
+            </article>
+            <article className="py-5 border-top">
+              <h4>VA-GM-2 Vega-Absolute GM-2</h4>
+              <h6 className="text-muted fw-light mb-4">November 11, 2023</h6>
+              <p>
+                We have implemented the decoder for VA-GM-2 Vega-Absolute GM-2. 
+                The decoder is currently compatible with FW ≥ 0.1.0.
+              </p>
+            </article>
+            <article className="py-5 border-top">
+              <h4>Fludia BelSenso FM432g Gas Tracker</h4>
+              <h6 className="text-muted fw-light mb-4">November 2, 2023</h6>
+              <p>
+                We have implemented the decoder for Fludia BelSenso FM432g Gas Tracker. 
+                The decoder is currently compatible with Document Ref FLD10068 version 1.0.7.
+              </p>
+            </article>
+            <article className="py-5 border-top">
+              <h4>NAS LoRaWAN™ BK-G PULSE READER CM3060</h4>
+              <h6 className="text-muted fw-light mb-4">October 22, 2023</h6>
+              <p>
+                We have implemented the decoder for NAS LoRaWAN™ BK-G PULSE READER CM3060. 
+                The decoder is currently compatible with FW ≥ 0.1.0.
+              </p>
+            </article>
+            <article className="py-5 border-top">
               <h4>Milesight EM300 series</h4>
               <h6 className="text-muted fw-light mb-4">January 21, 2022</h6>
               <p>
-                We have implemented the <Link to='/payloads/milesight/AM300/'>Milesight AM300 series</Link>
-                decoder including both sensors AM307 and AM319 in most recent version and added the decoder to our payload collection.
+                We have implemented the <Link to='/payloads/milesight/AM300/'>Milesight AM300 series</Link> decoder 
+                including both sensors AM307 and AM319 in most recent version and added the decoder to our payload collection.
               </p>
             </article>
             <article className="py-5 border-top">
@@ -229,8 +309,7 @@ const ProductsPage = () => (
               <h6 className="text-muted fw-light mb-4">June 24, 2020</h6>
               <p>
                 We have implemented the <Link to='/payloads/elvaco/CMi4160/'>Elvaco CMi4160</Link> sensor
-                in most recent version 1.0 and added the decoder to our
-                payload collection.
+                in versions 1.0 and 1.4 and added the decoder to our payload collection.
               </p>
             </article>
             <article className="py-5 border-top">

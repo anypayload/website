@@ -1,0 +1,3 @@
+[submodule "decoder/axioma-qalcosonic-w1"]
+	path = decoder/axioma-qalcosonic-w1
+	url = git@github.com:anypayload/axioma-qalcosonic-w1.git

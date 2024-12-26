@@ -162,7 +162,8 @@ class Decoder extends React.Component {
     if (name === 'decoder') {
       var decoder = DECODERS[value]
       this.setState({
-        port: decoder.port
+        port: decoder.port,
+        api: decoder.api
       })
     }
 

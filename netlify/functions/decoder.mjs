@@ -1,5 +1,4 @@
-import doDecode from '../../decoder/axioma-qalcosonic-w1/javascript/decoder.js';
-import hexToBytes from '../../decoder/axioma-qalcosonic-w1/javascript/decoder.js';
+import '../../decoder/axioma-qalcosonic-w1/javascript/decoder.js';
 
 export default async (req, context) => {
     switch (context.params.device) {

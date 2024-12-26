@@ -27,7 +27,7 @@ const DECODERS = {
   'axioma-qalcosonic-w1': {
     name: 'Axioma W1 Ultrasonic Water Meter',
     payload: '0x38CC4666100000000040F5456600000000000000000000000000000000000000000000000000000000000000000000',
-    api: 'decoders/axioma-qalcosonic-w1'
+    api: '/decoders/axioma-qalcosonic-w1'
   },
   'bosch-parking-lot-sensor': {
     name: 'Bosch Parking Lot Sensor',

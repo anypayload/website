@@ -1,9 +1,12 @@
-import { doDecode as decodeAxiomaQalcosonicW1 } from '../../decoder/axioma-qalcosonic-w1/javascript/decoder.js';
+import { doDecode as decodeAxiomaQalcosonicW1, hexToBytes } from '../../decoder/axioma-qalcosonic-w1/javascript/decoder.js';
 
 export default async (req, context) => {
     switch (context.params.device) {
         case "axioma-qalcosonic-w1":
-            return new Response(decodeAxiomaQalcosonicW1(req.body.bytes, req.body.fPort));
+            const payload = hexToBytes(req.body.payload);
+            const port = req.body.port;
+            decoded = decodeAxiomaQalcosonicW1(payload, port);
+            return new Response(decoded, { status: 200 });
         default:
             return new Response("Unknown decoder", { status: 404 });
     }

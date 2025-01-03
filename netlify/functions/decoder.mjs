@@ -17,14 +17,13 @@ export default async (req, context) => {
 
     console.log(`received payload '${payload}' for device '${device}' on port '${port}'`);
 
-    const bytes = hexToBytes(payload);
+    const bytes = Buffer.from(payload, 'hex');
 
     console.log('decoded bytes:', bytes);
-    console.log('decoded bytes via Buffer:', Buffer.from(payload, 'hex'));
 
     switch (device) {
         case "axioma-qalcosonic-w1":
-            const decoded = Decode(bytes, port);
+            const decoded = Decode(port, bytes);
             console.log('decoded:', decoded);
             return Response.json(decoded, { status: 200 });
         default:

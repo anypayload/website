@@ -6,9 +6,9 @@ export default async (req, context) => {
             const payload = hexToBytes(req.body.payload);
             const port = req.body.port;
             decoded = doDecode(payload, port);
-            return new Response.json(decoded, { status: 200 });
+            return Response.json(decoded, { status: 200 });
         default:
-            return new Response("Unknown decoder", { status: 404 });
+            return Response("Unknown decoder", { status: 404 });
     }
 };
 

@@ -1,13 +1,3 @@
-const { Decode: decodeAxiomaQalW1 } = require("../../decoder/axioma-qalcosonic-w1/javascript/decoder.js");
-
-// Convert a hex string to a byte array
-function hexToBytes(hex) {
-    let bytes = [];
-    for (let c = 0; c < hex.length; c += 2)
-        bytes.push(parseInt(hex.substr(c, 2), 16));
-    return bytes;
-}
-
 export default async (req, context) => {
     const { device } = context.params;
 
@@ -21,7 +11,8 @@ export default async (req, context) => {
 
     switch (device) {
         case "axioma-qalcosonic-w1":
-            const decoded = decodeAxiomaQalW1(port, bytes);
+            const Decode = require("../../decoder/axioma-qalcosonic-w1/javascript/decoder.js");
+            const decoded = Decode(port, bytes);
             console.log('decoded:', decoded);
             return Response.json(decoded, { status: 200 });
         default:

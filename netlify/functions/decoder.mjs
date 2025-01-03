@@ -1,5 +1,13 @@
 const Decode = require("../../decoder/axioma-qalcosonic-w1/javascript/decoder.js");
 
+// Convert a hex string to a byte array
+function hexToBytes(hex) {
+    let bytes = [];
+    for (let c = 0; c < hex.length; c += 2)
+        bytes.push(parseInt(hex.substr(c, 2), 16));
+    return bytes;
+}
+
 export default async (req, context) => {
     const { device } = context.params;
 
@@ -9,11 +17,15 @@ export default async (req, context) => {
 
     console.log(`received payload '${payload}' for device '${device}' on port '${port}'`);
 
-    const bytes = Buffer.from(payload, "hex");
+    const bytes = hexToBytes(payload);
+
+    console.log('decoded bytes:', bytes);
+    console.log('decoded bytes via Buffer:', Buffer.from(payload, 'hex'));
 
     switch (device) {
         case "axioma-qalcosonic-w1":
             const decoded = Decode(bytes, port);
+            console.log('decoded:', decoded);
             return Response.json(decoded, { status: 200 });
         default:
             console.error(`no decoder found for device '${device}'`);

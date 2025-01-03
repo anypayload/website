@@ -24,6 +24,12 @@ const DECODERS = {
     name: 'Adeunis Field Test Device',
     payload: '0xBF1B45159690005534502720200FC95207',
   },
+  'axioma-qalcosonic-w1': {
+    name: 'Axioma W1 Ultrasonic Water Meter',
+    payload: '0x199B4262304E8B050060BF4162EAF20400C400C109C409C409a4098809C409C509C409C409C409C409C809C009C409',
+    port: 100,
+    api: '/decoders/axioma-qalcosonic-w1'
+  },
   'bosch-parking-lot-sensor': {
     name: 'Bosch Parking Lot Sensor',
     payload: '0x00FE',
@@ -140,6 +146,7 @@ class Decoder extends React.Component {
       decoder: "elsys",
       payload: "",
       port: null,
+      api: null,
       decoded: null,
       loading: false
     }
@@ -156,7 +163,8 @@ class Decoder extends React.Component {
     if (name === 'decoder') {
       var decoder = DECODERS[value]
       this.setState({
-        port: decoder.port
+        port: decoder.port,
+        api: decoder.api
       })
     }
 
@@ -175,6 +183,7 @@ class Decoder extends React.Component {
     // Remove optional hex prefix
     const payload = this.state.payload.replace('0x', '')
     const port = parseInt(this.state.port)
+    const api = this.state.api || `${DECODER_API}/decoders/${decoder}`
 
     console.info(`Decode payload '${payload}' using '${decoder}'`)
 
@@ -184,7 +193,9 @@ class Decoder extends React.Component {
       body: JSON.stringify({ payload: payload, port: port })
     }
 
-    fetch(`${DECODER_API}/decoders/${decoder}`, requestOptions)
+
+
+    fetch(api, requestOptions)
       .then(response => response.json())
       .then(data => this.setState({ decoded: data, loading: false }))
       .catch(error => this.setState({ loading: false }))

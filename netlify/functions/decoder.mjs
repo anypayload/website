@@ -1,14 +1,22 @@
 import '../../decoder/axioma-qalcosonic-w1/javascript/decoder.js';
 
-export default async (req, context) => {
+exports.handler = async function(event, context) {
     switch (context.params.device) {
         case "axioma-qalcosonic-w1":
-            const payload = hexToBytes(req.body.payload);
-            const port = req.body.port;
+            const payload = hexToBytes(event.body.payload);
+            const port = event.body.port;
             decoded = doDecode(payload, port);
-            return Response.json(decoded, { status: 200 });
+            return {
+                statusCode: 200,
+                body: JSON.stringify(decoded)
+            };
         default:
-            return Response("Unknown decoder", { status: 404 });
+            return {
+                statusCode: 404,
+                body: JSON.stringify({
+                    error: "Device not found"
+                })
+            }
     }
 };
 

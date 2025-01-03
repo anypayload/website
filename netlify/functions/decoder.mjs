@@ -1,9 +1,11 @@
 const Decode = require("../../decoder/axioma-qalcosonic-w1/javascript/decoder.js");
 
 export default async (req, context) => {
-    const payload = req.body.payload;
-    const device = context.params.device;
-    const port = req.body.port;
+    const { device } = context.params;
+
+    const body = await req.json()
+    const payload = body.payload;
+    const port = body.port;
 
     console.log(`received payload '${payload}' for device '${device}' on port '${port}'`);
 

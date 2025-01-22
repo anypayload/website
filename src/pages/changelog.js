@@ -31,7 +31,7 @@ const ProductsPage = () => (
           <Col md="8">
             <article className="py-5">
               <h4>Elvaco CMi4140</h4>
-              <h6 className="text-muted fw-light mb-4">July 2, 2024</h6>
+              <h6 className="text-muted fw-light mb-4">January 22, 2025</h6>
               <p>
                 We have implemented the decoder for Elvaco CMi4140 in version 1.3.
               </p>

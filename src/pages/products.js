@@ -66,7 +66,8 @@ const DECODERS = {
   },
   'elvaco-CMi4140': {
     name: 'Elvaco CMi4140',
-    payload: '0x150400000000000411401f0000022a0000023b000002599e08025d9e080c785920298602fd170001'
+    payload: '0x150400000000000411401f0000022a0000023b000002599e08025d9e080c785920298602fd170001',
+    api: '/decoders/elvaco-CMi4140'
   },
   'elvaco-CMi4160': {
     name: 'Elvaco CMi4160',

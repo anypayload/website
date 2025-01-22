@@ -30,6 +30,13 @@ const ProductsPage = () => (
         <Row className="justify-content-center">
           <Col md="8">
             <article className="py-5">
+              <h4>Elvaco CMi4140</h4>
+              <h6 className="text-muted fw-light mb-4">July 2, 2024</h6>
+              <p>
+                We have implemented the decoder for Elvaco CMi4140 in version 1.3.
+              </p>
+            </article>
+            <article className="py-5">
               <h4>Wehrle WECOUNT-S</h4>
               <h6 className="text-muted fw-light mb-4">July 2, 2024</h6>
               <p>
@@ -89,7 +96,7 @@ const ProductsPage = () => (
               <h4>VA-GM-2 Vega-Absolute GM-2</h4>
               <h6 className="text-muted fw-light mb-4">November 11, 2023</h6>
               <p>
-                We have implemented the decoder for VA-GM-2 Vega-Absolute GM-2. 
+                We have implemented the decoder for VA-GM-2 Vega-Absolute GM-2.
                 The decoder is currently compatible with FW ≥ 0.1.0.
               </p>
             </article>
@@ -97,7 +104,7 @@ const ProductsPage = () => (
               <h4>Fludia BelSenso FM432g Gas Tracker</h4>
               <h6 className="text-muted fw-light mb-4">November 2, 2023</h6>
               <p>
-                We have implemented the decoder for Fludia BelSenso FM432g Gas Tracker. 
+                We have implemented the decoder for Fludia BelSenso FM432g Gas Tracker.
                 The decoder is currently compatible with Document Ref FLD10068 version 1.0.7.
               </p>
             </article>
@@ -105,7 +112,7 @@ const ProductsPage = () => (
               <h4>NAS LoRaWAN™ BK-G PULSE READER CM3060</h4>
               <h6 className="text-muted fw-light mb-4">October 22, 2023</h6>
               <p>
-                We have implemented the decoder for NAS LoRaWAN™ BK-G PULSE READER CM3060. 
+                We have implemented the decoder for NAS LoRaWAN™ BK-G PULSE READER CM3060.
                 The decoder is currently compatible with FW ≥ 0.1.0.
               </p>
             </article>
@@ -113,7 +120,7 @@ const ProductsPage = () => (
               <h4>Milesight EM300 series</h4>
               <h6 className="text-muted fw-light mb-4">January 21, 2022</h6>
               <p>
-                We have implemented the <Link to='/payloads/milesight/AM300/'>Milesight AM300 series</Link> decoder 
+                We have implemented the <Link to='/payloads/milesight/AM300/'>Milesight AM300 series</Link> decoder
                 including both sensors AM307 and AM319 in most recent version and added the decoder to our payload collection.
               </p>
             </article>

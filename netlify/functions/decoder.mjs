@@ -13,12 +13,12 @@ export default async (req, context) => {
 
     switch (device) {
         case "axioma-qalcosonic-w1":
-            const Decode = require("../../decoder/axioma-qalcosonic-w1/javascript/decoder.js");
+            let Decode = require("../../decoder/axioma-qalcosonic-w1/javascript/decoder.js");
             decoded = Decode(port, bytes);
             console.log('decoded:', decoded);
             return Response.json(decoded, { status: 200 });
         case "elvaco-CMi4140":
-            const Decode = require("../../decoder/elvaco-CMi4140/javascript/decoder.js");
+            let Decode = require("../../decoder/elvaco-CMi4140/javascript/decoder.js");
             decoded = doDecode(bytes, null);
             console.log('decoded:', decoded);
             return Response.json(decoded, { status: 200 });

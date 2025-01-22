@@ -9,10 +9,17 @@ export default async (req, context) => {
 
     const bytes = Buffer.from(payload, 'hex');
 
+    let decoded = null;
+
     switch (device) {
         case "axioma-qalcosonic-w1":
             const Decode = require("../../decoder/axioma-qalcosonic-w1/javascript/decoder.js");
-            const decoded = Decode(port, bytes);
+            decoded = Decode(port, bytes);
+            console.log('decoded:', decoded);
+            return Response.json(decoded, { status: 200 });
+        case "elvaco-CMi4140":
+            const Decode = require("../../decoder/elvaco-CMi4140/javascript/decoder.js");
+            decoded = doDecode(bytes, null);
             console.log('decoded:', decoded);
             return Response.json(decoded, { status: 200 });
         default:

@@ -33,7 +33,8 @@ const ProductsPage = () => (
               <h4>Elvaco CMi4140</h4>
               <h6 className="text-muted fw-light mb-4">January 22, 2025</h6>
               <p>
-                We have implemented the decoder for Elvaco CMi4140 in version 1.3.
+                We have implemented the decoder for Elvaco CMi4140 in version 1.3.<br />
+                The decoder is also compatible with Elvaco CMi4140 Kamstrup devices.
               </p>
             </article>
             <article className="py-5">

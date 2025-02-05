@@ -37,7 +37,7 @@ const ProductsPage = () => (
                 The decoder is also compatible with Elvaco CMi4140 Kamstrup devices.
               </p>
             </article>
-            <article className="py-5">
+            <article className="py-5 border-top">
               <h4>Wehrle WECOUNT-S</h4>
               <h6 className="text-muted fw-light mb-4">July 2, 2024</h6>
               <p>

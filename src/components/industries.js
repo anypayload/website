@@ -35,6 +35,10 @@ const Industries = (props) => {
             Building IoT solutions is challenging, especially if you want to execute in a faster
             than ever changing environment. Our technology helps you to focus on your core product,
             while we boost your productivity by unburdening you from recurring and work-intensive tasks.
+            We offer ready to use decoders for a wide range of payload sensors, and support you in building
+            or adopting decoders for your specific use case.
+            Our decoders support seamless integration across major IoT platforms, including Actility, ChirpStack,
+            and The Things Network (TTN) / The Things Stack (TTS).
           </p>
         </TabPane>
         <TabPane tabId="2" className="bg-white border border-top-0 ">
